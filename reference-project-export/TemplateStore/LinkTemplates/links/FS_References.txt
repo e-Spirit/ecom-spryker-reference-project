@@ -1,0 +1,7 @@
+[self]
+uid=/links
+gid=78404bec-8021-4163-b774-1930172d0a32
+store=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.TemplateFolderImpl
+root=de.espirit.firstspirit.store.access.templatestore.LinkTemplatesImpl
+

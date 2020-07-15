@@ -1,0 +1,6 @@
+[self]
+uid=free_fall_camera
+gid=c4e07414-445f-491b-94ea-9bf178c4a275
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

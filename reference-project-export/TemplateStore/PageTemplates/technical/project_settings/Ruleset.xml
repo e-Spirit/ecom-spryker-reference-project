@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RULES>
+	<!-- no rules required -->
+	<RULE>
+		<WITH>
+			<FALSE/>
+		</WITH>
+		<DO>
+			<PROPERTY name="NEW" source="ps_staticLinks"/>
+		</DO>
+	</RULE>
+</RULES>

@@ -1,0 +1,6 @@
+[self]
+uid=sony_camera_product_shot
+gid=bc8726d1-7639-40f6-9a75-51a459228fc1
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

@@ -1,0 +1,6 @@
+[self]
+uid=sony_dslr
+gid=e56afbe7-ead5-482f-bf19-d70afdb3ed4a
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

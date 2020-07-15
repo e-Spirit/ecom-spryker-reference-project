@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RULES>
+	<!-- mandatory -->
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="st_startNode"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="SAVE">
+					<PROPERTY name="VALID" source="st_startNode"/>
+					<MESSAGE lang="*" text="The start not must not be empty!"/>
+					<MESSAGE lang="DE" text="Der Startknoten darf nicht leer sein!"/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+</RULES>

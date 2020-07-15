@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEMPLATE comment="" filename="n_teaser" id="-3370397673696179833" templateid="2560513595937913558" type="section">
+	<EXTENSION file="html" link="html" templateSet="9062318847741885912"/>
+	<EXTENSION file="json" link="json" templateSet="-1285658006509869299"/>
+	<LANG displayname="N-Up Teaser" language="DE"/>
+	<LANG displayname="N-Up Teaser" language="EN"/>
+</TEMPLATE>

@@ -1,0 +1,6 @@
+[self]
+uid=deleted
+gid=c330191b-fdce-4cfa-a274-393a4c275625
+uidType=TEMPLATESTORE_FORMATTEMPLATE
+class=de.espirit.firstspirit.store.access.templatestore.FormatTemplateImpl
+

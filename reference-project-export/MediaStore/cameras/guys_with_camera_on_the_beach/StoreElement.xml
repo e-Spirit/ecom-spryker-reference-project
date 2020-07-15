@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="GuysWithCameraOnTheBeach" id="8381117577586907013" type="pic" uniquedescription="guys_with_camera_on_the_beach">
+	<LANG displayname="Guys with Camera on the beach" language="EN"/>
+	<LANG displayname="Jungs mit Kamera am Strand" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="1061.0,16.0,3478.0,3348.0,0,false" extension="jpg" height="3348" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3478"/>
+		<RESOLUTION cropData="152.0,117.0,5256.0,2960.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="16.0,23.0,5456.0,2327.0,0,false" extension="jpg" height="580" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="89.0,1573.0,5140.0,1038.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="3648" mimetype="image/jpeg" resolutionid="ORIGINAL" width="5472"/>
+	</PICTURE>
+</MEDIUM>

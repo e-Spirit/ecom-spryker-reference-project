@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="ActionSelfieWithDSLR" id="4887593623520868920" type="pic" uniquedescription="action_selfie_with_dslr">
+	<LANG displayname="Action Selfie mit DSLR" language="DE"/>
+	<LANG displayname="Action Selfie with DSLR" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1739.0,3204.0,646.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,937.0,3216.0,1805.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="345.0,172.0,2357.0,2967.0,0,false" extension="jpg" height="2967" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2357"/>
+		<RESOLUTION cropData="8.0,1027.0,3268.0,1766.0,0,false" extension="jpg" height="734" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION extension="jpg" height="4096" mimetype="image/jpeg" resolutionid="ORIGINAL" width="3276"/>
+	</PICTURE>
+</MEDIUM>

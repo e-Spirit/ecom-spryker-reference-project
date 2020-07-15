@@ -1,0 +1,1 @@
+{% widget 'FirstSpiritContentLinkWidget' args ["$CMS_VALUE(lt_article.values[0].formData.tt_page_identifier)$", "$CMS_VALUE(lt_linkText.convert2)$"] only %}{% endwidget %}

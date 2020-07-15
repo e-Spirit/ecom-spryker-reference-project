@@ -1,0 +1,6 @@
+[self]
+uid=smartphones
+gid=27c9149d-0b24-4e43-b530-970feb215f11
+uidType=MEDIASTORE_FOLDER
+class=de.espirit.firstspirit.store.access.mediastore.MediaFolderImpl
+

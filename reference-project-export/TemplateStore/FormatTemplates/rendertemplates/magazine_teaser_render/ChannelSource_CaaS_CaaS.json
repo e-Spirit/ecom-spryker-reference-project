@@ -1,0 +1,37 @@
+$--
+Aggregates data using the given entity and adds teaser data to the given teaser object.
+
+Usage: $CMS_RENDER(template: "magazine_teaser_render", rt_entity: magazineArticleEntity, rt_teaser: {:})$
+--$
+$CMS_IF(!rt_entity.teaser_headline.isEmpty())$
+	$CMS_SET(void, rt_teaser.put("title", rt_entity.teaser_headline.convert2))$
+$CMS_ELSE$
+	$CMS_SET(void, rt_teaser.put("title", rt_entity.headline.convert2))$
+$CMS_END_IF$
+
+$CMS_SET(void, rt_teaser.put("text", rt_entity.teaser_text.convert2))$
+
+$CMS_SET(picture,{:})$
+$CMS_IF(!rt_entity.teaser_picture.isEmpty())$
+	$CMS_SET(imageUrl)$$CMS_REF(rt_entity.teaser_picture,resolution:"CONTENT_IMAGE",abs:1)$$CMS_END_SET$
+	$CMS_SET(void, picture.put("imageUrl", imageUrl.toString()))$
+	$CMS_IF(!#global.isRelease())$
+		$CMS_SET(previewId)$$CMS_VALUE(previewId(element:rt_entity.teaser_picture))$$CMS_END_SET$
+		$CMS_SET(void, picture.put("previewId", previewId.toString()))$
+	$CMS_END_IF$
+$CMS_ELSIF(rt_entity.teaser_picture.isEmpty() && !rt_entity.banner.isEmpty())$
+	$CMS_SET(imageUrl)$$CMS_REF(rt_entity.banner,resolution:"CONTENT_IMAGE",abs:1)$$CMS_END_SET$
+	$CMS_SET(void, picture.put("imageUrl", imageUrl.toString()))$
+	$CMS_IF(!#global.isRelease())$
+		$CMS_SET(previewId)$$CMS_VALUE(previewId(element:rt_entity.banner))$$CMS_END_SET$
+		$CMS_SET(void, picture.put("previewId", previewId.toString()))$
+	$CMS_END_IF$
+$CMS_END_IF$
+$CMS_SET(void, rt_teaser.put("picture", picture))$
+
+$CMS_IF(!#global.isRelease())$
+	$CMS_SET(previewId)$$CMS_VALUE(previewId(element:ref(template:"magazine.magazine_articles").getDataset(rt_entity)))$$CMS_END_SET$
+	$CMS_SET(void, rt_teaser.put("previewId", previewId.toString()))$
+$CMS_END_IF$
+$CMS_SET(void, rt_teaser.put("page_identifier", rt_entity.page_identifier))$
+$CMS_SET(void, rt_teaser.put("date", rt_entity.date))$

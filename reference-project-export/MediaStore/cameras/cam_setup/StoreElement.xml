@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="CamSetup" id="3564732003777222024" type="pic" uniquedescription="cam_setup">
+	<LANG displayname="Cam Setup" language="EN"/>
+	<LANG displayname="Kamera-Aufbau" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1132.0,3096.0,1007.0,0,false" extension="jpg" height="442" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,1512.0,3105.0,627.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="103.0,624.0,2734.0,1538.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="445.0,5.0,2146.0,2356.0,0,false" extension="jpg" height="2356" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2146"/>
+		<RESOLUTION extension="jpg" height="2361" mimetype="image/jpeg" resolutionid="ORIGINAL" width="3106"/>
+	</PICTURE>
+</MEDIUM>

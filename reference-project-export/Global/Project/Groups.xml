@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OBJECT class="java.util.ArrayList">
+	<OBJECT class="de.espirit.firstspirit.server.projectmanagement.GroupDTO">
+		<FIELD name="_email"><NULL/><!-- class java.lang.String --></FIELD>
+		<FIELD name="_userIds">
+			<OBJECT class="java.util.HashSet">
+				<OBJECT class="java.lang.Long">1000438474281731692</OBJECT>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="isAdmin" type="boolean">true</FIELD>
+		<FIELD name="isEveryone" type="boolean">false</FIELD>
+		<FIELD name="m_ID" type="long">-5176991729407192876</FIELD>
+		<FIELD name="m_name">
+			<OBJECT class="java.lang.String">Administrators</OBJECT>
+		</FIELD>
+		<FIELD name="m_projectID" type="long">-5802341919937733185</FIELD>
+	</OBJECT>
+	<OBJECT class="de.espirit.firstspirit.server.projectmanagement.GroupDTO">
+		<FIELD name="_email"><NULL/><!-- class java.lang.String --></FIELD>
+		<FIELD name="_userIds"><NULL/><!-- interface java.util.Collection --></FIELD>
+		<FIELD name="isAdmin" type="boolean">false</FIELD>
+		<FIELD name="isEveryone" type="boolean">true</FIELD>
+		<FIELD name="m_ID" type="long">-392341367166725172</FIELD>
+		<FIELD name="m_name">
+			<OBJECT class="java.lang.String">Everyone</OBJECT>
+		</FIELD>
+		<FIELD name="m_projectID" type="long">-5802341919937733185</FIELD>
+	</OBJECT>
+</OBJECT>

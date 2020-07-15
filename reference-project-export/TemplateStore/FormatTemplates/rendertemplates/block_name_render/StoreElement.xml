@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTEMPLATE id="-2046786290249649750" name="block_name_render">
+	<LANG displayname="Render Template for the Block Name " language="EN"/>
+	<LANG displayname="Render-Template für den Blocknamen" language="DE"/>
+	<style tag="block_name_render" view="marked">
+		<attr name="align" value="left"/>
+		<render>
+			<channel conversion="CaaS" name="CaaS" templateSetId="-1285658006509869299"/>
+		</render>
+	</style>
+</FORMATTEMPLATE>

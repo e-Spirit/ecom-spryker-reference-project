@@ -1,0 +1,19 @@
+$CMS_IF(!lt_pageRef.isEmpty)$
+	$CMS_SET(set_pageUid,lt_pageRef.get().page.template.uid)$
+	$CMS_IF(set_pageUid == "contentpage")$
+		$CMS_SET(set_id)$$CMS_VALUE(lt_pageRef.uid)$$CMS_END_SET$
+		$CMS_SET(void, set_link.put("id", set_id.toString()))$
+		$CMS_SET(void, set_link.put("type","cmspage"))$
+	$CMS_ELSIF(!set_ps_staticLinks.isEmpty)$
+	    $CMS_IF(set_ps_staticLinks.containsKey(set_pageUid) && !set_ps_staticLinks.get(set_pageUid).isEmpty)$
+	    	$CMS_SET(void, set_link.put("url", set_ps_staticLinks.get(set_pageUid)))$
+			$CMS_SET(void, set_link.put("type","static"))$
+		$CMS_ELSE$
+			$CMS_SET(void,#global.logWarning("No URL set for Static Page Template " + set_pageUid))$
+		$CMS_END_IF$
+	$CMS_ELSE$
+		$CMS_SET(void,#global.logWarning("Could not link to " + lt_pageRef.get().page.uid))$
+	$CMS_END_IF$
+$CMS_ELSE$
+	$CMS_SET(void,#global.logWarning("This content link should not be empty!"))$
+$CMS_END_IF$

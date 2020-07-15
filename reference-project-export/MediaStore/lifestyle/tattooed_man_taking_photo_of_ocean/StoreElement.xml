@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="TattoodManTakingPhotoOfOcean" id="-8946132931448900027" type="pic" uniquedescription="tattooed_man_taking_photo_of_ocean">
+	<LANG displayname="Tattooed man taking photo of ocean" language="EN"/>
+	<LANG displayname="Tätowierter Mann macht ein Foto vom Meer" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,605.0,2000.0,1106.0,0,false" extension="jpg" height="752" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,949.0,2000.0,406.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="222.0,516.0,1678.0,1672.0,0,false" extension="jpg" height="1672" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="1678"/>
+		<RESOLUTION cropData="280.0,696.0,1705.0,959.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="2500" mimetype="image/jpeg" resolutionid="ORIGINAL" width="2000"/>
+	</PICTURE>
+</MEDIUM>

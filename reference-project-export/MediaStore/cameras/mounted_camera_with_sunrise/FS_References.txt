@@ -1,0 +1,6 @@
+[self]
+uid=mounted_camera_with_sunrise
+gid=b5f33758-82d5-43a0-82a8-6a077a141342
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

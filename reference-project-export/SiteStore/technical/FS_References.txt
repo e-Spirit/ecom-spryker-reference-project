@@ -1,0 +1,12 @@
+[self]
+uid=technical
+gid=d8283f46-237a-4a3e-9b91-1a138f10a799
+uidType=SITESTORE_FOLDER
+class=de.espirit.firstspirit.store.access.sitestore.PageRefFolderImpl
+
+[previousSibling]
+uid=product_pages
+gid=794d5009-d236-4f96-89be-2ca71aa852ae
+uidType=SITESTORE_FOLDER
+class=de.espirit.firstspirit.store.access.sitestore.PageRefFolderImpl
+

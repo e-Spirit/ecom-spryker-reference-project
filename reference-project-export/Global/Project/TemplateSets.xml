@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OBJECT class="java.util.ArrayList">
+	<OBJECT class="de.espirit.firstspirit.server.templatemanagement.TemplateSetDTO">
+		<FIELD name="_descriptions">
+			<OBJECT class="java.util.HashMap">
+				<OBJECT class="java.lang.String">DE</OBJECT>
+				<OBJECT class="java.lang.String"></OBJECT>
+				<OBJECT class="java.lang.String">EN</OBJECT>
+				<OBJECT class="java.lang.String"></OBJECT>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="_names">
+			<OBJECT class="java.util.HashMap">
+				<OBJECT class="java.lang.String">DE</OBJECT>
+				<OBJECT class="java.lang.String">HTML</OBJECT>
+				<OBJECT class="java.lang.String">EN</OBJECT>
+				<OBJECT class="java.lang.String">HTML</OBJECT>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="_templateInspectionEnabled"><NULL/><!-- class java.lang.Boolean --></FIELD>
+		<FIELD name="_useWebeditForPreview" type="boolean">false</FIELD>
+		<FIELD name="m_ID" type="long">9062318847741885912</FIELD>
+		<FIELD name="m_active" type="boolean">true</FIELD>
+		<FIELD name="m_channel" type="long">-1268668680467729278</FIELD>
+		<FIELD name="m_convTable">
+			<OBJECT class="de.espirit.firstspirit.server.templatemanagement.ConversionTableImpl">
+				<FIELD name="name">
+					<OBJECT class="java.lang.String">Convert HTML</OBJECT>
+				</FIELD>
+				<FIELD name="table">
+					<OBJECT class="java.lang.String">H4sIAAAAAAAAAItOzs8rSy0qieXiMqgwTrZVUsspsVYCsVOB7HQI28gIyFY2NoFwzICcxNwCCMccLGNprQQAcdsgtkkAAAA=</OBJECT>
+				</FIELD>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="m_extension">
+			<OBJECT class="java.lang.String">html</OBJECT>
+		</FIELD>
+		<FIELD name="m_name">
+			<OBJECT class="java.lang.String">html</OBJECT>
+		</FIELD>
+	</OBJECT>
+	<OBJECT class="de.espirit.firstspirit.server.templatemanagement.TemplateSetDTO">
+		<FIELD name="_descriptions">
+			<OBJECT class="java.util.HashMap">
+				<OBJECT class="java.lang.String">DE</OBJECT>
+				<OBJECT class="java.lang.String"></OBJECT>
+				<OBJECT class="java.lang.String">EN</OBJECT>
+				<OBJECT class="java.lang.String"></OBJECT>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="_names">
+			<OBJECT class="java.util.HashMap">
+				<OBJECT class="java.lang.String">DE</OBJECT>
+				<OBJECT class="java.lang.String">CaaS</OBJECT>
+				<OBJECT class="java.lang.String">EN</OBJECT>
+				<OBJECT class="java.lang.String">CaaS</OBJECT>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="_templateInspectionEnabled"><NULL/><!-- class java.lang.Boolean --></FIELD>
+		<FIELD name="_useWebeditForPreview" type="boolean">false</FIELD>
+		<FIELD name="m_ID" type="long">-1285658006509869299</FIELD>
+		<FIELD name="m_active" type="boolean">true</FIELD>
+		<FIELD name="m_channel" type="long">-7376935317569799158</FIELD>
+		<FIELD name="m_convTable">
+			<OBJECT class="de.espirit.firstspirit.server.templatemanagement.ConversionTableImpl">
+				<FIELD name="name">
+					<OBJECT class="java.lang.String">CaaS</OBJECT>
+				</FIELD>
+				<FIELD name="table">
+					<OBJECT class="java.lang.String">H4sIAAAAAAAAADOoMDKyVYpRUgIAFoc9hQkAAAA=</OBJECT>
+				</FIELD>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="m_extension">
+			<OBJECT class="java.lang.String">json</OBJECT>
+		</FIELD>
+		<FIELD name="m_name">
+			<OBJECT class="java.lang.String">CaaS</OBJECT>
+		</FIELD>
+	</OBJECT>
+</OBJECT>

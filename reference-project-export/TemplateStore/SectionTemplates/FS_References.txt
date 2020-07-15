@@ -1,0 +1,6 @@
+[self]
+uid=SectionTemplates
+gid=e9ea7da9-ab3d-4fa8-8254-b2631c9854e6
+store=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.SectionTemplatesImpl
+

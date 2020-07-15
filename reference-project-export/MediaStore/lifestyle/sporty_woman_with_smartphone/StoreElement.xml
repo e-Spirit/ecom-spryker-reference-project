@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="SportyWomanWithSmartphone" id="-789282690641855177" type="pic" uniquedescription="sporty_woman_with_smartphone">
+	<LANG displayname="Sportliche Frau mit Smartphone" language="DE"/>
+	<LANG displayname="Sporty Woman with Smartphone" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,602.0,4896.0,986.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="1189.0,174.0,2713.0,2691.0,0,false" extension="jpg" height="2691" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2713"/>
+		<RESOLUTION cropData="501.0,256.0,3901.0,2197.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="7.0,174.0,4889.0,1567.0,0,false" extension="jpg" height="435" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION extension="jpg" height="3264" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4896"/>
+	</PICTURE>
+</MEDIUM>

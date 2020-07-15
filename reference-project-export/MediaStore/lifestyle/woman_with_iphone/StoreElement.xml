@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="WomanWithiPhone" id="-8578658614340162143" type="pic" uniquedescription="woman_with_iphone">
+	<LANG displayname="Frau mit iPhone" language="DE"/>
+	<LANG displayname="Woman with iPhone" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,269.0,2844.0,576.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="126.0,1280.0,2722.0,1531.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="292.0,27.0,2314.0,2798.0,0,false" extension="jpg" height="2798" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2314"/>
+		<RESOLUTION cropData="9.0,228.0,2835.0,1692.0,0,false" extension="jpg" height="811" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION extension="jpg" height="4115" mimetype="image/jpeg" resolutionid="ORIGINAL" width="2848"/>
+	</PICTURE>
+</MEDIUM>

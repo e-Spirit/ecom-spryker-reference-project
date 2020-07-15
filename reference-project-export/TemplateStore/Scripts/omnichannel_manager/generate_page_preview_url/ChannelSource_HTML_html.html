@@ -1,0 +1,34 @@
+import de.espirit.firstspirit.agency.StoreElementAgent;
+import de.espirit.firstspirit.access.store.IDProvider;
+
+/**
+* Generates a preview URL for the given page reference.
+*
+* Usage: TPP_SNAP.execute('script:generate_page_preview_url', {
+*          pageRefUid: '<pageRefUid>' // Uid of the page reference
+*        })
+*/
+
+if (pageRefUid == void || pageRefUid == null) {
+    throw new IllegalArgumentException("Missing parameter 'pageRefUid'");
+}
+
+storeElementAgent = context.requireSpecialist(StoreElementAgent.TYPE);
+pageRef = storeElementAgent.loadStoreElement(pageRefUid, IDProvider.UidType.SITESTORE_LEAF, false);
+
+if(pageRef == null) {
+    return null;
+}
+
+if ("technical".equals(pageRef.parentFolder.uid)) {
+    // since OCM-388 / TPP 1.2.21 - Deep-Link support, a Startpage in FirstSpirit is mandatory
+    // using the "technical"-folder as default
+    return "";
+}
+
+page = pageRef.getPage();
+if(page.getTemplate().getUid().equals("contentpage")) {
+    return "/fs-preview/fs-cms-page-preview/" + pageRefUid;
+}
+//here we have a categorypage or homepage, returning no url in this case
+return "";

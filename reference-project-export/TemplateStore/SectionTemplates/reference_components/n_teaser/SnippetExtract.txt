@@ -1,0 +1,2 @@
+if(st_nTeaserItems.isEmpty,st_nTeaserItems.snippets.map(x
+->x.header).toString(", "))

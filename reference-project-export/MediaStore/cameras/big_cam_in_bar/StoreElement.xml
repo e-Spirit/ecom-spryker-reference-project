@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="BigCamInBar" id="1399838639226500669" type="pic" uniquedescription="big_cam_in_bar">
+	<LANG displayname="Big Cam in Bar" language="EN"/>
+	<LANG displayname="Große Kamera in einer Bar" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="1146.0,582.0,4225.0,3578.0,0,false" extension="jpg" height="3578" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="4225"/>
+		<RESOLUTION cropData="591.0,1478.0,4881.0,980.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="9.0,915.0,6231.0,2172.0,0,false" extension="jpg" height="474" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="99.0,142.0,6021.0,3385.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="4160" mimetype="image/jpeg" resolutionid="ORIGINAL" width="6240"/>
+	</PICTURE>
+</MEDIUM>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="CameraSetupWithLens" id="5536618644366579786" type="pic" uniquedescription="camera_setup_with_lens">
+	<LANG displayname="Camera Setup with Lens" language="EN"/>
+	<LANG displayname="Kamera-Aufbau mit Objektiv" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1635.0,6240.0,1257.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="1266.0,1081.0,3476.0,3078.0,0,false" extension="jpg" height="3078" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3476"/>
+		<RESOLUTION cropData="447.0,473.0,5528.0,3111.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="9.0,1376.0,6231.0,1766.0,0,false" extension="jpg" height="385" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION extension="jpg" height="4160" mimetype="image/jpeg" resolutionid="ORIGINAL" width="6240"/>
+	</PICTURE>
+</MEDIUM>

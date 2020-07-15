@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <FS_INDEX name="lt_article" height="1" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Magazine article"/>
+      <LANGINFO lang="DE" label="Magazinartikel"/>
+    </LANGINFOS>
+    <SOURCE name="DatasetDataAccessPlugin">
+      <TEMPLATE uid="magazine.magazine_articles"/>
+    </SOURCE>
+  </FS_INDEX>
+
+  <CMS_INPUT_TEXT name="lt_linkText" hFill="yes" singleLine="no" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Link text"/>
+      <LANGINFO lang="DE" label="Verweistext"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+</CMS_MODULE>

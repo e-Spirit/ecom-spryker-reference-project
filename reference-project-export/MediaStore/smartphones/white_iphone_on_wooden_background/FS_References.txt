@@ -1,0 +1,6 @@
+[self]
+uid=white_iphone_on_wooden_background
+gid=b855cc7b-348e-4832-b195-af91300d70fa
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

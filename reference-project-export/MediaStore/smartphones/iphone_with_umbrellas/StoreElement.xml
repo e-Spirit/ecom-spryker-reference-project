@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="iPhoneWithUmbrellas" id="4924498562910708871" type="pic" uniquedescription="iphone_with_umbrellas">
+	<LANG displayname="iPhone mit Regenschirmen" language="DE"/>
+	<LANG displayname="iPhone with Umbrellas" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1570.0,2839.0,572.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="105.0,1297.0,2539.0,1429.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="247.0,838.0,2601.0,2687.0,0,false" extension="jpg" height="2687" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2601"/>
+		<RESOLUTION cropData="9.0,1324.0,2839.0,1248.0,0,false" extension="jpg" height="597" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION extension="jpg" height="4288" mimetype="image/jpeg" resolutionid="ORIGINAL" width="2848"/>
+	</PICTURE>
+</MEDIUM>

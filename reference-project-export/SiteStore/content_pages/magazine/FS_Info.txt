@@ -1,0 +1,11 @@
+AllChildren: 1
+ExportVersion: 3.2
+HierarchicElement: true
+Language_DE: Deutsch
+Language_EN: English
+PresentationChannel_-1268668680467729278: HTML
+PresentationChannel_-7376935317569799158: CaaS
+StartNodeUidType_-5443911982723465288: SITESTORE_FOLDER
+StartNodeUid_-5443911982723465288: magazine_overview_page
+TemplateSet_-1285658006509869299: CaaS
+TemplateSet_9062318847741885912: html

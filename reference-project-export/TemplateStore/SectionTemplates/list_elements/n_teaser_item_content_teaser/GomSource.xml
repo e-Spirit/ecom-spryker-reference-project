@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <FS_REFERENCE name="st_picture" hFill="yes" useLanguages="no">
+    <FILTER>
+      <ALLOW type="picture"/>
+    </FILTER>
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Picture"/>
+      <LANGINFO lang="DE" label="Bild"/>
+    </LANGINFOS>
+    <PROJECTS>
+      <LOCAL name=".">
+        <SOURCES>
+          <FOLDER name="root" store="mediastore"/>
+        </SOURCES>
+      </LOCAL>
+    </PROJECTS>
+  </FS_REFERENCE>
+
+  <CMS_INPUT_TEXT name="st_headline" hFill="yes" maxInputLength="50" singleLine="no" useLanguages="yes">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Headline"/>
+      <LANGINFO lang="DE" label="Überschrift"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+  <CMS_INPUT_TEXT name="st_subline" hFill="yes" maxInputLength="75" singleLine="no" useLanguages="yes">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Subtitle"/>
+      <LANGINFO lang="DE" label="Untertitel"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+  <CMS_INPUT_TEXTAREA name="st_text" hFill="yes" maxInputLength="250" useLanguages="yes">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Teaser text"/>
+      <LANGINFO lang="DE" label="Teasertext"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXTAREA>
+
+  <CMS_INPUT_LINK name="st_link" hFill="yes" mode="inline" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Link"/>
+    </LANGINFOS>
+    <LINKEDITORS>
+      <LINKEDITOR name="category_link"/>
+      <LINKEDITOR name="product_link"/>
+      <LINKEDITOR name="search_link"/>
+      <LINKEDITOR name="magazine_article_link"/>
+      <LINKEDITOR name="content_link"/>
+      <LINKEDITOR name="external_link"/>
+    </LINKEDITORS>
+  </CMS_INPUT_LINK>
+
+  <CMS_INPUT_TEXT name="st_linkText" hFill="yes" singleLine="no" useLanguages="yes">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Button link text"/>
+      <LANGINFO lang="DE" label="Button Verweistext"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+</CMS_MODULE>

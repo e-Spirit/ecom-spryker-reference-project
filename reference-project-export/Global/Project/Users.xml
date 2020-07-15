@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OBJECT class="java.util.ArrayList">
+	<OBJECT class="de.espirit.firstspirit.server.usermanagement.UserDTO">
+		<FIELD name="_active" type="boolean">true</FIELD>
+		<FIELD name="_groups"><NULL/><!-- class [Lde.espirit.firstspirit.server.projectmanagement.ExternalGroupDTO; --></FIELD>
+		<FIELD name="_salt">
+			<ARRAY type="byte">DNGUxiBl7MrqE1dn</ARRAY>
+		</FIELD>
+		<FIELD name="_serverAdmin" type="boolean">true</FIELD>
+		<FIELD name="m_EMail"><NULL/><!-- class java.lang.String --></FIELD>
+		<FIELD name="m_ID" type="long">1000438474281731692</FIELD>
+		<FIELD name="m_Name">
+			<OBJECT class="java.lang.String">Admin</OBJECT>
+		</FIELD>
+		<FIELD name="m_PasswordHash"><NULL/><!-- class java.lang.String --></FIELD>
+		<FIELD name="m_PhoneNumber"><NULL/><!-- class java.lang.String --></FIELD>
+		<FIELD name="m_abbreviation"><NULL/><!-- class java.lang.String --></FIELD>
+		<FIELD name="m_ldap" type="boolean">false</FIELD>
+		<FIELD name="m_ldapSection">
+			<OBJECT class="java.lang.String"></OBJECT>
+		</FIELD>
+		<FIELD name="m_realname"><NULL/><!-- class java.lang.String --></FIELD>
+	</OBJECT>
+</OBJECT>

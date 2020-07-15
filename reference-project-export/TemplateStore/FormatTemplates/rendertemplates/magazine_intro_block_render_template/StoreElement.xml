@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTEMPLATE id="-2543857656515842019" name="magazine_intro_block_render_template">
+	<LANG displayname="Magazine Intro Block Render Template" language="EN"/>
+	<LANG displayname="Render-Template für den Magazinartikel-Intro-Block" language="DE"/>
+	<style tag="magazine_intro_block_render_template" view="marked">
+		<attr name="align" value="left"/>
+		<render>
+			<channel conversion="CaaS" name="CaaS" templateSetId="-1285658006509869299"/>
+		</render>
+	</style>
+</FORMATTEMPLATE>

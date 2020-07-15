@@ -1,0 +1,66 @@
+<CMS_HEADER>
+ 
+	<CMS_FUNCTION name="contentSelect" resultname="fr_st_teasers_descending">
+  		<CMS_PARAM name="schema" value="magazine" />
+  		<QUERY entityType="magazine_articles">
+  			<ORDERCRITERIA attribute="date" descending="1" />
+    	</QUERY>
+	</CMS_FUNCTION>
+	
+	<CMS_FUNCTION name="contentSelect" resultname="fr_st_teasers_ascending">
+  		<CMS_PARAM name="schema" value="magazine" />
+  		<QUERY entityType="magazine_articles">
+  			<ORDERCRITERIA attribute="date" descending="0" />
+    	</QUERY>
+	</CMS_FUNCTION>
+	
+</CMS_HEADER>
+$CMS_SET(block,{:})$
+$-- Defining general block data --$
+$CMS_SET(void, block.put("previewId", "" + previewId()))$
+$CMS_SET(void, block.put("active", "1"))$
+$CMS_SET(void, block.put("store_names", [ps_activeStore]))$
+$CMS_SET(void, block.put("template_name", "fs_molecule_block"))$
+$CMS_SET(void, block.put("template_path", "@CmsBlock/template/fs_molecule_block.twig"))$
+
+$CMS_SET(set_pageType, json.get("pagetype"))$
+
+$-- Add block name attribute to block object (page type dependent) --$
+$CMS_RENDER(template: "block_name_render", rt_pageType: set_pageType, rt_blockObject: block)$
+
+$-- Add additional block attributes to block object (page type dependent) --$
+$CMS_RENDER(template: "additional_block_attributes_render", rt_pageType: set_pageType, rt_blockObject: block)$
+
+$-- Defining placeholder data of the block --$
+$CMS_SET(placeholders,{:})$
+$CMS_SET(void, block.put("placeholder",placeholders))$
+
+$CMS_SET(featuredTeasers, [])$
+$CMS_FOR(for_featuredArticle, st_featuredArticles.values)$
+	$CMS_SET(teaser,{:})$
+	$CMS_RENDER(template: "magazine_teaser_render", rt_entity: for_featuredArticle.entity, rt_teaser: teaser)$
+	$CMS_SET(void, featuredTeasers.add(teaser))$
+$CMS_END_FOR$
+
+$CMS_SET(teasers, [])$
+$CMS_FOR(for_teaser, #global.context.getVariableValue("fr_st_teasers_"+st_sortingOrder.key))$
+	$CMS_SET(teaser,{:})$
+	$CMS_RENDER(template: "magazine_teaser_render", rt_entity: for_teaser, rt_teaser: teaser)$
+	$CMS_SET(void, teasers.add(teaser))$
+$CMS_END_FOR$
+
+$CMS_SET(locale, #global.language.getLocale())$
+$CMS_SET(localeAbbr, locale.getLanguage() + "_" + locale.getCountry())$
+$CMS_SET(data, {:})$
+$CMS_SET(void, data.put("featuredTeasers", featuredTeasers))$
+$CMS_SET(void, data.put("teasers", teasers))$
+$CMS_SET(void, data.put("moleculename", "fs-magazine-overview"))$
+$CMS_SET(localizedData, {:})$
+$CMS_SET(void, localizedData.put(localeAbbr, data))$
+$CMS_SET(void, block.put("data", localizedData))$
+
+$CMS_IF(#global.is("WEBEDIT") && !isSet(caas_preview_generation))$
+	$CMS_VALUE(block.toJSON)$
+$CMS_ELSE$
+	$CMS_SET(void, blocks.add(block))$
+$CMS_END_IF$

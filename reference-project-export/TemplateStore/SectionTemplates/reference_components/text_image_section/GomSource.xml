@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <CMS_INPUT_TEXT name="st_title" hFill="yes" maxInputLength="150" singleLine="no" useLanguages="yes">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Title"/>
+      <LANGINFO lang="DE" label="Titel"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+  <CMS_INPUT_DOM
+    name="st_text"
+    hFill="yes"
+    listConfig="style:List style[0:Bullet Points|2:Numbers]"
+    rows="10"
+    table="no"
+    useLanguages="yes">
+    <FORMATS>
+      <TEMPLATE name="h1"/>
+      <TEMPLATE name="h2"/>
+      <TEMPLATE name="h3"/>
+      <TEMPLATE name="p"/>
+      <TEMPLATE name="u"/>
+    </FORMATS>
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Text"/>
+    </LANGINFOS>
+    <LINKEDITORS>
+      <LINKEDITOR name="dom_content_link"/>
+      <LINKEDITOR name="dom_category_link"/>
+      <LINKEDITOR name="dom_product_link"/>
+      <LINKEDITOR name="dom_search_link"/>
+      <LINKEDITOR name="dom_magazine_article_link"/>
+      <LINKEDITOR name="dom_external_link"/>
+    </LINKEDITORS>
+  </CMS_INPUT_DOM>
+
+  <FS_REFERENCE name="st_picture" hFill="yes" upload="yes" useLanguages="no">
+    <FILTER>
+      <ALLOW type="picture"/>
+    </FILTER>
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Picture"/>
+      <LANGINFO lang="DE" label="Bild"/>
+    </LANGINFOS>
+    <PROJECTS>
+      <LOCAL name=".">
+        <SOURCES>
+          <FOLDER name="root" store="mediastore"/>
+        </SOURCES>
+      </LOCAL>
+    </PROJECTS>
+  </FS_REFERENCE>
+
+  <CMS_INPUT_RADIOBUTTON name="st_picturePosition" hFill="yes" useLanguages="no">
+    <ENTRIES>
+      <ENTRY value="left">
+        <LANGINFOS>
+          <LANGINFO lang="*" label="Left"/>
+          <LANGINFO lang="DE" label="Links"/>
+        </LANGINFOS>
+      </ENTRY>
+      <ENTRY value="right">
+        <LANGINFOS>
+          <LANGINFO lang="*" label="Right"/>
+          <LANGINFO lang="DE" label="Rechts"/>
+        </LANGINFOS>
+      </ENTRY>
+    </ENTRIES>
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Picture Position"/>
+      <LANGINFO lang="DE" label="Bildposition"/>
+    </LANGINFOS>
+  </CMS_INPUT_RADIOBUTTON>
+
+</CMS_MODULE>

@@ -1,0 +1,6 @@
+[self]
+uid=green_fitbit
+gid=aed4e4cf-4361-4fa7-bee6-e90f4e73d929
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

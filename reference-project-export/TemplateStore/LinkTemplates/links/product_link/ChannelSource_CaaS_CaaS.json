@@ -1,0 +1,17 @@
+$CMS_IF(!lt_product.isEmpty())$
+	$CMS_SET(set_id)$$CMS_VALUE(lt_product.identifiers[0])$$CMS_END_SET$
+	$CMS_IF(set_id == ("error_404"))$
+	$--
+		If this error occurs the product is not available via Glue Api
+		Possible reasons:
+		- Product is deleted --> check Zed, remove link
+		- Product is removed from Store --> check Zed, remove link
+		- Glue is temporarily not available --> check Glue, check server settings, check logs
+		- Another error --> check the logs
+	 --$
+		$CMS_SET(void,#global.logError("Error 404: Product is not available"))$
+	$CMS_ELSE$
+		$CMS_SET(void, set_link.put("id", set_id.toString()))$
+		$CMS_SET(void, set_link.put("type","product"))$
+	$CMS_END_IF$
+$CMS_END_IF$

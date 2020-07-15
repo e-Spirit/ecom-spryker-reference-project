@@ -1,0 +1,6 @@
+if(!st_text.isEmpty,
+	truncate(st_text,160),
+	if(!st_subline.isEmpty,
+		italic(st_subline)
+	)
+)

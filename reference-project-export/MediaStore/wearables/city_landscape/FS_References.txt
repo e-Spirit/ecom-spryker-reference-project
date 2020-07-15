@@ -1,0 +1,6 @@
+[self]
+uid=city_landscape
+gid=9f2f183c-b784-46ad-99af-a4d5ea8a9772
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

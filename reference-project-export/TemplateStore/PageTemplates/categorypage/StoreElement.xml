@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEMPLATE filename="categorypage" hidden="1" id="6288037676649031318" templateid="4385079165626528132" type="page">
+	<ALLOWED enabled="banner" templateid="-5069870773366139176"/>
+	<ALLOWED enabled="banner" templateid="5421764679857664518"/>
+	<ALLOWED enabled="top,bottom" templateid="-3054217477551797392"/>
+	<ALLOWED enabled="top,bottom" templateid="-3641967359253832579"/>
+	<ALLOWED enabled="top,bottom" templateid="1272876832146233179"/>
+	<ALLOWED enabled="top,bottom" templateid="2560513595937913558"/>
+	<ALLOWED enabled="top,bottom" templateid="4036886215267889542"/>
+	<EXTENSION file="html" link="html" replaceable="false" templateSet="9062318847741885912"/>
+	<EXTENSION file="js" link="json" replaceable="false" templateSet="-1285658006509869299"/>
+	<LANG displayname="Category page" language="EN"/>
+	<LANG displayname="Kategorieseite" language="DE"/>
+	<TEMPLATEBODY name="banner">
+		<LANG displayname="" language="DE"/>
+		<LANG displayname="Banner" language="EN"/>
+	</TEMPLATEBODY>
+	<TEMPLATEBODY name="top">
+		<LANG language="DE"/>
+		<LANG language="EN"/>
+	</TEMPLATEBODY>
+	<TEMPLATEBODY name="bottom">
+		<LANG language="DE"/>
+		<LANG language="EN"/>
+	</TEMPLATEBODY>
+</TEMPLATE>

@@ -1,0 +1,1 @@
+if(!st_image_map.isEmpty(), st_image_map.image ,"No image")

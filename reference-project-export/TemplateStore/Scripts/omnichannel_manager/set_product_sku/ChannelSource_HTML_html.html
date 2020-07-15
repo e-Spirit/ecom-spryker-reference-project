@@ -1,0 +1,40 @@
+import de.espirit.firstspirit.agency.StoreElementAgent;
+import de.espirit.firstspirit.access.store.IDProvider;
+import de.espirit.firstspirit.access.store.pagestore.Page;
+
+/**
+ * Sets the product SKU for a product page. 
+ *
+ * Usage: TPP_SNAP.execute('script:set_product_sku', {
+ *          pageUid: '<pageUid>', // Uid of the product page
+ *          productSku: '<productSku>' // Sku of the product to use
+ *        })
+ */
+
+if (pageUid == void || pageUid == null)
+    throw new IllegalArgumentException("Missing parameter 'pageUid'");
+
+if (productSku == void || productSku == null)
+    throw new IllegalArgumentException("Missing parameter 'productSku'");
+
+storeElementAgent = context.requireSpecialist(StoreElementAgent.TYPE);
+page = (Page) storeElementAgent.loadStoreElement(pageUid, Page.UID_TYPE, false);
+if(page != null) {
+    try {
+        page.setLock(true, true);
+        formData = page.getFormData();
+        productSkuFormField = formData.get(null, "pt_productSku");
+        productSkuFormField.set(productSku);
+        page.setFormData(formData);
+        page.save("Setting product sku for product page.");
+    } catch (e) {
+        context.logError("Failed to set product SKU form field of product page " + pageUid, e);
+    } finally {
+        try {
+            page.setLock(false, true);
+        } catch (e) {
+            context.logError("Failed to unlock product page " + pageUid, e);
+        }
+    }
+}
+return null;

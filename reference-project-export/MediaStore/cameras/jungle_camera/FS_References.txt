@@ -1,0 +1,6 @@
+[self]
+uid=jungle_camera
+gid=fee22c9d-fdac-4e9d-9a3b-ff77332fb7c6
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

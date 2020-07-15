@@ -1,0 +1,57 @@
+import de.espirit.firstspirit.access.store.IDProvider;
+import de.espirit.firstspirit.agency.OperationAgent;
+import de.espirit.firstspirit.store.operations.ReleaseOperation;
+import de.espirit.firstspirit.agency.OperationAgent;
+import de.espirit.firstspirit.ui.operations.RequestOperation;
+import de.espirit.firstspirit.access.store.LockException;
+import de.espirit.firstspirit.access.store.ElementDeletedException;
+
+checkOnly = false; 
+releaseParentPath = true;	
+recursive = false;		
+IDProvider.DependentReleaseType dependentType = IDProvider.DependentReleaseType.NO_DEPENDENT_RELEASE;
+
+idProvider = context.getElement();
+
+errorMessage = "";
+
+if (idProvider != null) {
+	try {
+	  idProvider.setLock(false, true);
+	  try {
+	    operationAgent = context.requireSpecialist(OperationAgent.TYPE);
+	    releaseOperation = operationAgent.getOperation(ReleaseOperation.TYPE);
+
+	    releaseOperation
+	    	.checkOnly(checkOnly)
+	    	.ensureAccessibility(releaseParentPath)
+	    	.recursive(recursive)
+	    	.dependentReleaseType(dependentType)
+	    	.perform(idProvider);
+	  } catch (e) {
+	    errorMessage = "Failed to release object with uid '" + idProvider.getUid() + "'!";
+	  } finally {
+	    idProvider.setLock(true, false);
+	  }
+	} catch (LockException e) {
+	  errorMessage = "Failed to release object '" + idProvider.getUid() + "' because it is currently being edited!\nPlease try again later.";
+	} catch (ElementDeletedException e) {
+	  errorMessage = "Failed to release object '" + idProvider.getUid() + "' because it has been deleted on the server!";
+	} catch (e) {
+	  errorMessage = "Failed to release object with uid '" + idProvider.getUid() + "'!";
+	}
+} else {
+  errorMessage = "Failed to release object because the related element couldn't be found!";
+}
+
+if(!errorMessage.isEmpty()) {
+    operationAgent = context.requireSpecialist(OperationAgent.TYPE);
+    requestOperation = operationAgent.getOperation(RequestOperation.TYPE);
+    requestOperation.setKind(RequestOperation.Kind.ERROR);
+    requestOperation.setTitle("Oops..");
+    selectedAnswer = requestOperation.perform(errorMessage);
+    context.logError(errorMessage);
+    context.gotoErrorState(errorMessage, null);
+} else {
+    context.doTransition("release");
+}

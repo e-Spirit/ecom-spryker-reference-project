@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <CMS_GROUP tabs="top">
+
+    <CMS_GROUP>
+      <LANGINFOS>
+        <LANGINFO lang="*" label="General Config"/>
+        <LANGINFO lang="DE" label="Allgemein"/>
+      </LANGINFOS>
+
+      <CMS_GROUP>
+
+        <CMS_LABEL>
+          <LANGINFOS>
+            <LANGINFO lang="*" label="Choose the store for which the content will be visible after publishing."/>
+            <LANGINFO lang="DE" label="Auswahl des Stores, auf dem der Inhalt nach der Publizierung sichtbar ist."/>
+          </LANGINFOS>
+        </CMS_LABEL>
+
+        <CMS_INPUT_COMBOBOX name="ps_activeStore" hFill="no" useLanguages="no">
+          <ENTRIES>
+            <ENTRY value="DE">
+              <LANGINFOS>
+                <LANGINFO lang="*" label="DE"/>
+              </LANGINFOS>
+            </ENTRY>
+            <ENTRY value="AT">
+              <LANGINFOS>
+                <LANGINFO lang="*" label="AT"/>
+              </LANGINFOS>
+            </ENTRY>
+            <ENTRY value="US">
+              <LANGINFOS>
+                <LANGINFO lang="*" label="US"/>
+              </LANGINFOS>
+            </ENTRY>
+          </ENTRIES>
+          <LANGINFOS>
+            <LANGINFO lang="*" label="Active Store"/>
+            <LANGINFO lang="DE" label="Aktiver Store"/>
+          </LANGINFOS>
+        </CMS_INPUT_COMBOBOX>
+
+      </CMS_GROUP>
+
+      <CMS_GROUP>
+
+        <CMS_LABEL>
+          <LANGINFOS>
+            <LANGINFO lang="*" label="Choose the page reference that is responsible for rendering the navigations."/>
+            <LANGINFO lang="DE" label="Auswahl der Seitenreferenz, die für die Ausgabe der Navigationen zuständig ist."/>
+          </LANGINFOS>
+        </CMS_LABEL>
+
+        <FS_REFERENCE name="ps_navigationsPageReference" hFill="yes" useLanguages="no">
+          <FILTER>
+            <ALLOW type="pageref"/>
+          </FILTER>
+          <LANGINFOS>
+            <LANGINFO lang="*" label="Page reference"/>
+            <LANGINFO lang="DE" label="Seitenreferenz"/>
+          </LANGINFOS>
+          <PROJECTS>
+            <LOCAL name=".">
+              <SOURCES>
+                <FOLDER name="technical" store="sitestore"/>
+              </SOURCES>
+            </LOCAL>
+          </PROJECTS>
+        </FS_REFERENCE>
+
+      </CMS_GROUP>
+
+    </CMS_GROUP>
+
+    <CMS_GROUP>
+      <LANGINFOS>
+        <LANGINFO lang="*" label="Static Pages"/>
+      </LANGINFOS>
+
+      <FS_CATALOG name="ps_staticLinks" useLanguages="no" viewMode="details">
+        <LANGINFOS>
+          <LANGINFO lang="*" label="Static Page URLs"/>
+          <LANGINFO lang="*" label="Statische Seiten URLs"/>
+        </LANGINFOS>
+        <TEMPLATES type="section">
+          <TEMPLATE uid="static_page_url"/>
+        </TEMPLATES>
+      </FS_CATALOG>
+
+      <FS_BUTTON name="ps_staticLinkUpdate" icon="fs:edit" onClick="class:ContentConnectSpryker_ProjectProperiesStaticPageUrlList">
+        <LANGINFOS>
+          <LANGINFO lang="*" label="Static Page Templates Import"/>
+          <LANGINFO lang="DE" label="Statische Seiten Templates Import"/>
+        </LANGINFOS>
+        <PARAMS>
+          <PARAM name="staticPageUrlTemplateUid">static_page_url</PARAM>
+          <PARAM name="pageTemplateFsReference">st_pageTemplate</PARAM>
+          <PARAM name="staticPageTemplateFolder">static_pages</PARAM>
+          <PARAM name="staticPageCatalog">#field.ps_staticLinks</PARAM>
+        </PARAMS>
+      </FS_BUTTON>
+
+    </CMS_GROUP>
+
+  </CMS_GROUP>
+
+</CMS_MODULE>

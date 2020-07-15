@@ -1,0 +1,6 @@
+[self]
+uid=apple_watch_and_fitness_tracker
+gid=886f3bf9-732d-4489-9b48-99149d9f2b0a
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

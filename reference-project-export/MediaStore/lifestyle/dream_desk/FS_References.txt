@@ -1,0 +1,6 @@
+[self]
+uid=dream_desk
+gid=72c4e3ba-2c8c-44e6-b91a-2c5798066bca
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

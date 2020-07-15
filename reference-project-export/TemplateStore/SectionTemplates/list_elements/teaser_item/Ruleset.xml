@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RULES>
+	<RULE>
+		<WITH>
+			<OR>
+				<PROPERTY name="EMPTY" source="st_picture"/>
+				<EQUAL>
+					<PROPERTY name="ENTRY" source="st_teaserVariation"/>
+					<TEXT>hero</TEXT>
+				</EQUAL>
+			</OR>
+		</WITH>
+		<DO>
+			<NOT>
+				<PROPERTY name="VISIBLE" source="st_picturePosition"/>
+			</NOT>
+		</DO>
+	</RULE>
+	<RULE>
+		<WITH>
+			<EQUAL>
+				<PROPERTY name="ENTRY" source="st_teaserVariation"/>
+				<TEXT>action</TEXT>
+			</EQUAL>
+		</WITH>
+		<DO>
+			<PROPERTY name="VISIBLE" source="st_teaserText"/>
+		</DO>
+	</RULE>
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="st_picture"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="RELEASE">
+					<PROPERTY name="VALID" source="st_picture"/>
+					<MESSAGE lang="*" text="This form element must not be empty!"/>
+					<MESSAGE lang="DE" text="Diese Eingabekomponente darf nicht leer sein!"/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+	<RULE>
+		<WITH>
+			<EQUAL>
+				<PROPERTY name="VALUE" source="st_teaserVariation.value"/>
+				<TEXT>hero</TEXT>
+			</EQUAL>
+		</WITH>
+		<DO>
+			<NOT>
+				<PROPERTY name="VISIBLE" source="st_linkText"/>
+			</NOT>
+		</DO>
+	</RULE>
+	<RULE>
+		<WITH>
+			<EQUAL>
+				<PROPERTY name="ENTRY" source="st_teaserVariation"/>
+				<TEXT>action</TEXT>
+			</EQUAL>
+		</WITH>
+		<DO>
+			<PROPERTY name="VISIBLE" source="st_linkText"/>
+		</DO>
+	</RULE>
+</RULES>

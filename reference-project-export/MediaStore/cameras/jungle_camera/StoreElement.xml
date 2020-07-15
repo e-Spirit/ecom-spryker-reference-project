@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="JungleCamera" id="-4893226604502830431" type="pic" uniquedescription="jungle_camera">
+	<LANG displayname="Jungle Camera" language="EN"/>
+	<LANG displayname="Jungle Kamera" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1432.0,4480.0,3241.0,0,false" extension="jpg" height="983" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,1915.0,4480.0,896.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="253.0,1209.0,3957.0,4002.0,0,false" extension="jpg" height="4002" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3957"/>
+		<RESOLUTION cropData="73.0,1716.0,4406.0,2476.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="6720" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4480"/>
+	</PICTURE>
+</MEDIUM>

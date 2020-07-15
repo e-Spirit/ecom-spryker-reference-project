@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RULES>
+	<RULE>
+		<WITH>
+			<MATCHES regex="(https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,})">
+				<PROPERTY name="VALUE" source="lt_linkUrl"/>
+			</MATCHES>
+		</WITH>
+		<DO>
+			<VALIDATION scope="RELEASE">
+				<PROPERTY name="VALID" source="lt_linkUrl"/>
+				<MESSAGE lang="*" text="Please enter valid url"/>
+			</VALIDATION>
+		</DO>
+	</RULE>
+	<!-- mandatory -->
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="lt_linkUrl"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="SAVE">
+					<PROPERTY name="VALID" source="lt_linkUrl"/>
+					<MESSAGE lang="*" text="This form element must not be empty!"/>
+					<MESSAGE lang="DE" text="Diese Eingabekomponente darf nicht leer sein!"/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+</RULES>

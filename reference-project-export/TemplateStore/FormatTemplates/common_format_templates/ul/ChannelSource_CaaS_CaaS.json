@@ -1,0 +1,11 @@
+$CMS_IF(#list.style == 2)$$--
+	--$<ol>$--
+--$$CMS_ELSE$$--
+	--$<ul>$--
+--$$CMS_END_IF$$--
+--$$CMS_VALUE(#content)$$--
+--$$CMS_IF(#list.style == 2)$$--
+	--$</ol>$--
+--$$CMS_ELSE$$--
+	--$</ul>$--
+--$$CMS_END_IF$

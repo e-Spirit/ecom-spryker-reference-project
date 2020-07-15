@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<FIELDS>
+	<FIELD name='st_dataSource'><UID>magazine_articles</UID><UIDTYPE>CONTENTSTORE</UIDTYPE><REMOTE/></FIELD>
+	<FIELD name='st_sortingOrder'><SEL><VALUE>descending</VALUE></SEL></FIELD>
+</FIELDS>

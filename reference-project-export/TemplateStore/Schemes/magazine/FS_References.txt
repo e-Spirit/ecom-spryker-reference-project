@@ -1,0 +1,6 @@
+[self]
+uid=magazine
+gid=679b452a-3d3b-4f8a-a168-0549a4de46d9
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.SchemaImpl
+

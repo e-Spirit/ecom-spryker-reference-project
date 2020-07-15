@@ -1,0 +1,6 @@
+[self]
+uid=fitness_watch_on_wrist
+gid=59307091-afac-45fe-b01b-a750c0b2f07a
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

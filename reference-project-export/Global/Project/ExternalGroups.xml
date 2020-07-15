@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OBJECT class="java.util.ArrayList">
+	<OBJECT class="de.espirit.firstspirit.server.projectmanagement.ExternalGroupDTO">
+		<FIELD name="_admin" type="boolean">true</FIELD>
+		<FIELD name="_email"><NULL/><!-- class java.lang.String --></FIELD>
+		<FIELD name="_externalName">
+			<OBJECT class="java.lang.String">cn=demo-ecommerce-projectadmins,ou=demo,ou=Groups,dc=ecs,dc=e-spirit,dc=de</OBJECT>
+		</FIELD>
+		<FIELD name="_id" type="long">-4385537291989015278</FIELD>
+		<FIELD name="_name">
+			<OBJECT class="java.lang.String">ProjectAdmins</OBJECT>
+		</FIELD>
+	</OBJECT>
+	<OBJECT class="de.espirit.firstspirit.server.projectmanagement.ExternalGroupDTO">
+		<FIELD name="_admin" type="boolean">false</FIELD>
+		<FIELD name="_email"><NULL/><!-- class java.lang.String --></FIELD>
+		<FIELD name="_externalName">
+			<OBJECT class="java.lang.String">cn=demo-ecommerce-editors,ou=demo,ou=Groups,dc=ecs,dc=e-spirit,dc=de</OBJECT>
+		</FIELD>
+		<FIELD name="_id" type="long">-6970423860054070039</FIELD>
+		<FIELD name="_name">
+			<OBJECT class="java.lang.String">Editors</OBJECT>
+		</FIELD>
+	</OBJECT>
+	<OBJECT class="de.espirit.firstspirit.server.projectmanagement.ExternalGroupDTO">
+		<FIELD name="_admin" type="boolean">false</FIELD>
+		<FIELD name="_email"><NULL/><!-- class java.lang.String --></FIELD>
+		<FIELD name="_externalName">
+			<OBJECT class="java.lang.String">cn=demo-ecommerce-chiefeditors,ou=demo,ou=Groups,dc=ecs,dc=e-spirit,dc=de</OBJECT>
+		</FIELD>
+		<FIELD name="_id" type="long">3011663112730059853</FIELD>
+		<FIELD name="_name">
+			<OBJECT class="java.lang.String">ChiefEditors</OBJECT>
+		</FIELD>
+	</OBJECT>
+</OBJECT>

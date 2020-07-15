@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RULES>
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="st_link"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<PROPERTY name="VISIBLE" source="st_linkText"/>
+			</NOT>
+		</DO>
+	</RULE>
+</RULES>

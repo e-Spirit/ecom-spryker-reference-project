@@ -1,0 +1,6 @@
+[self]
+uid=set_product_sku
+gid=6a5f3465-9300-467a-abbd-36ee77d9dae3
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

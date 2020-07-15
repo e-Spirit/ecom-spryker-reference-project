@@ -1,0 +1,25 @@
+$CMS_IF(!lt_product.isEmpty())$
+	$CMS_IF(lt_product.identifiers[0] == "error_404")$
+		$--
+		If this error occurs the product is not available via Glue Api
+		Possible reasons:
+		- Product is deleted --> check Zed, remove link
+		- Product is removed from Store --> check Zed, remove link
+		- Glue is temporarily not available --> check Glue, check server settings, check logs
+		- Another error --> check the logs
+		--$
+		$CMS_IF(#global.preview)$
+			<span style="color: red; font-weight: bolder" title="An error occured. Please check this link. This message is only visible in the preview">
+		$CMS_END_IF$
+
+		$CMS_VALUE(lt_linkText.convert2)$
+
+		$CMS_IF(#global.preview)$
+			</span>
+		$CMS_END_IF$
+
+		$CMS_SET(void,#global.logError("Error 404: Product is not available"))$
+	$CMS_ELSE$
+		{% widget 'FirstSpiritProductLinkWidget' args ["$CMS_VALUE(lt_product.identifiers[0])$", "$CMS_VALUE(lt_linkText.convert2)$"] only %}{% endwidget %}
+	$CMS_END_IF$
+$CMS_END_IF$

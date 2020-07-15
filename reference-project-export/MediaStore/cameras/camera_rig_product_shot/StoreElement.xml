@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="CameraRigProductShot" id="-8931981184857727783" type="pic" uniquedescription="camera_rig_product_shot">
+	<LANG displayname="Camera Rig Productshot" language="EN"/>
+	<LANG displayname="Camera Rig Produktfoto" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,680.0,5415.0,1435.0,0,false" extension="jpg" height="360" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="1329.0,340.0,3648.0,3308.0,0,false" extension="jpg" height="3308" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3648"/>
+		<RESOLUTION cropData="291.0,714.0,5148.0,1038.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="992.0,539.0,4176.0,2352.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="3648" mimetype="image/jpeg" resolutionid="ORIGINAL" width="5472"/>
+	</PICTURE>
+</MEDIUM>

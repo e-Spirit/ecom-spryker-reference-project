@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTEMPLATE id="1588167839066169934" name="nav_type_render">
+	<LANG displayname="Nav Type Render" language="EN"/>
+	<LANG displayname="Navigationstyp" language="DE"/>
+	<style tag="nav_type_render" view="marked">
+		<attr name="align" value="left"/>
+		<render/>
+	</style>
+</FORMATTEMPLATE>

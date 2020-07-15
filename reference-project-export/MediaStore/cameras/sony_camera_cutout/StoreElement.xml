@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="SonyCameraCutout" id="-549377511141410340" type="pic" uniquedescription="sony_camera_cutout">
+	<LANG displayname="Sony Camera Cutout" language="EN"/>
+	<LANG displayname="Sony Kamera-Ausschnitt" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1430.0,2848.0,570.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,321.0,2848.0,2479.0,0,false" extension="jpg" height="2479" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2848"/>
+		<RESOLUTION cropData="0.0,740.0,2848.0,2506.0,0,false" extension="jpg" height="1196" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="421.0,990.0,2417.0,1358.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="4272" mimetype="image/jpeg" resolutionid="ORIGINAL" width="2848"/>
+	</PICTURE>
+</MEDIUM>

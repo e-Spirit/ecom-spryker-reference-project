@@ -1,0 +1,12 @@
+[self]
+uid=navigations
+gid=c4172c27-81bd-42c5-ab00-78c5433c6d45
+uidType=SITESTORE_LEAF
+class=de.espirit.firstspirit.store.access.sitestore.PageRefImpl
+
+[requiredId]
+uid=navigations
+gid=d84878ea-48ea-4840-8844-15f5505bdc84
+uidType=PAGESTORE
+class=de.espirit.firstspirit.store.access.pagestore.PageImpl
+

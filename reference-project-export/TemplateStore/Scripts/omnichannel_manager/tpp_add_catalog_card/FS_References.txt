@@ -1,0 +1,6 @@
+[self]
+uid=tpp_add_catalog_card
+gid=38612473-1fd9-43ea-9918-8c69e2d8b5ad
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

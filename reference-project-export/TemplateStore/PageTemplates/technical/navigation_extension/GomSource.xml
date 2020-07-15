@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <CMS_INPUT_TEXT name="pt_navigationKey" allowEmpty="no" hFill="yes" hidden="yes" singleLine="no" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Navigation Key"/>
+      <LANGINFO lang="DE" label="Navigations-Key"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+  <FS_CATALOG name="pt_startNodes" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Start nodes for extending the navigation"/>
+      <LANGINFO lang="DE" label="Startknoten zur Erweiterung der Navigation"/>
+    </LANGINFOS>
+    <TEMPLATES type="section">
+      <TEMPLATE uid="navigation_node_reference"/>
+    </TEMPLATES>
+  </FS_CATALOG>
+
+</CMS_MODULE>

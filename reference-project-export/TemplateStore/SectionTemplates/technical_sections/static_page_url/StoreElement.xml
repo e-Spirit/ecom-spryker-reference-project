@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEMPLATE filename="static_page_url" id="-5010504121796708002" templateid="-330986259428420491" type="section">
+	<EXTENSION anchor="0" file="html" link="html" templateSet="9062318847741885912"/>
+	<EXTENSION anchor="0" file="json" link="json" templateSet="-1285658006509869299"/>
+	<LANG displayname="Static Page Url" language="EN"/>
+	<LANG displayname="Statische Seiten Url" language="DE"/>
+</TEMPLATE>

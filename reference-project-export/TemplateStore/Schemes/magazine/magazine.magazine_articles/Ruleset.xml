@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RULES>
+	<!-- pattern_matching -->
+	<RULE>
+		<WITH>
+			<MATCHES regex="^[\/A-Za-z0-9_.\-]+$">
+				<PROPERTY name="VALUE" source="tt_url"/>
+			</MATCHES>
+		</WITH>
+		<DO>
+			<VALIDATION scope="SAVE">
+				<PROPERTY name="VALID" source="tt_url"/>
+				<MESSAGE lang="DE" text="Die eingegebene Seitenurl ist nicht valide. Erlaubte Zeichen sind folgende: A-Z a-z 0-9 / _ . -"/>
+				<MESSAGE lang="*" text="The entered page url is not valid. Allowed characters are: A-Z a-z 0-9 / _ . -"/>
+			</VALIDATION>
+		</DO>
+	</RULE>
+	<!-- mandatory -->
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="tt_title"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="SAVE">
+					<PROPERTY name="VALID" source="tt_title"/>
+					<MESSAGE lang="*" text="This form element must not be empty!"/>
+					<MESSAGE lang="DE" text="Diese Eingabekomponente darf nicht leer sein!"/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+	<RULE>
+		<SCHEDULE id="x" service="ContentConnectSpryker_RandomIdGenerationValueService">
+			<CONDITION>
+				<PROPERTY name="EMPTY" source="tt_page_identifier"/>
+			</CONDITION>
+			<PARAM name="prefix">
+				<TEXT>magazine_article_</TEXT>
+			</PARAM>
+		</SCHEDULE>
+		<DO>
+			<PROPERTY name="VALUE" source="tt_page_identifier"/>
+		</DO>
+	</RULE>
+	<RULE>
+		<WITH>
+			<AND>
+				<NOT>
+					<PROPERTY name="WEB" source="#global"/>
+				</NOT>
+				<OR>
+					<IN_GROUP name="ProjectAdmins"/>
+					<IN_GROUP name="Administrators"/>
+				</OR>
+			</AND>
+		</WITH>
+		<DO>
+			<PROPERTY name="VISIBLE" source="tt_page_identifier"/>
+		</DO>
+	</RULE>
+</RULES>

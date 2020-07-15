@@ -1,0 +1,301 @@
+$CMS_TRIM(level:4)$
+
+$CMS_IF(isSet(schedule))$
+	$-- make "schedule" (ScheduleEntryControl) printable as "scheduleTaskResults" --$
+	$CMS_SET(RunState, class("de.espirit.firstspirit.access.schedule.RunState"))$
+
+	$CMS_SET(LOG_LEVELS, { "FATAL": "Consolidated Fatal Errors", "ERROR": "Consolidated Errors", "WARN": "Consolidated Warnings" })$
+	$CMS_SET(LOG_PATTERN, class("java.util.regex.Pattern").compile("^(" + LOG_LEVELS.keySet.toString("|") + ")\\s+[^(]+(.*)$"))$
+
+	$CMS_SET(downloadUrlPrefix, #global
+		.requireSpecialist(class("de.espirit.firstspirit.agency.LegacyModuleAgent").TYPE)
+		.getGlobalWebAppUrl(class("de.espirit.firstspirit.agency.GlobalWebAppId").WEBMON.globalId)
+			+ "/Monitoring/do.TailScheduleLogServlet?download=true"
+			+ "&project=" + schedule.scheduleEntry.project.id
+			+ "&schedule=" + schedule.scheduleEntry.id
+			+ "&control=" + schedule.id
+			+ "&task="
+	)$
+	
+	$CMS_SET(scheduleTaskResults, schedule.state.taskResults
+		.filter(r -> r.state != RunState.RUNNING)
+		.map(result -> {
+			"state": result.state.name(),
+			"color": {
+				RunState.SUCCESS: "green",
+				RunState.NOT_STARTED: "gray",
+				RunState.ERROR: "red",
+				RunState.FINISHED_WITH_ERRORS: "orange"
+			}.get(result.state),
+			"name": result.task.name.convert2,
+			"download": if(result.state != RunState.NOT_STARTED, downloadUrlPrefix + schedule.state.taskResults.indexOf(result)),
+			"taskResults": result,
+			"problems": []
+				+ if(result.warningCount == 0, [], if(result.warningCount == 1, "1 warning", result.warningCount + " warnings"))
+				+ if(result.errorCount == 0, [], if(result.errorCount == 1, "1 error", result.errorCount + " errors"))
+				+ if(result.fatalErrorCount == 0, [], if(result.fatalErrorCount == 1, "1 fatal error", result.fatalErrorCount + " fatal errors"))
+			}
+		)
+	)$
+$CMS_END_IF$
+
+$CMS_SET(elementDisplayName)$
+	$CMS_IF(isSet(element))$
+		$CMS_IF(element.isDeleted())$
+			<i>$CMS_VALUE(element.displayName)$</i>
+		$CMS_ELSE$
+			<a href="$CMS_VALUE(element.webeditUrl)$">$CMS_VALUE(element.displayName)$<a>
+		$CMS_END_IF$
+	$CMS_END_IF$
+$CMS_END_SET$
+
+
+$CMS_IF("SCHEDULE_ERROR" == mailType)$
+	$-- a schedule ran into an error --$
+	$CMS_SET(headline)$
+		Execution of task $CMS_VALUE(schedule.scheduleEntry.name.convert2)$ failed
+	$CMS_END_SET$
+
+	$CMS_SET(intro)$
+		The execution of the task <b>$CMS_VALUE(schedule.scheduleEntry.name.convert2)$</b> was unsuccessful.<br>
+		This means, one or more actions returned errors.
+		<br><br>
+		Please find below the status of the individual actions of the task along with their results.
+		If you click on the action titles you can download the whole logfile for the action (you might have
+		to log in to FirstSpirit in order to complete the download).
+		<br><br>
+		If you are unable to resolve the issue with the information provided in this mail please contact the
+		e-Spirit <a href="https://help.e-spirit.com/" style="color:#aaaaaa">Technical Support</a> for further assistance.
+	$CMS_END_SET$
+
+$CMS_ELSIF("RELEASED_NO_DEPLOYMENT" == mailType)$
+	$CMS_SET(headline)$
+		FirstSpirit Release successfully completed
+	$CMS_END_SET$
+
+	$CMS_SET(intro)$
+		The execution of the release for page $CMS_VALUE(elementDisplayName)$ was successful.<br>
+		If you want to publish the content into Spryker, you have to start the release workflow with the action "Page Publication"
+		or start the full publication via the actions menu in the ContentCreator.
+	$CMS_END_SET$
+
+$CMS_ELSIF("RELEASED_DEPLOYED_SUCCESS" == mailType)$
+	$CMS_SET(headline)$
+		FirstSpirit Release and Publication successfully completed
+	$CMS_END_SET$
+
+	$CMS_SET(intro)$
+		The release for page $CMS_VALUE(elementDisplayName)$ and execution of the publication
+		task <b>$CMS_VALUE(schedule.scheduleEntry.name.convert2)$</b> was successful. <br>
+		This means, all actions finished and your content has been published to Spryker.
+		<br><br>
+		Please find below the status of the individual actions of the publication task along with their results.
+	$CMS_END_SET$
+
+$CMS_ELSIF("RELEASED_DEPLOYED_ERROR" == mailType)$
+	$CMS_SET(headline)$
+		FirstSpirit Publication failed
+	$CMS_END_SET$
+
+	$CMS_IF(!isSet(schedule))$
+		$CMS_SET(intro)$
+			Your page $CMS_VALUE(elementDisplayName)$ was successful released, however the execution of the publication
+			task could not be completed.<br>
+			<b>Please specify the Publication task in the project component configuration.</b>
+		$CMS_END_SET$
+	$CMS_ELSE$
+		$CMS_SET(intro)$
+			Your page $CMS_VALUE(elementDisplayName)$ was successful released, however the execution of the publication
+			task <b>$CMS_VALUE(schedule.scheduleEntry.name.convert2)$</b> could not be completed.<br>
+			This means, one or more of the actions returned errors and your content has not been published to Spryker.
+			<br><br>	
+			A copy of the information below was sent to $CMS_VALUE(schedule.scheduleEntry.email)$.
+		$CMS_END_SET$
+	$CMS_END_IF$
+
+	
+$CMS_ELSIF("DELETED_NO_DEPLOYMENT" == mailType)$
+	$CMS_SET(headline)$
+		FirstSpirit Page Deletion was successful
+	$CMS_END_SET$
+
+	$CMS_SET(intro)$
+		The page $CMS_VALUE(elementDisplayName)$ was successfully deleted. If you want to delete the content from Spryker,
+		you have to start the full publication via the actions menu in the ContentCreator.
+	$CMS_END_SET$
+
+$CMS_ELSIF("DELETED_DEPLOYED_SUCCESS" == mailType)$
+	$CMS_SET(headline)$
+		FirstSpirit Page Deletion and Publication were successfully completed
+	$CMS_END_SET$
+	
+	$CMS_SET(intro)$
+		The execution of the deletion with publication task <b>$CMS_VALUE(schedule.scheduleEntry.name.convert2)$</b> for
+		page "$CMS_VALUE(element.displayName)$" was successful. <br>
+		This means, all actions have been finished and your content has been deleted from Spryker.
+		<br><br>
+		Please find below the status of the individual actions of the task along with their results. 
+		If you click on the action titles you can download the whole logfile for the action (you might have to
+		log in to FirstSpirit in order to complete the download).
+	$CMS_END_SET$
+
+$CMS_ELSIF("DELETED_DEPLOYED_ERROR" == mailType)$
+	$CMS_SET(headline)$
+		FirstSpirit Page Deletion was successful, but the Publication failed
+	$CMS_END_SET$
+
+	$CMS_SET(intro)$
+		The page $CMS_VALUE(elementDisplayName)$ was successfully deleted, however the execution of the publication
+		task could not be completed.<br>
+
+		$CMS_IF(!isSet(schedule))$
+			<b>Please specify the Publication task in the project component configuration.</b>
+		$CMS_ELSE$
+			The execution of the publication task <b>$CMS_VALUE(schedule.scheduleEntry.name.convert2)$</b> was unsuccessful.
+			This means, one or more of the actions returned errors and your content has not been published to Spryker.
+			<br><br>
+			A detailed information email was sent to $CMS_VALUE(schedule.scheduleEntry.email)$.
+		$CMS_END_IF$
+	$CMS_END_SET$
+
+$CMS_END_IF$
+
+
+$CMS_IF(isSet(Mailer))$
+	$CMS_SET(void, Mailer.subject(#global.project.name + " - " + headline.toString.trim))$
+$CMS_END_IF$
+			
+$CMS_SET(styles, {
+	"background": "#F0F0F0",
+	"baseSize": 24,
+	"font": "font-family: Helvetica, Arial, sans-serif"
+})$
+
+$CMS_SET(cssContent)$$CMS_TRIM(level:4)$
+	background-color: #ffffff;
+	padding: $CMS_VALUE(styles.baseSize)$px;
+$CMS_END_TRIM$$CMS_END_SET$
+
+$CMS_SET(cssCopyTitle)$$CMS_TRIM(level:4)$
+	$CMS_VALUE(styles.font)$;
+	color: #605D7C;
+	font-size: $CMS_VALUE(styles.baseSize * 0.75)$px;
+$CMS_END_TRIM$$CMS_END_SET$
+
+$CMS_SET(cssCopy)$$CMS_TRIM(level:4)$
+	$CMS_VALUE(styles.font)$;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+$CMS_END_TRIM$$CMS_END_SET$
+
+$CMS_SET(cssFooter)$$CMS_TRIM(level:4)$
+	$CMS_VALUE(styles.font)$;
+	color: #AAAAAA;
+	padding-left: $CMS_VALUE(styles.baseSize)$px;
+	padding-right: $CMS_VALUE(styles.baseSize)$px;
+	font-size: $CMS_VALUE(styles.baseSize/2)$px;
+	line-height: $CMS_VALUE(styles.baseSize * 0.75)$px;
+	text-align:center;
+	height: 35px;
+$CMS_END_TRIM$$CMS_END_SET$
+
+$CMS_SET(cssLog)$$CMS_TRIM(level:4)$
+	background-color: #EEEEEE;
+	padding: 2px 4px;
+	font-family: monospace;
+	white-space: pre;
+	font-size: 12px;
+	line-height: 16px;
+$CMS_END_TRIM$$CMS_END_SET$
+
+
+$CMS_END_TRIM$<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="format-detection" content="date=no">
+		<meta name="format-detection" content="telephone=no">
+		<title></title>
+		<style type="text/css">
+			body { margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+			table { border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+			table td { border-collapse: collapse; }
+		</style>
+	</head>
+	<body style="margin:0;padding:0;" bgcolor="$CMS_VALUE(styles.background)$" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+		<table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" bgcolor="$CMS_VALUE(styles.background)$" style="padding:20px 20px 0 20px">
+			<tr>
+				<td align="center" valign="top" bgcolor="$CMS_VALUE(styles.background)$" style="background-color:$CMS_VALUE(styles.background)$;">
+					<br>
+					<table border="0" cellpadding="0" cellspacing="0" width="98%">
+						<tr>
+							<td style="$CMS_VALUE(cssContent)$">
+								<div style="$CMS_VALUE(cssCopyTitle)$"><b>$CMS_VALUE(headline)$</b></div><br>
+								<div style="$CMS_VALUE(cssCopy)$">$CMS_VALUE(intro)$</div>
+							</td>
+						</tr>
+							$CMS_IF(isSet(schedule))$
+								</table>
+								<br><br>
+								<table border="0" cellpadding="0" cellspacing="0" width="98%">
+									<tr>
+										<td style="$CMS_VALUE(cssContent)$">
+
+											<div style="$CMS_VALUE(cssCopyTitle)$"><b>Project: $CMS_VALUE(#global.project.name)$</b></div><br>
+											<div style="$CMS_VALUE(cssCopyTitle)$"><b>Task: $CMS_VALUE(schedule.scheduleEntry.name.convert2)$</b></div><br>
+											<div style="$CMS_VALUE(cssCopy)$">
+												Started $CMS_VALUE(schedule.startTime.format("yyyy-MM-dd HH:mm:ss"))$, by $CMS_VALUE(schedule.user.loginName)$.
+												<br><br>
+											</div>
+											$CMS_FOR(result, scheduleTaskResults)$
+												<div style="height:1px;border-bottom:1px solid #cccccc">&nbsp;</div><br>
+												<div style="$CMS_VALUE(cssCopyTitle)$">
+													Action '$CMS_IF(!result.download.empty)$<a href="$CMS_VALUE(result.download)$">$CMS_VALUE(result.name)$</a>$CMS_ELSE$$CMS_VALUE(result.name)$$CMS_END_IF$': <code style="font-family:monospace; font-weight: bold; color: $CMS_VALUE(result.color, default:"inherit")$">$CMS_VALUE(result.state)$</code></div>
+												<div style="$CMS_VALUE(cssCopy)$">
+													$CMS_IF(!result.problems.empty)$
+														($CMS_VALUE(result.problems.toString(", "))$)<br><br>
+
+														$CMS_SET(consolidated, LOG_LEVELS.keySet.fold(map:{:},type->map.set(type,{:})))$
+														$CMS_SET(void, class("de.espirit.common.tools.Streams")
+															.toString(result.taskResults.logfile, "utf8")
+															.split("\n")
+															.map(line -> LOG_PATTERN.matcher(line))
+															.filter(matcher -> matcher.find())
+															.map(matcher -> { "type": matcher.group(1), "text": matcher.group(2) })
+															.filter(msg -> consolidated[msg.type].set(msg.text, if(consolidated[msg.type][msg.text].empty, 1, consolidated[msg.type][msg.text] + 1)))
+														)$
+														$CMS_FOR(logType, LOG_LEVELS.keySet.filter(type -> !consolidated[type].empty))$
+															<b>$CMS_VALUE(LOG_LEVELS[logType])$</b>
+															<pre style="$CMS_VALUE(cssLog)$">$CMS_VALUE(
+																([] + consolidated[logType].entrySet)
+																.sort(entry -> -entry.value)
+																.map(entry -> entry.value + "x " + entry.key)
+																.toString("\n")
+															)$</pre>
+														$CMS_END_FOR$
+													$CMS_ELSE$
+														<br>
+													$CMS_END_IF$
+												</div>
+											$CMS_END_FOR$
+
+											<br><br>
+										</td>
+									</tr>
+							$CMS_END_IF$
+						<tr>
+							<td class="footer-text" style="$CMS_VALUE(cssFooter)$">
+								<small>This Mail was sent by the FirstSpirit Server at <a href="$CMS_VALUE(#global.webeditUrl)$" style="color:#aaaaaa">$CMS_VALUE(#global.webeditUrl)$</a>.</small>
+								<br>
+							</td>
+						</tr>
+					</table>					
+				</td>
+			</tr>
+		</table>
+		<br>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="FitnessWatchOnWrist" id="1776583799067733941" type="pic" uniquedescription="fitness_watch_on_wrist">
+	<LANG displayname="Fitness Watch am Handgelenk" language="DE"/>
+	<LANG displayname="Fitness Watch on Wrist" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1207.0,5184.0,1044.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="1128.0,721.0,2657.0,2396.0,0,false" extension="jpg" height="2396" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2657"/>
+		<RESOLUTION cropData="1280.0,691.0,3448.0,1940.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="15.0,791.0,5115.0,1774.0,0,false" extension="jpg" height="471" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION extension="jpg" height="3456" mimetype="image/jpeg" resolutionid="ORIGINAL" width="5184"/>
+	</PICTURE>
+</MEDIUM>

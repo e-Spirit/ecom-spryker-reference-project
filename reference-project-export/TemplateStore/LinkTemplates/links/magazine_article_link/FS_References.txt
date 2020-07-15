@@ -1,0 +1,6 @@
+[self]
+uid=magazine_article_link
+gid=e56426ed-d098-4fd1-9d1b-d774e16f59c9
+uidType=TEMPLATESTORE_LINKTEMPLATE
+class=de.espirit.firstspirit.store.access.templatestore.LinkTemplateImpl
+

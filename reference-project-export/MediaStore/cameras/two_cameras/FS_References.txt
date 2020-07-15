@@ -1,0 +1,6 @@
+[self]
+uid=two_cameras
+gid=8f04e7a4-bfdf-4bc8-a880-16425a48f7cf
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

@@ -1,0 +1,6 @@
+[self]
+uid=cam_setup
+gid=d8c65171-d2d8-4c0c-8309-8005bb4acef6
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

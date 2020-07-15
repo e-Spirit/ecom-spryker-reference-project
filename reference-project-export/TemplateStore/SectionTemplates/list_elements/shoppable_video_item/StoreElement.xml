@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEMPLATE filename="shoppable_video_item" id="3904818885994101408" templateid="-400031351032180625" type="section">
+	<EXTENSION anchor="0" file="html" link="html" templateSet="9062318847741885912"/>
+	<EXTENSION anchor="0" file="json" link="json" templateSet="-1285658006509869299"/>
+	<LANG displayname="Shoppable Video Item" language="DE"/>
+	<LANG displayname="Shoppable Video Item" language="EN"/>
+</TEMPLATE>

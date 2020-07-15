@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="SonyDSLR" id="-9059216251285461442" type="pic" uniquedescription="sony_dslr">
+	<LANG displayname="Sony DSLR" language="DE"/>
+	<LANG displayname="Sony DSLR" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1256.0,3274.0,1842.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,2044.0,3327.0,675.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="415.0,730.0,2662.0,2847.0,0,false" extension="jpg" height="2847" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2662"/>
+		<RESOLUTION cropData="9.0,1118.0,3318.0,1608.0,0,false" extension="jpg" height="659" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION extension="jpg" height="4159" mimetype="image/jpeg" resolutionid="ORIGINAL" width="3327"/>
+	</PICTURE>
+</MEDIUM>

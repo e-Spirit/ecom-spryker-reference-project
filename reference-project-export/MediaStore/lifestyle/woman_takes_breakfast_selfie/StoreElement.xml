@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="WomanTakesBreakfastSelfie" id="-7178867549929995573" type="pic" uniquedescription="woman_takes_breakfast_selfie">
+	<LANG displayname="Frau macht Frühstücksselfie" language="DE"/>
+	<LANG displayname="Woman takes Breakfast Selfie" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="12.0,318.0,3929.0,2150.0,0,false" extension="jpg" height="744" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="12.0,898.0,3916.0,789.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="464.0,404.0,3427.0,1933.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="890.0,267.0,2875.0,4719.0,0,false" extension="jpg" height="4719" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2875"/>
+		<RESOLUTION extension="jpg" height="5724" mimetype="image/jpeg" resolutionid="ORIGINAL" width="3941"/>
+	</PICTURE>
+</MEDIUM>

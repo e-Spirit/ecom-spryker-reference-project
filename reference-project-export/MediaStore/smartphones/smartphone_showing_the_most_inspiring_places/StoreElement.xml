@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="SmartphoneShowingTheMostInspiringPlaces" id="-1199710706686278392" type="pic" uniquedescription="smartphone_showing_the_most_inspiring_places">
+	<LANG displayname="Smartphone showing The Most Inspiring Places" language="EN"/>
+	<LANG displayname="Smartphone zeigt The Most Inspiring Places" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1412.0,4000.0,1404.0,0,false" extension="jpg" height="477" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,1929.0,4000.0,809.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="43.0,996.0,3956.0,2228.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="684.0,791.0,2880.0,2631.0,0,false" extension="jpg" height="2631" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2880"/>
+		<RESOLUTION extension="jpg" height="4000" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4000"/>
+	</PICTURE>
+</MEDIUM>

@@ -1,0 +1,6 @@
+[self]
+uid=tattooed_man_taking_photo_of_ocean
+gid=54d233f7-5141-4008-bcfc-b18db5175ffd
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

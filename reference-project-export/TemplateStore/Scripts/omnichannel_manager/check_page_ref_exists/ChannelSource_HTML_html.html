@@ -1,0 +1,16 @@
+import de.espirit.firstspirit.agency.StoreElementAgent;
+import de.espirit.firstspirit.access.store.IDProvider;
+
+/**
+ * Checks whether the page reference for the given page id exists.
+ *
+ * Usage: TPP_SNAP.execute('script:check_page_ref_exists', {
+ *          pageId: '<pageId>' // Id of the Spryker page
+ *        })
+ */
+
+if (pageId == void || pageId == null)
+    throw new IllegalArgumentException("Missing parameter 'pageId'");
+
+storeElementAgent = context.requireSpecialist(StoreElementAgent.TYPE);
+return storeElementAgent.loadStoreElement(pageId, IDProvider.UidType.SITESTORE_LEAF, false) != null;

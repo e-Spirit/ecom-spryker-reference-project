@@ -1,0 +1,6 @@
+[self]
+uid=wearables
+gid=6c0da44f-a2f8-4057-a945-f4c7c92c1dbb
+uidType=MEDIASTORE_FOLDER
+class=de.espirit.firstspirit.store.access.mediastore.MediaFolderImpl
+

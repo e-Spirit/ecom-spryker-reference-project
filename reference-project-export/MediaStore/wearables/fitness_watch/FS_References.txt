@@ -1,0 +1,6 @@
+[self]
+uid=fitness_watch
+gid=67083fb4-ee10-4a30-b4d2-9abe11719135
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

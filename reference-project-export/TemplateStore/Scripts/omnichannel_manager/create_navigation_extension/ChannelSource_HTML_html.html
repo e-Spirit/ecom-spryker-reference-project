@@ -1,0 +1,119 @@
+import de.espirit.firstspirit.agency.StoreAgent;
+import de.espirit.firstspirit.access.store.globalstore.GlobalStoreRoot;
+import de.espirit.firstspirit.access.store.Store;
+import de.espirit.firstspirit.access.store.IDProvider;
+import de.espirit.firstspirit.access.store.globalstore.GCAPage;
+import de.espirit.firstspirit.access.store.globalstore.GCAFolder;
+import de.espirit.firstspirit.access.store.IDProvider.UidType;
+import de.espirit.firstspirit.agency.StoreElementAgent;
+import de.espirit.firstspirit.agency.LanguageAgent;
+import de.espirit.firstspirit.agency.OperationAgent;
+import de.espirit.firstspirit.ui.operations.ShowFormDialogOperation;
+import de.espirit.firstspirit.agency.FormsAgent;
+
+/*
+ * Creates a GCA page that holds navigation extensions for a specific navigation (if the GCA page doesn't exist yet).
+ *
+ *  - Usage:
+TPP_API.Common.execute('script:create_navigation_extension', {
+    navigationKey: 'MAIN_NAVIGATION_DESKTOP',
+    language: 'en'
+});
+ */
+String GCA_FOLDER_UID = "navigation_extensions";
+String PAGE_TEMPLATE_UID = "navigation_extension";
+String NAVIGATION_NODES_CATALOG_NAME = "pt_startNodes";
+String NAVIGATION_KEY_INPUT_NAME = "pt_navigationKey";
+String NAVIGATION_NODE_TEMPLATE_UID = "navigation_node_reference";
+
+result = new HashMap();
+result{"success"} = "false";
+result{"abort"} = "false";
+result{"errorMessage"} = "";
+resultData = new HashMap();
+result{"data"} = resultData;
+
+if (language == void) {
+    throw new IllegalArgumentException("Missing parameter 'language'");
+}
+
+if (navigationKey == void) {
+    throw new IllegalArgumentException("Missing parameter 'navigationKey'");
+}
+
+_language = context.requireSpecialist(LanguageAgent.TYPE).getProjectLanguages(false).get(language);
+if (_language == null) {
+    message = "Couldn't find language with abbreviation '" + language + "'!";
+    context.logError(message);
+    result{"errorMessage"} = message;
+    return result;
+}
+
+storeElementAgent = context.requireSpecialist(StoreElementAgent.TYPE);
+
+navigationExtensionsPageTemplate = storeElementAgent.loadStoreElement(PAGE_TEMPLATE_UID, IDProvider.UidType.TEMPLATESTORE, false);
+if(navigationExtensionsPageTemplate == null) {
+    message = "Couldn't find navigation extensions page temmplate with uid '" +  PAGE_TEMPLATE_UID + "'!";
+    context.logError(message);
+    result{"errorMessage"} = message;
+    return result;
+}
+
+storeAgent = context.requestSpecialist(StoreAgent.TYPE);
+globalStore = ((GlobalStoreRoot) storeAgent.getStore(Store.Type.GLOBALSTORE)); 
+globalContentArea = globalStore.getGlobalContentArea();
+gcaFolders = globalContentArea.getChildren(GCAFolder.class);
+
+navigationExtensionsFolder = null;
+for(gcaFolder : gcaFolders) {
+    if(gcaFolder.getName().equals(GCA_FOLDER_UID)) {
+        navigationExtensionsFolder = gcaFolder;
+    }
+}
+if(navigationExtensionsFolder == null) {
+    message = "Couldn't find navigation extensions GCA folder with uid '" +  GCA_FOLDER_UID + "'!";
+    context.logError(message);
+    result{"errorMessage"} = message;
+    return result;
+}
+
+navigationExtensionsPage = null;
+for(navigationExtensionGcaPage : gcaFolder.getChildren(GCAPage.class)) {
+    if(navigationExtensionGcaPage.getUid().equals(navigationKey.toLowerCase() + "_extension")) {
+        navigationExtensionsPage = navigationExtensionGcaPage;
+        break;
+    }
+}
+
+if(navigationExtensionsPage == null) {
+    try {
+        storeElementAgent = context.requireSpecialist(StoreElementAgent.TYPE);
+        navigationExtensionsPageTemplate = storeElementAgent.loadStoreElement(PAGE_TEMPLATE_UID, IDProvider.UidType.TEMPLATESTORE, false);
+        if(navigationExtensionsPageTemplate == null) {
+            message = "Couldn't find navigation extension page temmplate with uid '" +  PAGE_TEMPLATE_UID + "'!";
+            context.logError(message);
+            result{"errorMessage"} = message;
+            return result;
+        }
+        navigationExtensionsPage = navigationExtensionsFolder.createGCAPage(navigationKey.toLowerCase() + "_extension", navigationExtensionsPageTemplate);
+        
+        navigationExtensionsPage.setLock(true, false);
+        formData = navigationExtensionsPage.getFormData();
+        formData.get(null, NAVIGATION_KEY_INPUT_NAME).set(navigationKey);
+        navigationExtensionsPage.setFormData(formData);
+        navigationExtensionsPage.save();
+        navigationExtensionsPage.setLock(false, false);
+    } catch (e) {
+        message = "Couldn't create GCA page for navigation with key '" + navigationKey + "': " + e.message;
+        context.logError(message, e);
+        result{"errorMessage"} = message;
+        return result;
+    }
+} 
+
+result{"success"} = "true";
+resultData{"elementType"} = navigationExtensionsPage.getElementType();
+resultData{"elementId"} = "" + navigationExtensionsPage.getId();
+resultData{"catalogName"} = NAVIGATION_NODES_CATALOG_NAME;
+resultData{"cardTemplateUid"} = NAVIGATION_NODE_TEMPLATE_UID;
+return result;

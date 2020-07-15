@@ -1,0 +1,12 @@
+[self]
+uid=magazine_detail_page
+gid=b4556cef-4e66-491a-a768-ec103581748e
+uidType=PAGESTORE
+class=de.espirit.firstspirit.store.access.pagestore.PageImpl
+
+[requiredProjectId]
+uid=magazine_detail_page
+gid=9e7f4915-541b-46c2-ba01-19146f5c2ed3
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.PageTemplateImpl
+

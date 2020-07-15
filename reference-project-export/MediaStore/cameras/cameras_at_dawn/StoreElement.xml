@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="CameraAtDawn" id="3305650469282625949" type="pic" uniquedescription="cameras_at_dawn">
+	<LANG displayname="Cameras at Dawn" language="EN"/>
+	<LANG displayname="Kameras im Morgengrauen" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1037.0,4898.0,1233.0,0,false" extension="jpg" height="342" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,1080.0,4898.0,987.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="1226.0,964.0,2677.0,1785.0,0,false" extension="jpg" height="1785" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2677"/>
+		<RESOLUTION cropData="809.0,737.0,3508.0,1976.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="3265" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4898"/>
+	</PICTURE>
+</MEDIUM>

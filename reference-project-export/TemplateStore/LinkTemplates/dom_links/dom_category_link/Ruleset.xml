@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RULES>
+	<!-- maximum entries -->
+	<RULE>
+		<WITH>
+			<GREATER_THAN>
+				<PROPERTY name="SIZE" source="lt_category"/>
+				<NUMBER>0</NUMBER>
+			</GREATER_THAN>
+		</WITH>
+		<DO>
+			<NOT>
+				<PROPERTY name="ADD" source="lt_category"/>
+			</NOT>
+		</DO>
+	</RULE>
+	<RULE>
+		<WITH>
+			<LESS_THAN>
+				<PROPERTY name="SIZE" source="lt_category"/>
+				<NUMBER>2</NUMBER>
+			</LESS_THAN>
+		</WITH>
+		<DO>
+			<VALIDATION scope="SAVE">
+				<PROPERTY name="VALID" source="lt_category"/>
+				<MESSAGE lang="*" text="This form element must not contain more than one entry!"/>
+				<MESSAGE lang="DE" text="Diese Eingabekomponente darf nicht mehr als einen Eintrag enthalten!"/>
+			</VALIDATION>
+		</DO>
+	</RULE>
+	<!-- mandatory -->
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="lt_linkText"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="SAVE">
+					<PROPERTY name="VALID" source="lt_linkText"/>
+					<MESSAGE lang="*" text="This form element must not be empty!"/>
+					<MESSAGE lang="DE" text="Diese Eingabekomponente darf nicht leer sein!"/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+	<!-- mandatory -->
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="lt_category"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="SAVE">
+					<PROPERTY name="VALID" source="lt_category"/>
+					<MESSAGE lang="*" text="This form element must not be empty!"/>
+					<MESSAGE lang="DE" text="Diese Eingabekomponente darf nicht leer sein!"/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+</RULES>

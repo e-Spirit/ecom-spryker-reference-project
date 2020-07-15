@@ -1,0 +1,1 @@
+if(!tt_teaserText.isEmpty(), tt_teaserText, "No teaserText")

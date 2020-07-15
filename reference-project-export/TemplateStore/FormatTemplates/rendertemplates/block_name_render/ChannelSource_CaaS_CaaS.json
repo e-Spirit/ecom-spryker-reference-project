@@ -1,0 +1,21 @@
+$--
+Adds the block name for the current section dependent on the given page type to the given block object.
+Should only be used within section templates.
+
+When the pageType is not "static" the section id is appended,
+When the current context is a contentprojection, the id of the current entity is appended
+When the current context is within a FS_CATALOG, the UID of these sections is appended
+
+Usage: $CMS_RENDER(template: "block_name_render", rt_pageType: "static", rt_blockObject: {:})$
+--$
+$CMS_SET(set_block_name, #global.section.parent.name)$
+$CMS_IF(rt_pageType != "static")$
+  $CMS_SET(set_block_name, set_block_name + "_" + #global.section.id)$
+  $CMS_IF(#row != null && #global.multiPageParams.entitiesPerPage==1)$
+    $CMS_SET(set_block_name, set_block_name + "_" + #row.id)$
+  $CMS_END_IF$
+  $CMS_IF(!#fs_catalog.isNull)$
+    $CMS_SET(set_block_name, set_block_name + "_" + #card.id)$
+  $CMS_END_IF$
+$CMS_END_IF$
+$CMS_SET(void, rt_blockObject.put("block_name", set_block_name))$

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="iPhoneAndAppleWatch" id="7466518292577575684" type="pic" uniquedescription="iphone_and_apple_watch">
+	<LANG displayname="iPhone and Apple Watch" language="EN"/>
+	<LANG displayname="iPhone und Apple Watch" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1292.0,3998.0,811.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,911.0,3901.0,2192.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="322.0,455.0,3398.0,2876.0,0,false" extension="jpg" height="2876" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3398"/>
+		<RESOLUTION cropData="33.0,866.0,3964.0,1521.0,0,false" extension="jpg" height="521" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION extension="jpg" height="4997" mimetype="image/jpeg" resolutionid="ORIGINAL" width="3998"/>
+	</PICTURE>
+</MEDIUM>

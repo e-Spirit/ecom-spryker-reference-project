@@ -1,0 +1,6 @@
+[self]
+uid=black_and_white_photographer
+gid=5b734c66-9ba5-4c6f-aaad-fda6c9dbc696
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

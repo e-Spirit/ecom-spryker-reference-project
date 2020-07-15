@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEMPLATE comment="" filename="teaser_grid" id="2083156083066186482" templateid="-3054217477551797392" type="section">
+	<EXTENSION file="html" link="html" templateSet="9062318847741885912"/>
+	<EXTENSION file="json" link="json" templateSet="-1285658006509869299"/>
+	<LANG displayname="Teaser Grid" language="EN"/>
+	<LANG displayname="Teaser-Grid" language="DE"/>
+</TEMPLATE>

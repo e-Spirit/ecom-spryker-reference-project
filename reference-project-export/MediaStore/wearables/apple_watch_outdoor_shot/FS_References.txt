@@ -1,0 +1,6 @@
+[self]
+uid=apple_watch_outdoor_shot
+gid=cab4df76-b404-4e24-8e4e-93710d288f8b
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

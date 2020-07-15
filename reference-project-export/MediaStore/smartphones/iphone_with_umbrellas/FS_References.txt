@@ -1,0 +1,6 @@
+[self]
+uid=iphone_with_umbrellas
+gid=7a5e4a3f-f1c3-4fac-9a94-97e4120f2cdd
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

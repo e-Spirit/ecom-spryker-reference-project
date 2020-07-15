@@ -1,0 +1,12 @@
+$CMS_SET(set_ps_staticLinks,{:})$
+$CMS_FOR(for_staticLink,ps_staticLinks.filter(x->!x.item.st_pageTemplate.isEmpty))$
+	$CMS_SET(
+		void,
+		set_ps_staticLinks
+			.put(
+				for_staticLink.item.st_pageTemplate.get.uid,
+				for_staticLink.item.st_url.convert2
+				)
+	)$
+$CMS_END_FOR$
+$CMS_SET(set_ps_contentPageList,["contentpage"])$

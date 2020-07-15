@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="ManyCameras" id="7310094575953151507" type="pic" uniquedescription="many_cameras">
+	<LANG displayname="Many Cameras" language="EN"/>
+	<LANG displayname="Viele Kameras" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1701.0,4673.0,940.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="10.0,499.0,4428.0,2491.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="1081.0,714.0,2462.0,2400.0,0,false" extension="jpg" height="2400" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2462"/>
+		<RESOLUTION cropData="6.0,957.0,4668.0,1408.0,0,false" extension="jpg" height="410" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION extension="jpg" height="3121" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4675"/>
+	</PICTURE>
+</MEDIUM>

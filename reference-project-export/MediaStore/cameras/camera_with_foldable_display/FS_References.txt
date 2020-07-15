@@ -1,0 +1,6 @@
+[self]
+uid=camera_with_foldable_display
+gid=41a0ebf6-a8a6-4737-a2ef-eeb9a00b214b
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

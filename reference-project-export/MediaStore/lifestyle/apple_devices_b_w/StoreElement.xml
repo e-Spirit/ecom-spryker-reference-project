@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="AppleDevicesBW" id="-8296010672177294935" type="pic" uniquedescription="apple_devices_b_w">
+	<LANG displayname="Apple Devices b/w" language="EN"/>
+	<LANG displayname="Apple Geräte s/w" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1520.0,3013.0,611.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,575.0,2899.0,1627.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,802.0,3013.0,1657.0,0,false" extension="jpg" height="747" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="150.0,493.0,2594.0,2871.0,0,false" extension="jpg" height="2871" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2594"/>
+		<RESOLUTION extension="jpg" height="3766" mimetype="image/jpeg" resolutionid="ORIGINAL" width="3013"/>
+	</PICTURE>
+</MEDIUM>

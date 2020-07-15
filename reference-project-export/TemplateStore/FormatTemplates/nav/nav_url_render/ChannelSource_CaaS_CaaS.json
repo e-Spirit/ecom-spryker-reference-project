@@ -1,0 +1,22 @@
+$--
+	Rendertemplate: Nav URL
+	
+	Return Value: url
+
+	Params:
+		- ref = #nav.ref
+		
+	Call
+	$CMS_RENDER(template:"nav_url_render",ref:#nav.ref)$
+--$$CMS_IF(isSet(ref) && !ref.isEmpty)$$--l
+	--$$CMS_IF(ref.getPageLangSpec(#global.language).useExternalUrl())$$--
+		--$$CMS_REF(ref)$$--
+	--$$CMS_ELSIF(!set_ps_staticLinks.isEmpty && set_ps_staticLinks.containsKey(ref.page.template.uid))$$--
+		--$$CMS_VALUE(set_ps_staticLinks.get(ref.page.template.uid))$$--
+	--$$CMS_ELSIF(!set_ps_contentPageList.isEmpty && set_ps_contentPageList.contains(ref.page.template.uid))$$--
+		--$$CMS_SET(set_url, if(#global.isRelease(), ref.page.formData.get(#global.getLanguage(), "pt_url").get(), "/fs-preview/fs-cms-page-preview/" + ref.uid))$$--
+		--$$CMS_VALUE("/" + locale.getLanguage() + if(!set_url.startsWith("/"), "/") + set_url.convert2)$$--
+	--$$CMS_END_IF$$--
+--$$CMS_ELSE$$--
+	--$$CMS_SET(void,#global.logWarning("Rendertemplate 'nav_url_render' called without parameter 'ref'"))$$--
+--$$CMS_END_IF$

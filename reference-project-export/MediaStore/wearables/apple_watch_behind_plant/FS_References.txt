@@ -1,0 +1,6 @@
+[self]
+uid=apple_watch_behind_plant
+gid=ae244624-fc82-466c-a38b-4397909b20f1
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

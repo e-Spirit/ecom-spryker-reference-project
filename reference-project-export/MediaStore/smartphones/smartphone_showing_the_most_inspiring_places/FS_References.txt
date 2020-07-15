@@ -1,0 +1,6 @@
+[self]
+uid=smartphone_showing_the_most_inspiring_places
+gid=4ccd9741-b33e-4958-ac14-2f7564770de3
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

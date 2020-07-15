@@ -1,0 +1,72 @@
+$CMS_SET(block,{:})$
+
+$-- Defining general block data --$
+$CMS_SET(void, block.put("previewId", "" + previewId()))$
+$CMS_SET(void, block.put("active", "1"))$
+$CMS_SET(void, block.put("store_names", [ps_activeStore]))$
+$CMS_SET(void, block.put("template_name", "fs_molecule_block"))$
+$CMS_SET(void, block.put("template_path", "@CmsBlock/template/fs_molecule_block.twig"))$
+
+$CMS_SET(set_pageType, json.get("pagetype"))$
+
+$-- Add block name attribute to block object (page type dependent) --$
+$CMS_RENDER(template: "block_name_render", rt_pageType: set_pageType, rt_blockObject: block)$
+
+$-- Add additional block attributes to block object (page type dependent) --$
+$CMS_RENDER(template: "additional_block_attributes_render", rt_pageType: set_pageType, rt_blockObject: block)$
+
+$-- Defining placeholder data of the block --$
+$CMS_SET(placeholders,{:})$
+$CMS_SET(void, block.put("placeholder",placeholders))$
+
+$CMS_SET(data,{:})$
+
+$CMS_SET(void, data.put("moleculename", "fs-shoppable-image"))$
+$CMS_SET(void, data.put("previewId", previewId()))$
+$CMS_SET(attributes,{:})$
+
+$CMS_SET(picture, {:})$
+$CMS_IF(!st_imageMap.isEmpty())$
+	$CMS_IF(!#global.isRelease())$
+		$CMS_SET(previewId)$$CMS_VALUE(previewId(element:st_imageMap.image))$$CMS_END_SET$
+		$CMS_SET(void, picture.put("previewId", previewId.toString()))$
+	$CMS_END_IF$
+	$CMS_SET(imageUrl)$$CMS_REF(st_imageMap, resolution:"CONTENT_IMAGE",abs:1)$$CMS_END_SET$
+	$CMS_SET(void, picture.put("image_url", imageUrl.toString()))$
+$CMS_END_IF$
+$CMS_SET(void, data.put("picture", picture))$
+
+$CMS_SET(set_areas,[])$
+$CMS_FOR(for_area, st_imageMap.areas)$
+	$CMS_SET(set_area,{:})$
+	$CMS_SET(set_x, for_area.leftTop.x + ((for_area.rightBottom.x - for_area.leftTop.x)/2)-10)$   
+    	$CMS_SET(set_y, for_area.leftTop.y + ((for_area.rightBottom.y - for_area.leftTop.y)/2)-10)$
+    	$CMS_SET(set_pointXPercentage, set_x/st_imageMap.getImage().width()*100)$
+    	$CMS_SET(set_pointYPercentage, set_y/st_imageMap.getImage().height()*100)$
+	$CMS_SET(void, set_area.put("pointXPercentage", set_pointXPercentage))$
+	$CMS_SET(void, set_area.put("pointYPercentage", set_pointYPercentage))$
+	$CMS_SET(void, set_area.put("linktext", for_area.link.lt_linkText))$
+	$CMS_SET(void, set_area.put("product", for_area.link.lt_product.iterator.next.identifier))$	
+	
+	$CMS_IF(!for_area.link.isEmpty())$
+		$CMS_SET(set_area_url)$$CMS_VALUE(for_area.link)$$CMS_END_SET$
+		$CMS_SET(void, set_area.put("area_url", set_area_url.toString()))$
+	$CMS_END_IF$
+	
+	$CMS_SET(void, set_areas.add(set_area))$
+$CMS_END_FOR$
+
+$CMS_SET(void, data.put("areas", set_areas))$
+
+
+$CMS_SET(locale, #global.language.getLocale())$
+$CMS_SET(localeAbbr, locale.getLanguage() + "_" + locale.getCountry())$
+$CMS_SET(localizedData,{:})$
+$CMS_SET(void, localizedData.put(localeAbbr, data))$
+$CMS_SET(void, block.put("data", localizedData))$
+
+$CMS_IF(#global.is("WEBEDIT") && !isSet(caas_preview_generation))$
+	$CMS_VALUE(block.toJSON)$
+$CMS_ELSE$
+	$CMS_SET(void, blocks.add(block))$
+$CMS_END_IF$

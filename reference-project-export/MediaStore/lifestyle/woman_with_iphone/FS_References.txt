@@ -1,0 +1,6 @@
+[self]
+uid=woman_with_iphone
+gid=92316d8b-a34b-4ecd-ab5f-8e50b757f202
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

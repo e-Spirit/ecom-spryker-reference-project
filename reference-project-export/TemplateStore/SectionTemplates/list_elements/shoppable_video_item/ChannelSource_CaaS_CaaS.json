@@ -1,0 +1,23 @@
+$CMS_SET(item, {
+	"time": st_time
+})$
+
+$CMS_IF(!st_picture.empty)$
+	$CMS_SET(void, item.put("picture", {
+		"imageUrl": ref(st_picture, res:"CONTENT_IMAGE", abs:1).url,
+		"ambilight": !st_ambilight.empty && st_ambilight
+	}))$
+	$CMS_IF(!#global.release)$
+		$CMS_SET(void, item.picture.put("previewId", previewId(element: st_picture)))$
+	$CMS_END_IF$
+$CMS_END_IF$
+
+$CMS_IF(!st_text.empty)$
+	$CMS_SET(void, item.put("text", st_text.normalize.toText(true)))$
+$CMS_END_IF$
+
+$CMS_IF(!st_product.empty)$
+	$CMS_SET(void, item.put("productId", st_product.identifiers.get(0)))$
+$CMS_END_IF$
+
+$CMS_SET(void, items.add(item))$

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<FIELDS>
+	<FIELD name='st_autoplayEnabled'><STATE>false</STATE></FIELD>
+	<FIELD name='st_autoplaySpeed'><FIG>5000</FIG></FIELD>
+	<FIELD name='st_slideWidth'><FIG>100</FIG></FIELD>
+</FIELDS>

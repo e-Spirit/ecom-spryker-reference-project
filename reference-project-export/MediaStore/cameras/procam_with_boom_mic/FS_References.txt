@@ -1,0 +1,6 @@
+[self]
+uid=procam_with_boom_mic
+gid=f270a4bb-4bc9-4560-9811-21f41dcc1376
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

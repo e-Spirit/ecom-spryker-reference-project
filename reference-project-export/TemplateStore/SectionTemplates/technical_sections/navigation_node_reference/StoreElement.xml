@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEMPLATE filename="navigation_node_reference" id="6578694419364165176" templateid="-626782702327135311" type="section">
+	<EXTENSION anchor="0" file="html" link="html" templateSet="9062318847741885912"/>
+	<EXTENSION anchor="0" file="json" link="json" templateSet="-1285658006509869299"/>
+	<LANG displayname="Navigation node reference" language="EN"/>
+	<LANG displayname="Navigationsknotenreferenz" language="DE"/>
+</TEMPLATE>

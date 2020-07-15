@@ -1,0 +1,6 @@
+[self]
+uid=cameras
+gid=48a8f3ae-3713-4be6-b6c9-61504a97b088
+uidType=MEDIASTORE_FOLDER
+class=de.espirit.firstspirit.store.access.mediastore.MediaFolderImpl
+

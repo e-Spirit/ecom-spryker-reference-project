@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="WhiteiPhoneOnWoodenBackground" id="8030960564052966203" type="pic" uniquedescription="white_iphone_on_wooden_background">
+	<LANG displayname="White iPhone on wooden Background" language="EN"/>
+	<LANG displayname="weißes iPhone auf hölzernem Hintergrund" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,388.0,3885.0,782.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="156.0,426.0,3289.0,1848.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="6.0,450.0,3866.0,1130.0,0,false" extension="jpg" height="397" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="819.0,419.0,2057.0,1873.0,0,false" extension="jpg" height="1873" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2057"/>
+		<RESOLUTION extension="jpg" height="2857" mimetype="image/jpeg" resolutionid="ORIGINAL" width="3885"/>
+	</PICTURE>
+</MEDIUM>

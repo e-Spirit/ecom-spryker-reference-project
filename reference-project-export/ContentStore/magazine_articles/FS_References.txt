@@ -1,0 +1,12 @@
+[self]
+uid=magazine_articles
+gid=98273fb4-7874-43f9-b8f8-d097f88fda03
+uidType=CONTENTSTORE
+class=de.espirit.firstspirit.store.access.contentstore.Content2Impl
+
+[requiredProjectId]
+uid=magazine.magazine_articles
+gid=328c3f59-c91b-4fbc-bcbe-e021ec30dad6
+uidType=TEMPLATESTORE_SCHEMA
+class=de.espirit.firstspirit.store.access.templatestore.TableTemplateImpl
+

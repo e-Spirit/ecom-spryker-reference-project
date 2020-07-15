@@ -1,0 +1,23 @@
+$--
+	Rendertemplate: Nav Type
+	
+	Return Value: cms_page|link|external_url|label|category
+
+	Params:
+		- ref = #nav.ref
+		
+	Call
+	$CMS_RENDER(template:"nav_type_render",ref:#nav.ref)$
+--$$CMS_IF(isSet(ref))$$--
+	--$$CMS_IF(ref.isEmpty)$$--
+		--$label$--
+	--$$CMS_ELSIF(ref.getPageLangSpec(#global.language).useExternalUrl())$$--
+		--$external_url$--
+	--$$CMS_ELSIF(!set_ps_staticLinks.isEmpty && set_ps_staticLinks.containsKey(ref.page.template.uid))$$--
+		--$link$--
+	--$$CMS_ELSIF(!set_ps_contentPageList.isEmpty && set_ps_contentPageList.contains(ref.page.template.uid))$$--
+		--$cms_page$--
+	--$$CMS_END_IF$$--
+--$$CMS_ELSE$$--
+	--$$CMS_SET(void,#global.logWarning("Rendertemplate 'nav_type_render' called without parameter 'ref'"))$$--
+--$$CMS_END_IF$

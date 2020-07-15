@@ -1,0 +1,6 @@
+[self]
+uid=sporty_woman_with_smartphone
+gid=d29f02e4-849c-4d00-accb-d0a88c51b7ba
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

@@ -1,0 +1,6 @@
+[self]
+uid=iphone_and_apple_watch
+gid=ac7736f9-35cb-46ee-90a9-40a49b1891aa
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

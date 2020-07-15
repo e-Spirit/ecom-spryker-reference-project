@@ -1,0 +1,88 @@
+<CMS_HEADER>	
+	<CMS_FUNCTION name="define" resultname="ft_startNode">
+	  <CMS_CDATA_PARAM name="source">
+	    <![CDATA[$CMS_TRIM(level:4)$
+		      $CMS_IF(!st_startNode.isEmpty && !st_startNode.get().isEmpty)$
+		      	$CMS_VALUE(st_startNode.get().referenceName)$
+		      $CMS_ELSE$
+		      	pagefolder:root
+		      $CMS_END_IF$
+	      $CMS_END_TRIM$]]>
+	  </CMS_CDATA_PARAM>
+	</CMS_FUNCTION>
+	<CMS_FUNCTION name="Navigation" resultname="fr_mainNav">
+		<CMS_PARAM name="expansionVisibility" value="all"/>
+		<CMS_VALUE_PARAM name="root" value="ft_startNode.toString()" />
+		
+		<CMS_ARRAY_PARAM name="innerBeginHTML">
+			<CMS_ARRAY_ELEMENT index="0..100"><![CDATA[$CMS_IF(#nav.ref.content2Params.isEmpty)$, "children":[$CMS_END_IF$]]></CMS_ARRAY_ELEMENT>
+		</CMS_ARRAY_PARAM>
+		
+		<CMS_ARRAY_PARAM name="beginHTML">
+			<CMS_ARRAY_ELEMENT index="0..100"><![CDATA[$CMS_IF(#nav.ref.content2Params.isEmpty)${$CMS_END_IF$]]></CMS_ARRAY_ELEMENT>
+		</CMS_ARRAY_PARAM>
+		
+		<CMS_ARRAY_PARAM name="unselectedHTML">
+			<CMS_ARRAY_ELEMENT index="0..100"><![CDATA[$CMS_IF(#nav.ref.content2Params.isEmpty)$$--
+				--$"identifier": "$CMS_VALUE(#card.id)$_$CMS_VALUE(#nav.ref.uid)$"$--
+				--$, "node_type": "$CMS_RENDER(template:"nav_type_render",ref: #nav.ref)$"$--
+				--$, "is_active": true$--
+				--$, "position": $CMS_VALUE(#nav.levelPos + 1)$$--
+				--$, "localizedAttributes": {$--
+					--$"title": {$--
+						--$"$CMS_VALUE(localeAbbr)$": $CMS_VALUE(#nav.label.convert2.toJSON)$$--
+					--$},$--
+					--$"url": {$--
+						--$"$CMS_VALUE(localeAbbr)$": "$CMS_RENDER(template:"nav_url_render",ref: #nav.ref)$"$--
+					--$}$--
+				--$}$--
+				--$, "valid_from": ""$--
+				--$, "valid_to": ""$--
+			--$$CMS_END_IF$]]></CMS_ARRAY_ELEMENT>
+		</CMS_ARRAY_PARAM>
+		
+		<CMS_ARRAY_PARAM name="endHTML">
+			<CMS_ARRAY_ELEMENT index="0..100"><![CDATA[$CMS_IF(#nav.ref.content2Params.isEmpty)$}$CMS_IF(!#nav.isLast)$,$CMS_END_IF$$CMS_END_IF$]]></CMS_ARRAY_ELEMENT>
+		</CMS_ARRAY_PARAM>
+		
+		<CMS_ARRAY_PARAM name="innerEndHTML">
+			<CMS_ARRAY_ELEMENT index="0..100"><![CDATA[$CMS_IF(#nav.ref.content2Params.isEmpty)$]$CMS_END_IF$]]></CMS_ARRAY_ELEMENT>
+		</CMS_ARRAY_PARAM>
+	</CMS_FUNCTION>
+
+</CMS_HEADER>
+$CMS_TRIM(level:1)$
+	$CMS_IF(!st_startNode.isEmpty && !st_startNode.get().isEmpty)$
+		$CMS_SET(locale, #global.language.getLocale())$
+		$CMS_SET(localeAbbr, locale.getLanguage() + "_" + locale.getCountry())$
+		$CMS_SET(set_referenceStartNode, st_startNode.get().getStartNode())$
+		$CMS_SET(set_referenceStartNode, if(!set_referenceStartNode.isEmpty && class("de.espirit.firstspirit.access.store.sitestore.PageRef").isCase(set_referenceStartNode), set_referenceStartNode, null))$
+		$CMS_IF((!set_referenceStartNode.isEmpty && set_referenceStartNode.content2Params.isEmpty) || set_referenceStartNode.isEmpty)$
+			$CMS_IF(!set_referenceStartNode.isEmpty)$
+				$CMS_SET(set_title, set_referenceStartNode.getDisplayName(#global.getLanguage()))$
+			$CMS_ELSE$
+				$CMS_SET(set_title, st_startNode.get().getFolderLangSpec(#global.getLanguage()).getLabel())$
+			$CMS_END_IF$
+			{
+				"identifier": "$CMS_VALUE(#card.id)$",
+				"node_type": "$CMS_RENDER(template: "nav_type_render",ref: set_referenceStartNode)$",  
+				"children": [$CMS_VALUE(fr_mainNav)$],
+				$CMS_SET(set_previewId, if(!isSet(for_gcaPage), previewId(), previewId(element: #global.gca(for_gcaPage))))$
+				"previewId": "custom:catalog:$CMS_VALUE(set_previewId)$:pt_startNodes:$CMS_VALUE(#card.getId())$",
+				"is_active": true,
+				"localizedAttributes": {
+					"title": {
+						"$CMS_VALUE(localeAbbr)$": "$CMS_VALUE(set_title.convert2)$"
+					}
+					$CMS_IF(!set_referenceStartNode.isEmpty)$,
+					"url": {
+						"$CMS_VALUE(localeAbbr)$": "$CMS_RENDER(template:"nav_url_render",ref: set_referenceStartNode)$"
+					}
+					$CMS_END_IF$
+				},
+				"valid_from": "",
+				"valid_to": ""
+			}$CMS_IF(#index + 1 < #fs_catalog.size)$,$CMS_END_IF$
+		$CMS_END_IF$
+	$CMS_END_IF$
+$CMS_END_TRIM$

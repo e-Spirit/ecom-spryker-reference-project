@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="DiscoiPhone" id="-1814319258764504485" type="pic" uniquedescription="disco_iphone">
+	<LANG displayname="Disco iPhone" language="EN"/>
+	<LANG displayname="Disko iPhone" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="201.0,664.0,5026.0,2825.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="8.0,782.0,5991.0,1582.0,0,false" extension="jpg" height="359" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="835.0,462.0,3840.0,2782.0,0,false" extension="jpg" height="2782" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3840"/>
+		<RESOLUTION cropData="86.0,1475.0,5911.0,1191.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="4000" mimetype="image/jpeg" resolutionid="ORIGINAL" width="6000"/>
+	</PICTURE>
+</MEDIUM>

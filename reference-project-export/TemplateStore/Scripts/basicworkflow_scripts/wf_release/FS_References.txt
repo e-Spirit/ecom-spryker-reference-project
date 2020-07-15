@@ -1,0 +1,6 @@
+[self]
+uid=wf_release
+gid=19b86942-7c7c-4478-9d3d-bfdba2a5b944
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

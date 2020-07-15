@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <CMS_INPUT_IMAGEMAP name="st_imageMap" allowEmpty="no" hFill="yes" simpleMode="yes" useLanguages="yes">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Image map" description="Selection of an image and definition of the linked image sections."/>
+      <LANGINFO lang="DE" label="Image-Map" description="Auswahl des Bildes und Definition der verlinkten Bereiche"/>
+    </LANGINFOS>
+    <LINKEDITORS>
+      <LINKEDITOR name="dom_product_link"/>
+    </LINKEDITORS>
+    <PROJECTS>
+      <LOCAL name=".">
+        <SOURCES>
+          <FOLDER name="root"/>
+        </SOURCES>
+      </LOCAL>
+    </PROJECTS>
+  </CMS_INPUT_IMAGEMAP>
+
+</CMS_MODULE>

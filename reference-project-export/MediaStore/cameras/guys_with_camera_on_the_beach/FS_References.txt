@@ -1,0 +1,6 @@
+[self]
+uid=guys_with_camera_on_the_beach
+gid=63253567-84c5-425d-a1d0-dd337ae55b9a
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

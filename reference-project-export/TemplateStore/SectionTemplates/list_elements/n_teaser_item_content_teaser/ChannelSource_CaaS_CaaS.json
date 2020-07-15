@@ -1,0 +1,33 @@
+$CMS_SET(set_teaserItem,{:})$
+
+$CMS_SET(void, set_teaserItem.put("itemPreviewId", "" + previewId()))$
+$CMS_SET(void, set_teaserItem.put("headline", if(st_headline.isEmpty(),"",st_headline.convert2)))$
+$CMS_SET(void, set_teaserItem.put("subline", if(st_subline.isEmpty(),"",st_subline.convert2)))$
+$CMS_IF(!st_text.isEmpty())$
+	$CMS_SET(void, set_teaserItem.put("teaserText", st_text.convert2))$
+$CMS_END_IF$
+
+$CMS_SET(void, set_teaserItem.put("moleculename", "fs-n-teaser-item"))$
+
+$CMS_SET(set_picture,{:})$
+$CMS_IF(!st_picture.isEmpty())$
+	$CMS_SET(set_imageUrl)$$CMS_REF(st_picture,resolution:"TEASER_IMAGE",abs:1)$$CMS_END_SET$
+	$CMS_SET(void, set_picture.put("imageUrl", set_imageUrl.toString()))$
+	$CMS_SET(void, set_picture.put("description", if(!st_picture.isEmpty(),ref(st_picture).description)))$
+	$CMS_IF(!#global.isRelease())$
+		$CMS_SET(previewId)$$CMS_VALUE(previewId(element:st_picture))$$CMS_END_SET$
+		$CMS_SET(void, set_picture.put("previewId", previewId.toString()))$
+	$CMS_END_IF$
+$CMS_END_IF$
+$CMS_SET(void,set_teaserItem.put("picture", set_picture))$
+
+$CMS_IF(!st_link.isEmpty())$
+	$CMS_SET(set_link,{:})$
+	$CMS_SET(void, set_link.put("text", if(!st_linkText.isEmpty,st_linkText.convert2)))$
+
+	$CMS_VALUE(st_link)$
+	$CMS_SET(void, set_teaserItem.put("link", set_link))$
+$CMS_END_IF$
+
+$-- Add to variable defined in n_teaser --$
+$CMS_SET(void, set_nTeaserItems.add(set_teaserItem))$

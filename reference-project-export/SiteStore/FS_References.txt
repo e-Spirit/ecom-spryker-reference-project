@@ -1,0 +1,6 @@
+[self]
+uid=root
+gid=4303d2dc-9842-4fd2-a954-a617973ba9d9
+uidType=SITESTORE_FOLDER
+class=de.espirit.firstspirit.store.access.sitestore.SiteStoreRootImpl
+

@@ -1,0 +1,7 @@
+[self]
+uid=/omnichannel_manager
+gid=e21b1b16-50c4-4b99-a0b1-141d292a6305
+store=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptFolderImpl
+root=de.espirit.firstspirit.store.access.templatestore.ScriptsImpl
+

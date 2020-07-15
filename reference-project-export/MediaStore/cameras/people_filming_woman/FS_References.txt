@@ -1,0 +1,6 @@
+[self]
+uid=people_filming_woman
+gid=2fff97c7-08ca-48cb-b634-88c7c3c6f80d
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

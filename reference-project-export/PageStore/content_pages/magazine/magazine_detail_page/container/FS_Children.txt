@@ -1,0 +1,1 @@
+magazine_detail_page~#~container~#~magazine_articles

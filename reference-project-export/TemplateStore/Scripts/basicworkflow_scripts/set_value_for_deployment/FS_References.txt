@@ -1,0 +1,6 @@
+[self]
+uid=set_value_for_deployment
+gid=3b79b855-e72d-41d8-97aa-64238cfc89b0
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

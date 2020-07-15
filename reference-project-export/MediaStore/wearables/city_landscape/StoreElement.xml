@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="CityLandscape" id="8838395104969803782" type="pic" uniquedescription="city_landscape">
+	<LANG displayname="City Landscape" language="EN"/>
+	<LANG displayname="Stadtsilhouette" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,316.0,6015.0,3382.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,749.0,6015.0,1713.0,0,false" extension="jpg" height="387" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,901.0,6015.0,1214.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="2195.0,615.0,3409.0,2758.0,0,false" extension="jpg" height="2758" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3409"/>
+		<RESOLUTION extension="jpg" height="4016" mimetype="image/jpeg" resolutionid="ORIGINAL" width="6016"/>
+	</PICTURE>
+</MEDIUM>

@@ -1,0 +1,46 @@
+$CMS_SET(block,{:})$
+
+$-- Defining general block data --$
+$CMS_SET(void, block.put("previewId", "" + previewId()))$
+$CMS_SET(void, block.put("active", "1"))$
+$CMS_SET(void, block.put("store_names", [ps_activeStore]))$
+$CMS_SET(void, block.put("template_name", "fs_molecule_block"))$
+$CMS_SET(void, block.put("template_path", "@CmsBlock/template/fs_molecule_block.twig"))$
+
+$CMS_SET(set_pageType, json.get("pagetype"))$
+
+$-- Add block name attribute to block object (page type dependent) --$
+$CMS_RENDER(template: "block_name_render", rt_pageType: set_pageType, rt_blockObject: block)$
+
+$-- Add additional block attributes to block object (page type dependent) --$
+$CMS_RENDER(template: "additional_block_attributes_render", rt_pageType: set_pageType, rt_blockObject: block)$
+
+$-- Defining placeholder data of the block --$
+$CMS_SET(placeholders,{:})$
+$CMS_SET(void, block.put("placeholder",placeholders))$
+
+$CMS_SET(data,{:})$
+$CMS_SET(void, data.put("title", tt_title.convert2))$
+$CMS_SET(void, data.put("subtitle", tt_subtitle.convert2))$
+$CMS_SET(void, data.put("date", tt_date))$
+
+$CMS_SET(void, data.put("moleculename", "fs-magazine-intro"))$
+
+$CMS_SET(banner,{:})$
+$CMS_IF(!tt_banner.isEmpty())$
+	$CMS_SET(imageUrl)$$CMS_REF(tt_banner,resolution:"MAGAZINE_ARTICLE_BANNER",abs:1)$$CMS_END_SET$
+	$CMS_SET(void, banner.put("imageUrl", imageUrl.toString()))$
+	$CMS_IF(!#global.isRelease())$
+		$CMS_SET(previewId)$$CMS_VALUE(previewId(element:tt_banner))$$CMS_END_SET$
+		$CMS_SET(void, banner.put("previewId", previewId.toString()))$
+	$CMS_END_IF$
+$CMS_END_IF$
+$CMS_SET(void, data.put("banner", banner))$
+
+$CMS_SET(locale, #global.language.getLocale())$
+$CMS_SET(localeAbbr, locale.getLanguage() + "_" + locale.getCountry())$
+$CMS_SET(localizedData,{:})$
+$CMS_SET(void, localizedData.put(localeAbbr, data))$
+$CMS_SET(void, block.put("data", localizedData))$
+
+$CMS_SET(void, blocks.add(block))$

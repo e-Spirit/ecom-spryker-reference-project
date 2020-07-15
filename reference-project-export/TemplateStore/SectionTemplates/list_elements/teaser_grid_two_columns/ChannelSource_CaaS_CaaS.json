@@ -1,0 +1,16 @@
+$CMS_SET(set_teaserColumns, {:})$
+
+$CMS_SET(set_teaserGridItemsLeft, [])$
+$CMS_SET(set_teaserList, set_teaserGridItemsLeft)$
+$CMS_VALUE(st_teaserGridItemsLeft)$
+
+$CMS_SET(set_teaserGridItemsRight, [])$
+$CMS_SET(set_teaserList, set_teaserGridItemsRight)$
+$CMS_VALUE(st_teaserGridItemsRight)$
+
+$CMS_SET(void, set_teaserColumns.put("column_left", set_teaserGridItemsLeft))$
+$CMS_SET(void, set_teaserColumns.put("column_right", set_teaserGridItemsRight))$
+
+$CMS_SET(set_teaserList, null)$
+
+$CMS_SET(void, set_teaserGridItems.add(set_teaserColumns))$

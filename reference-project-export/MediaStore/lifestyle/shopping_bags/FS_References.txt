@@ -1,0 +1,6 @@
+[self]
+uid=shopping_bags
+gid=a59f8157-5517-4790-a74c-f78f07cdfbc3
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

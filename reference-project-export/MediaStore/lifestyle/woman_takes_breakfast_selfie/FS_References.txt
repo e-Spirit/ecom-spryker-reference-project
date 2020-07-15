@@ -1,0 +1,6 @@
+[self]
+uid=woman_takes_breakfast_selfie
+gid=87be0eeb-e5e2-4342-b600-8f0b3f468b2e
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

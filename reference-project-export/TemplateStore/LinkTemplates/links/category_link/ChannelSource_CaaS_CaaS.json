@@ -1,0 +1,5 @@
+$CMS_IF(!lt_category.isEmpty())$
+  $CMS_SET(set_id)$$CMS_VALUE(lt_category.values[0].getNodeId)$$CMS_END_SET$
+  $CMS_SET(void, set_link.put("id", set_id.toString()))$
+  $CMS_SET(void, set_link.put("type","category"))$
+$CMS_END_IF$

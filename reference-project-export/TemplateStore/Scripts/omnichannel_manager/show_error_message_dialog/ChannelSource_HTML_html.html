@@ -1,0 +1,33 @@
+import de.espirit.firstspirit.agency.OperationAgent;
+import de.espirit.firstspirit.ui.operations.RequestOperation;
+
+/**
+ * Displays an error message to the user with the ability to allow further inspection of the error using a detailed message
+ *
+ * Usage: TPP_SNAP.execute('script:show_message_dialog', {
+ *          message: '<message>', // The message to show
+ *	   [detailedMessage: '<detailedMessage>'] // Optional: A detailed message of the error
+ *        })
+ */
+
+if (message == void || message == null)
+   throw new IllegalArgumentException("Missing parameter 'message'");
+   
+operationAgent = context.requireSpecialist(OperationAgent.TYPE);
+requestOperation = operationAgent.getOperation(RequestOperation.TYPE);
+requestOperation.setKind(RequestOperation.Kind.ERROR);
+requestOperation.setTitle("Oops..");
+
+okAnswer = requestOperation.addOk();
+
+if(detailedMessage != void && detailedMessage instanceof String && !detailedMessage.isEmpty()) {
+    showDetailedAnswer = requestOperation.addAnswer("Show more information");
+    selectedAnswer = requestOperation.perform(message);
+    if(selectedAnswer.equals(showDetailedAnswer)) {
+        detailedRequestOperation = operationAgent.getOperation(RequestOperation.TYPE);
+        detailedRequestOperation.setKind(RequestOperation.Kind.ERROR);
+        detailedRequestOperation.perform(detailedMessage);
+    }
+} else {
+    requestOperation.perform(message);
+}

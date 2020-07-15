@@ -1,0 +1,6 @@
+[self]
+uid=apple_devices_b_w
+gid=c98c0a1b-cd43-47e5-ad94-ab4f3e0fe1c8
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

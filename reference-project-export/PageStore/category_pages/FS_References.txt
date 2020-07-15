@@ -1,0 +1,6 @@
+[self]
+uid=category_pages
+gid=c51d1c12-aba4-4081-8c54-35062e0719d1
+uidType=PAGESTORE
+class=de.espirit.firstspirit.store.access.pagestore.PageFolderImpl
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="SmartphoneWithCameraAndEarpods" id="3759601508624299326" type="pic" uniquedescription="smartphone_with_camera_and_earpods">
+	<LANG displayname="Smartphone mit Kamera und Kopfhörern" language="DE"/>
+	<LANG displayname="Smartphone with Camera and Earpods" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1771.0,5569.0,1124.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,536.0,5569.0,1775.0,0,false" extension="jpg" height="433" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="1925.0,501.0,3329.0,2591.0,0,false" extension="jpg" height="2591" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3329"/>
+		<RESOLUTION cropData="1999.0,1415.0,3071.0,1725.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="3212" mimetype="image/jpeg" resolutionid="ORIGINAL" width="5569"/>
+	</PICTURE>
+</MEDIUM>

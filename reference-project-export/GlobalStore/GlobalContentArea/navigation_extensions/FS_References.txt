@@ -1,0 +1,7 @@
+[self]
+uid=/navigation_extensions
+gid=28c0c235-3d9b-4157-94b2-c2f5d0d32e52
+store=GLOBALSTORE
+class=de.espirit.firstspirit.store.access.globalstore.GCAFolderImpl
+root=de.espirit.firstspirit.store.access.globalstore.GlobalContentAreaImpl
+

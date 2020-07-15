@@ -1,0 +1,6 @@
+[self]
+uid=create_navigation_extension
+gid=8d244e31-758b-41f6-84f9-c981e27be440
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

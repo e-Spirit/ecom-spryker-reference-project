@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <CMS_INPUT_TEXT name="pt_cmsPageTemplateName" allowEmpty="no" hFill="yes" hidden="yes" singleLine="no" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Page Template Name"/>
+      <LANGINFO lang="DE" label="Name des Page Templates"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+  <CMS_INPUT_TEXT name="pt_cmsPageTemplatePath" allowEmpty="no" hFill="yes" hidden="yes" singleLine="no" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Page Template Path"/>
+      <LANGINFO lang="DE" label="Pfad der Seitenvorlage"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+</CMS_MODULE>

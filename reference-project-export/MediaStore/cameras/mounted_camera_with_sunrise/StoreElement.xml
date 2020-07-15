@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="MountedCameraWithSunrise" id="-6905208938056923507" type="pic" uniquedescription="mounted_camera_with_sunrise">
+	<LANG displayname="Kamera auf Stativ mit Sonnenaufgang" language="DE"/>
+	<LANG displayname="Mounted Camera with Sunrise" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1852.0,4000.0,2213.0,0,false" extension="jpg" height="752" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,1895.0,4000.0,800.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="210.0,1703.0,3382.0,1908.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="253.0,1719.0,2933.0,2960.0,0,false" extension="jpg" height="2960" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2933"/>
+		<RESOLUTION extension="jpg" height="6000" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4000"/>
+	</PICTURE>
+</MEDIUM>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="CameraWithFoldableDisplay" id="6928568729992004166" type="pic" uniquedescription="camera_with_foldable_display">
+	<LANG displayname="Camera with foldable Display" language="EN"/>
+	<LANG displayname="Kamera mit Klapp-Display" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,2766.0,3842.0,2158.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,2973.0,4000.0,1800.0,0,false" extension="jpg" height="612" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,3388.0,4000.0,800.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="293.0,2866.0,3347.0,2200.0,0,false" extension="jpg" height="2200" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3347"/>
+		<RESOLUTION extension="jpg" height="6000" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4000"/>
+	</PICTURE>
+</MEDIUM>

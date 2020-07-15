@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <FS_INDEX name="lt_category" height="1" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Category"/>
+      <LANGINFO lang="DE" label="Kategorie"/>
+    </LANGINFOS>
+    <SOURCE name="ContentConnectSpryker/ContentConnectSpryker_CategoryDataAccessPlugin"/>
+  </FS_INDEX>
+
+  <CMS_INPUT_TEXT name="lt_linkText" hFill="yes" singleLine="no" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Link text"/>
+      <LANGINFO lang="DE" label="Verweistext"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+</CMS_MODULE>

@@ -1,0 +1,42 @@
+$CMS_TRIM(level:1)$
+	$CMS_SET(json, {:})$
+	$CMS_IF(#global.pageParams.data.size > 0)$
+		$CMS_SET(previewId, previewId(element:#global.node))$
+		$CMS_SET(void, json.put("previewId", "" + previewId))$
+		$CMS_SET(void, json.put("template_name", pt_cmsPageTemplateName))$
+		$CMS_SET(void, json.put("template_path", "@Cms/templates/fs-content-page/fs-content-page.twig"))$
+		$CMS_SET(void, json.put("pagetype", "cmspage"))$
+		$CMS_SET(void, json.put("is_active", "1"))$
+		$CMS_SET(void, json.put("store_names", [ps_activeStore]))$
+		$CMS_SET(void, json.put("is_searchable", "1"))$
+
+		$CMS_IF(#global.dataset.formData.tt_page_identifier != null && !#global.dataset.formData.tt_page_identifier.isEmpty())$
+			$CMS_SET(void, json.put("identifier", #global.dataset.formData.tt_page_identifier))$
+		$CMS_ELSE$
+			$CMS_SET(void, #global.logError("Missing page identifier for magazine detail page with entity id '" + #row.id + "'. Magazine detail pages without a page identifier can't be generated."))$
+			$CMS_SET(#global.stopGenerate, true)$
+		$CMS_END_IF$
+
+		$CMS_SET(locale, #global.language.getLocale())$
+		$CMS_SET(localeAbbr, locale.getLanguage() + "_" + locale.getCountry())$
+
+		$CMS_SET(attributes, {:})$
+		$CMS_SET(set_entityUrl, #global.dataset.formData.tt_url.convert2)$
+		$CMS_IF(set_entityUrl != null && !set_entityUrl.isEmpty())$
+			$CMS_SET(url, "/" + locale.getLanguage() + if(!set_entityUrl.startsWith("/"), "/") + set_entityUrl)$
+			$CMS_SET(void, attributes.put("url", {localeAbbr: url}))$
+		$CMS_ELSE$
+			$CMS_SET(void,#global.logError("Missing url for contentpage " + #global.node.uid + "_" + global.dataset.entity.fs_id + ". Contentpages without url can't create and generate."))$
+			$CMS_SET(#global.stopGenerate,true)$
+		$CMS_END_IF$
+		$CMS_SET(pageName, #global.dataset.formData.tt_title.convert2)$
+		$CMS_SET(void, attributes.put("name", {localeAbbr: if(pageName.toString() != null, pageName, "")}))$
+		$CMS_SET(void, attributes.put("meta_title", {localeAbbr: ""}))$
+		$CMS_SET(void, attributes.put("meta_description", {localeAbbr: ""}))$
+		$CMS_SET(void, attributes.put("meta_keywords", {localeAbbr: ""}))$
+		$CMS_SET(void, json.put("localizedAttributes", attributes))$
+
+		$CMS_VALUE(#global.page.body("container"))$
+	$CMS_END_IF$
+	$CMS_VALUE(json.toJSON)$
+$CMS_END_TRIM$

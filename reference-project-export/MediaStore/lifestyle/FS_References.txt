@@ -1,0 +1,6 @@
+[self]
+uid=lifestyle
+gid=92340a8f-7527-473f-bfb6-4e4db98dc91d
+uidType=MEDIASTORE_FOLDER
+class=de.espirit.firstspirit.store.access.mediastore.MediaFolderImpl
+

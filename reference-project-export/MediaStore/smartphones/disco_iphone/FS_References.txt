@@ -1,0 +1,6 @@
+[self]
+uid=disco_iphone
+gid=b95e02e4-efc7-4ac6-bc85-6ad965bdc2a2
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

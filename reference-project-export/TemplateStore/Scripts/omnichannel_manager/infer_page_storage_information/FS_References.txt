@@ -1,0 +1,6 @@
+[self]
+uid=infer_page_storage_information
+gid=61d038e6-ae24-41a8-9ff7-fa775065dff0
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

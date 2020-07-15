@@ -1,0 +1,35 @@
+import de.espirit.firstspirit.agency.StoreAgent;
+import de.espirit.firstspirit.access.store.globalstore.GlobalStoreRoot;
+import de.espirit.firstspirit.access.store.Store;
+import de.espirit.firstspirit.access.store.IDProvider;
+import de.espirit.firstspirit.access.store.globalstore.GCAPage;
+import de.espirit.firstspirit.access.store.globalstore.GCAFolder;
+import de.espirit.firstspirit.access.store.IDProvider.UidType;
+
+/**
+ * Collects all GCA pages of navigation extensions and adds them to the given result list object.
+ * Either searches in release or in current state depending on the given parameter.
+ *
+ * Usage: $CMS_RENDER(script: "get_navigation_gca_pages", isRelease: true, resultList: yourResultListObject)$
+ */
+
+if (resultList == void || resultList == null)
+    throw new IllegalArgumentException("Missing parameter 'resultList'");
+
+if (isRelease == void || isRelease == null)
+    throw new IllegalArgumentException("Missing parameter 'isRelease'");
+
+storeAgent = context.requestSpecialist(StoreAgent.TYPE);
+
+globalStore = ((GlobalStoreRoot) storeAgent.getStore(Store.Type.GLOBALSTORE, isRelease));
+globalContentArea = globalStore.getGlobalContentArea();
+gcaFolders = globalContentArea.getChildren(GCAFolder.class);
+
+for(gcaFolder : gcaFolders) {
+	if(gcaFolder.getName().equals("navigation_extensions")) {
+		for(navigationExtensionGcaPage : gcaFolder.getChildren(GCAPage.class)) {
+			resultList.add(navigationExtensionGcaPage.getUid());
+		}
+		break;
+	}
+}

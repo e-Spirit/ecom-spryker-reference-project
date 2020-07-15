@@ -1,0 +1,12 @@
+[self]
+uid=navigation_extension
+gid=90ad9fac-92c9-4261-b6c6-a98e507b4bb4
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.PageTemplateImpl
+
+[optionalId]
+uid=navigation_node_reference
+gid=f67e7914-2bb2-4ed4-a1be-51ac8a9a00e1
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.SectionTemplateImpl
+

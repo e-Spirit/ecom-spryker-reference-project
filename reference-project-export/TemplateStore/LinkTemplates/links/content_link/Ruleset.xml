@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RULES>
+	<!-- mandatory -->
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="lt_pageRef"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="SAVE">
+					<PROPERTY name="VALID" source="lt_pageRef"/>
+					<MESSAGE lang="*" text="This form element must not be empty!"/>
+					<MESSAGE lang="DE" text="Diese Eingabekomponente darf nicht leer sein!"/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+</RULES>

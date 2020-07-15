@@ -1,0 +1,9 @@
+AllChildren: 1
+ExportVersion: 3.2
+Language_DE: Deutsch
+Language_EN: English
+PresentationChannel_-1268668680467729278: HTML
+PresentationChannel_-7376935317569799158: CaaS
+TemplateName_-8221843494534206845: magazine_overview
+TemplateSet_-1285658006509869299: CaaS
+TemplateSet_9062318847741885912: html

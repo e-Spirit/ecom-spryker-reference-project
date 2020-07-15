@@ -1,0 +1,6 @@
+[self]
+uid=cameras_at_dawn
+gid=7409ad3c-f002-4697-986c-4f5e745fb668
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

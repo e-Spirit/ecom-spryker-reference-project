@@ -1,0 +1,30 @@
+//!Beanshell
+
+import de.espirit.firstspirit.access.store.Store;
+import de.espirit.firstspirit.access.store.contentstore.ContentFolder;
+import de.espirit.firstspirit.access.store.globalstore.ProjectProperties;
+import de.espirit.firstspirit.access.store.StoreElementFolder;
+import de.espirit.firstspirit.access.store.sitestore.PageRef;
+import java.util.ArrayList;
+import java.util.List;
+
+List allowedTemplates = new ArrayList();
+        allowedTemplates.add("contentpage");
+        allowedTemplates.add("productpage");
+        allowedTemplates.add("categorypage");
+
+boolean isContentFolder(storeElement) {
+	return storeElement.getStore().getType() == Store.Type.CONTENTSTORE
+		&& storeElement instanceof ContentFolder;
+}
+
+boolean isProjectProperties(storeElement) {
+	return storeElement instanceof ProjectProperties;
+}
+
+boolean isContentPage(storeElement) {
+	return storeElement instanceof PageRef && allowedTemplates.contains(((PageRef) storeElement).getPage().getTemplate().getUid());
+}
+
+storeElement = context.getElement();
+return storeElement != null && !isContentFolder(storeElement) && !isProjectProperties(storeElement) && isContentPage(storeElement);

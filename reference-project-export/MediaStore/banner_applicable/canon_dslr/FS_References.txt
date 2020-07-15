@@ -1,0 +1,6 @@
+[self]
+uid=canon_dslr
+gid=da76b771-6a7f-459d-abb9-9d50bc9ebdbb
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="CanonDSLR" id="2082707517419958817" type="pic" uniquedescription="canon_dslr">
+	<LANG displayname="Canon DSLR" language="DE"/>
+	<LANG displayname="Canon DSLR" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1308.0,2654.0,531.0,180,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,1540.0,2656.0,2054.0,0,false" extension="jpg" height="2054" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2656"/>
+		<RESOLUTION cropData="0.0,1567.0,2656.0,2010.0,0,false" extension="jpg" height="1029" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,1587.0,2647.0,1485.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="3984" mimetype="image/jpeg" resolutionid="ORIGINAL" width="2656"/>
+	</PICTURE>
+</MEDIUM>

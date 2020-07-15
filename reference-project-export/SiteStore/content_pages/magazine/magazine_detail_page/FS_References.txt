@@ -1,0 +1,12 @@
+[self]
+uid=magazine_detail_page
+gid=e5478753-4ab7-4f3a-be36-790a5eb87d25
+uidType=SITESTORE_FOLDER
+class=de.espirit.firstspirit.store.access.sitestore.PageRefFolderImpl
+
+[nextSibling]
+uid=magazine_overview_page
+gid=7a19cc68-e519-425f-a661-06451c284ea0
+uidType=SITESTORE_FOLDER
+class=de.espirit.firstspirit.store.access.sitestore.PageRefFolderImpl
+

@@ -1,0 +1,6 @@
+[self]
+uid=action_selfie_with_dslr
+gid=49b0c01b-e49b-4f6b-ba64-7ccbabc7db39
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

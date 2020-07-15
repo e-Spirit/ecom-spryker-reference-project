@@ -1,0 +1,3 @@
+$CMS_SET(set_url)$$CMS_VALUE(lt_url.convert2)$$CMS_END_SET$
+$CMS_SET(void, set_link.put("url", set_url.toString()))$
+$CMS_SET(void, set_link.put("type","external"))$

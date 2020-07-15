@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="DreamDesk" id="-9147760900793104109" type="pic" uniquedescription="dream_desk">
+	<LANG displayname="Dream Desk" language="EN"/>
+	<LANG displayname="Traum-Schreibtisch" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,359.0,1920.0,387.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="2.0,219.0,1915.0,617.0,0,false" extension="jpg" height="438" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="62.0,171.0,1743.0,980.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="7.0,168.0,1349.0,957.0,0,false" extension="jpg" height="957" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="1349"/>
+		<RESOLUTION extension="jpg" height="1152" mimetype="image/jpeg" resolutionid="ORIGINAL" width="1920"/>
+	</PICTURE>
+</MEDIUM>

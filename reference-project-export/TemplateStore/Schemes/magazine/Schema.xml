@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element temporal="1" version="4.0">
+		<xs:complexType uuid="5f77e83d-be2b-45a0-9181-023c158873fc" vName="magazine_articles">
+			<xs:sequence>
+				<xs:element javaType="de.espirit.firstspirit.client.editorcomponent.EditorWrapper" length="65535" nullable="1" type="xml" uuid="bc45a942-11c1-4618-a272-1f20813c8d8e" vName="banner"/>
+				<xs:element hidden="1" javaType="java.lang.Long" nullable="1" type="xs:long" uuid="cbc3eecd-8d8e-433b-802f-9ad81da7719c" vName="changed by"/>
+				<xs:element javaType="de.espirit.firstspirit.client.editorcomponent.EditorWrapper" length="65535" nullable="1" type="xml" uuid="3accd662-1139-4e28-b7c2-f53ff1106cf8" vName="content_DE"/>
+				<xs:element javaType="de.espirit.firstspirit.client.editorcomponent.EditorWrapper" length="65535" nullable="1" type="xml" uuid="ae443178-c0fe-4d2b-8b7c-3bc97509e3b4" vName="content_EN"/>
+				<xs:element javaType="java.util.Date" nullable="1" type="xs:date" uuid="49df3ca5-942b-42c3-89ff-ec40cdb749d1" vName="date"/>
+				<xs:element hidden="1" javaType="java.util.UUID" length="16" nullable="1" readonly="1" type="xs:uuid" uuid="87fbe086-cd09-41a8-9d54-b67804e07fbb" vName="FS_GID"/>
+				<xs:element hidden="1" javaType="java.lang.Integer" type="xs:long" uuid="7b97490f-26a9-4d5d-93c8-268e5ca702dc" vName="fs_id"/>
+				<xs:element hidden="1" javaType="de.espirit.or.impl.schema.JsonValue" length="65535" nullable="1" type="xs:json" uuid="276a3de5-ccc6-4657-87fe-1d1f2c76c36f" vName="FS_META_DATA"/>
+				<xs:element javaType="java.lang.String" length="1024" nullable="1" type="xs:string" uuid="e2733eb4-a5ac-40cc-be3a-cca70d06550a" vName="headline_DE"/>
+				<xs:element javaType="java.lang.String" length="1024" nullable="1" type="xs:string" uuid="2fb84540-097d-4a18-afc5-029235238a5f" vName="headline_EN"/>
+				<xs:element javaType="java.lang.String" length="64" type="xs:string" uuid="1d546699-eec8-49c0-b512-49a4883e55bb" vName="page_identifier"/>
+				<xs:element hidden="1" javaType="java.lang.Long" nullable="1" type="xs:long" uuid="abd46891-a795-46ef-97ad-c0f79a7af812" vName="released by"/>
+				<xs:element javaType="java.lang.String" length="1024" nullable="1" type="xs:string" uuid="da2067a4-7a97-447f-8b27-2efe988f8087" vName="subline_DE"/>
+				<xs:element javaType="java.lang.String" length="1024" nullable="1" type="xs:string" uuid="0a1aa26f-9c97-4187-bda3-642e1ed13bbf" vName="subline_EN"/>
+				<xs:element javaType="java.lang.String" length="1024" nullable="1" type="xs:string" uuid="9a940f97-c574-45d2-80d9-d1c50dcdee1a" vName="teaser_headline_DE"/>
+				<xs:element javaType="java.lang.String" length="1024" nullable="1" type="xs:string" uuid="cf0e3ebe-ccf3-4fda-9a72-ac993661914e" vName="teaser_headline_EN"/>
+				<xs:element javaType="de.espirit.firstspirit.client.editorcomponent.EditorWrapper" length="65535" nullable="1" type="xml" uuid="44c82ce8-e4f5-460a-81b0-a39ec7ae6a77" vName="teaser_picture"/>
+				<xs:element javaType="java.lang.String" length="2048" nullable="1" type="xs:string" uuid="1e45e91d-a785-4bae-92c0-bb698134e8a6" vName="teaser_text_DE"/>
+				<xs:element javaType="java.lang.String" length="2048" nullable="1" type="xs:string" uuid="45ae2d20-6828-42da-90ad-86c0e78ed9c4" vName="teaser_text_EN"/>
+				<xs:element javaType="java.lang.String" length="1024" nullable="1" type="xs:string" uuid="a62dd61e-51fe-49d3-b8a8-40c72b57450f" vName="url_DE"/>
+				<xs:element javaType="java.lang.String" length="1024" nullable="1" type="xs:string" uuid="2dc46bbf-2de7-4121-b407-da6cd03272b3" vName="url_EN"/>
+				<xs:element hidden="1" javaType="java.awt.Color" nullable="1" type="xs:integer" uuid="18056c94-a384-4f70-ac56-a668e2b77c85" vName="wf col"/>
+				<xs:element hidden="1" javaType="java.lang.Long" nullable="1" type="xs:long" uuid="fdffb4e3-38d8-4a17-a1ac-9df720f98531" vName="wf id"/>
+				<xs:element type="xs:long" uuid="0c00cd12-bc9d-4c60-84f8-eb7bc940b17e" vName="FS_RELEASE_TO" visible="0"/>
+				<xs:element type="xs:long" uuid="90f6cc82-7214-43d9-aada-29e5f62a165b" vName="FS_VALID_FROM" visible="0"/>
+				<xs:element type="xs:long" uuid="027b9673-7338-48bc-84fa-36d29214a94f" vName="FS_VALID_TO" visible="0"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key vName="pk_magazin_articles">
+			<xs:selector xpath="magazine_articles"/>
+			<xs:attribute xpath="fs_id"/>
+			<xs:attribute xpath="FS_RELEASE_TO"/>
+			<xs:attribute xpath="FS_VALID_FROM"/>
+			<xs:attribute xpath="FS_VALID_TO"/>
+		</xs:key>
+		<xs:complexType uuid="35304a22-5e6b-4a77-b230-7e6534c5413c" vName="TRANSACTION_COUNTER" visible="0">
+			<xs:sequence>
+				<xs:element type="xs:long" uuid="eeac0860-54cc-468d-bc3c-26ca82042b5f" vName="COUNTER" visible="0"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key autoIncrement="1" vName="pk_TRANSACTION_COUNTER">
+			<xs:selector xpath="TRANSACTION_COUNTER"/>
+			<xs:attribute xpath="COUNTER"/>
+		</xs:key>
+		<meta name="version">1.1</meta>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="TwoCameras" id="5056452017206645071" type="pic" uniquedescription="two_cameras">
+	<LANG displayname="Two Cameras" language="EN"/>
+	<LANG displayname="Zwei Cameras" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,2513.0,4011.0,2594.0,0,false" extension="jpg" height="879" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,3919.0,4011.0,802.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="347.0,1590.0,3583.0,3944.0,0,false" extension="jpg" height="3944" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3583"/>
+		<RESOLUTION cropData="47.0,1056.0,3829.0,2154.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="6016" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4016"/>
+	</PICTURE>
+</MEDIUM>

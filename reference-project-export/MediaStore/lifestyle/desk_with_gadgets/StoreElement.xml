@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="DeskWithGadgets" id="-5545658038013665073" type="pic" uniquedescription="desk_with_gadgets">
+	<LANG displayname="Desk with Gadgets" language="EN"/>
+	<LANG displayname="Schreibtisch mit Gadgets" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1264.0,4590.0,927.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,742.0,4590.0,1379.0,0,false" extension="jpg" height="408" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="1051.0,850.0,2798.0,1573.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="612.0,360.0,3287.0,2751.0,0,false" extension="jpg" height="2751" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3287"/>
+		<RESOLUTION extension="jpg" height="3448" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4592"/>
+	</PICTURE>
+</MEDIUM>

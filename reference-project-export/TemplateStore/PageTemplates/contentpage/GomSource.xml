@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <CMS_INPUT_TEXT name="pt_cmsPageTemplateName" allowEmpty="no" hFill="yes" hidden="yes" singleLine="no" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Page Template Name"/>
+      <LANGINFO lang="DE" label="Name der Seitenvorlage"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+  <CMS_INPUT_TEXT name="pt_cmsPageTemplatePath" allowEmpty="no" hFill="yes" hidden="yes" singleLine="no" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Page Template Path"/>
+      <LANGINFO lang="DE" label="Pfad der Seitenvorlage"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+  <CMS_GROUP tabs="top">
+
+    <CMS_GROUP>
+      <LANGINFOS>
+        <LANGINFO lang="*" label="General"/>
+        <LANGINFO lang="DE" label="Allgemein"/>
+      </LANGINFOS>
+
+      <CMS_INPUT_TEXT name="pt_url" allowEmpty="no" hFill="yes" singleLine="no" useLanguages="yes">
+        <LANGINFOS>
+          <LANGINFO lang="*" label="Page URL"/>
+          <LANGINFO lang="DE" label="Seiten-URL"/>
+        </LANGINFOS>
+      </CMS_INPUT_TEXT>
+
+    </CMS_GROUP>
+
+    <CMS_GROUP>
+      <LANGINFOS>
+        <LANGINFO lang="*" label="Meta/SEO Attributes"/>
+        <LANGINFO lang="DE" label="Meta/SEO-Attribute"/>
+      </LANGINFOS>
+
+      <CMS_INPUT_TEXT name="pt_metaTitle" hFill="yes" singleLine="no" useLanguages="yes">
+        <LANGINFOS>
+          <LANGINFO lang="*" label="Meta Title"/>
+          <LANGINFO lang="DE" label="Meta-Titel"/>
+        </LANGINFOS>
+      </CMS_INPUT_TEXT>
+
+      <CMS_INPUT_TEXT name="pt_metaKeywords" hFill="yes" singleLine="no" useLanguages="yes">
+        <LANGINFOS>
+          <LANGINFO lang="*" label="Meta Keywords"/>
+          <LANGINFO lang="DE" label="Meta-Schlüsselwörter"/>
+        </LANGINFOS>
+      </CMS_INPUT_TEXT>
+
+      <CMS_INPUT_TEXT name="pt_metaDescription" hFill="yes" singleLine="no" useLanguages="yes">
+        <LANGINFOS>
+          <LANGINFO lang="*" label="Meta Description"/>
+          <LANGINFO lang="DE" label="Meta-Beschreibung"/>
+        </LANGINFOS>
+      </CMS_INPUT_TEXT>
+
+    </CMS_GROUP>
+
+  </CMS_GROUP>
+
+</CMS_MODULE>

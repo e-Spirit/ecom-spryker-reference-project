@@ -1,0 +1,6 @@
+[self]
+uid=magazine_overview_page~#~content_top
+gid=e47e109e-ff14-44dc-9570-d3bcde036e8a
+store=PAGESTORE
+class=de.espirit.firstspirit.store.access.pagestore.BodyImpl
+

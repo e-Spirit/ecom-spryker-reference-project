@@ -1,0 +1,6 @@
+[self]
+uid=LinkTemplates
+gid=e91a2cb5-931e-4130-a645-863731d41539
+store=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.LinkTemplatesImpl
+

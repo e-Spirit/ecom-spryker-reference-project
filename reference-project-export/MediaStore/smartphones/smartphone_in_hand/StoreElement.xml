@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="SmartphoneInHand" id="9038717254508578924" type="pic" uniquedescription="smartphone_in_hand">
+	<LANG displayname="Hand mit Smartphone" language="DE"/>
+	<LANG displayname="Smartphone in Hand" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1260.0,3376.0,683.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,568.0,3376.0,1903.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="15.0,600.0,3293.0,1590.0,0,false" extension="jpg" height="656" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="419.0,382.0,2678.0,1966.0,0,false" extension="jpg" height="1966" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2678"/>
+		<RESOLUTION extension="jpg" height="3376" mimetype="image/jpeg" resolutionid="ORIGINAL" width="3376"/>
+	</PICTURE>
+</MEDIUM>

@@ -1,0 +1,6 @@
+[self]
+uid=shadow_man_with_film_camera
+gid=daa8f61b-7044-429d-a5cc-e3547baa43d9
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

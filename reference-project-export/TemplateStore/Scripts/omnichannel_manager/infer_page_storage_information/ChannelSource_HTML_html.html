@@ -1,0 +1,38 @@
+import de.espirit.firstspirit.access.BaseContext;
+import de.espirit.firstspirit.access.editor.value.TargetReference;
+import de.espirit.firstspirit.access.store.Store;
+import de.espirit.firstspirit.access.store.globalstore.GlobalStoreRoot;
+import de.espirit.firstspirit.access.store.globalstore.ProjectProperties;
+import de.espirit.firstspirit.agency.StoreAgent;
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * Infers the page storage information using the given page type and id.
+ *
+ * Usage: TPP_SNAP.execute('script:infer_page_storage_information', {
+ *          pageId: '<pageId>', // Id of the Spryker page
+ *          pageType: '<pageType>' // Type of the Spryker page
+ *        })
+ */
+
+if (pageId == void || pageId == null)
+    throw new IllegalArgumentException("Missing parameter 'pageId'");
+
+if (pageType == void || pageType == null)
+    throw new IllegalArgumentException("Missing parameter 'pageType'");
+
+Map mappingDef = new HashMap();
+
+if (pageType.equals("static") && pageId.equals("homepage")) {
+    mappingDef.put("fsTemplate", "homepage");
+    mappingDef.put("pageFolder", "content_pages");
+} else if(pageType.equals("category")) {
+    mappingDef.put("fsTemplate", "categorypage");
+    mappingDef.put("pageFolder", "category_pages");
+} else if (pageType.equals("product")) {
+    mappingDef.put("fsTemplate", "productpage");
+    mappingDef.put("pageFolder", "product_pages");
+}
+
+return mappingDef;

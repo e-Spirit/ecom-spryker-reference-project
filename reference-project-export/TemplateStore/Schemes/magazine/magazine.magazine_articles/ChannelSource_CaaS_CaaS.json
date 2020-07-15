@@ -1,0 +1,40 @@
+$CMS_SET(blocks, [])$
+
+$CMS_RENDER(template: "magazine_intro_block_render_template")$
+$CMS_SET(contentTopBlocks, [])$
+$CMS_SET(void, contentTopBlocks.addAll(blocks))$
+
+$CMS_SET(blocks, [])$
+$CMS_VALUE(tt_sections)$
+$CMS_SET(contentBodyBlocks, [])$
+$CMS_SET(void, contentBodyBlocks.addAll(blocks))$
+
+$CMS_SET(resultingBlocks, [])$
+$CMS_SET(void, resultingBlocks.addAll(contentTopBlocks))$
+$CMS_SET(void, resultingBlocks.addAll(contentBodyBlocks))$
+$CMS_SET(void, json.put("blocks", resultingBlocks))$
+
+$CMS_SET(placeholder, {:})$
+
+$CMS_SET(contentTopPlaceholder, "")$
+$CMS_IF(!contentTopBlocks.isEmpty())$
+	$CMS_FOR(contentTopBlock, contentTopBlocks)$
+		$CMS_SET(contentTopPlaceholder, contentTopPlaceholder + "{{ fsSpyCmsBlock({name: '" + contentTopBlock.get("block_name") + "'}) }}\n")$
+	$CMS_END_FOR$
+$CMS_END_IF$
+
+$CMS_SET(contentBodyPlaceholder, "")$
+$CMS_IF(!contentBodyBlocks.isEmpty())$
+	$CMS_FOR(contentBodyBlock, contentBodyBlocks)$
+		$CMS_SET(contentBodyPlaceholder, contentBodyPlaceholder + "{{ fsSpyCmsBlock({name: '" + contentBodyBlock.get("block_name") + "'}, isContentEditable = false) }}\n")$
+	$CMS_END_FOR$
+$CMS_END_IF$
+
+$-- Placeholders values have to exist in Spryker for synchronization purposes, therefore allowing even empty placeholder values for online CaaS --$
+$CMS_IF(!contentTopPlaceholder.isEmpty() || #global.isRelease())$
+	$CMS_SET(void, placeholder.put("content_top", {localeAbbr: contentTopPlaceholder}))$
+$CMS_END_IF$
+$CMS_SET(void, placeholder.put("content_body", {localeAbbr: contentBodyPlaceholder}))$
+
+$CMS_SET(void, json.put("placeholder", placeholder))$
+$CMS_SET(void, json.put("previewId", "" + previewId()))$

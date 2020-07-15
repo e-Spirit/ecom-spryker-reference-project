@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="ShoppingBags" id="7092096573675939434" type="pic" uniquedescription="shopping_bags">
+	<LANG displayname="Einkaufstüten" language="DE"/>
+	<LANG displayname="Shopping Bags" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,0.0,1280.0,720.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,209.0,1280.0,258.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,60.0,1280.0,418.0,0,false" extension="jpg" height="444" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="177.0,24.0,619.0,693.0,0,false" extension="jpg" height="693" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="619"/>
+		<RESOLUTION extension="jpg" height="759" mimetype="image/jpeg" resolutionid="ORIGINAL" width="1280"/>
+	</PICTURE>
+</MEDIUM>

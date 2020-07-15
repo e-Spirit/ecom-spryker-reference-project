@@ -1,0 +1,6 @@
+[self]
+uid=sony_camera_cutout
+gid=769b83af-405e-4698-a1cb-092fac708aec
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

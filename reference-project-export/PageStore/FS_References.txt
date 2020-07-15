@@ -1,0 +1,6 @@
+[self]
+uid=root
+gid=aaa1a04e-f843-47d3-9f35-fe80befbe87a
+uidType=PAGESTORE
+class=de.espirit.firstspirit.store.access.pagestore.PageStoreRootImpl
+

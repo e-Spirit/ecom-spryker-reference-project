@@ -1,0 +1,1 @@
+if (!lt_article.isEmpty, lt_article.values[0].name, "Select a magazine article!")

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<FIELDS>
+	<FIELD name='pt_url'><TEXT>magazine-overview</TEXT></FIELD>
+	<FIELD name='pt_metaTitle'><TEXT/></FIELD>
+	<FIELD name='pt_metaKeywords'><TEXT/></FIELD>
+	<FIELD name='pt_metaDescription'><TEXT/></FIELD>
+</FIELDS>

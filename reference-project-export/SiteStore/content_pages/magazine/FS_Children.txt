@@ -1,0 +1,2 @@
+magazine_detail_page
+magazine_overview_page

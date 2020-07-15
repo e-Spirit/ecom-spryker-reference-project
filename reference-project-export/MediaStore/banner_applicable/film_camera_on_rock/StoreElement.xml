@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="FilmCameraOnRock" id="7541416586826534582" type="pic" uniquedescription="film_camera_on_rock">
+	<LANG displayname="Film Camera on Rock" language="EN"/>
+	<LANG displayname="Filmkamera auf Felsen" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1341.0,6000.0,1209.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,942.0,6000.0,1920.0,0,false" extension="jpg" height="435" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="1173.0,240.0,2844.0,2836.0,0,false" extension="jpg" height="2836" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2844"/>
+		<RESOLUTION cropData="1631.0,1146.0,2570.0,1447.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="4000" mimetype="image/jpeg" resolutionid="ORIGINAL" width="6000"/>
+	</PICTURE>
+</MEDIUM>

@@ -1,0 +1,13 @@
+$CMS_SET(set_teaserItem,{:})$
+
+$CMS_SET(void, set_teaserItem.put("moleculename", "fs-n-teaser-item-product"))$
+
+$CMS_IF(!st_product.isEmpty())$
+	$CMS_SET(set_prodId)$$CMS_VALUE(st_product.identifiers[0])$$CMS_END_SET$
+	$CMS_SET(void, set_teaserItem.put("productSku", set_prodId.toString()))$
+$CMS_END_IF$
+
+$CMS_SET(void, set_teaserItem.put("buttonText", if(!st_linkText.isEmpty,st_linkText.convert2)))$
+
+$-- Add to variable defined in n_teaser --$
+$CMS_SET(void, set_nTeaserItems.add(set_teaserItem))$

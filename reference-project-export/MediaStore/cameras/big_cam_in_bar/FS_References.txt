@@ -1,0 +1,6 @@
+[self]
+uid=big_cam_in_bar
+gid=021c2281-be27-4990-b970-80850e087565
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

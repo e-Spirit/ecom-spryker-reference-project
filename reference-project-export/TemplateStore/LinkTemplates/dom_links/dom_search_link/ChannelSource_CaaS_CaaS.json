@@ -1,0 +1,1 @@
+<a href="{{ path('search') }}?q=$CMS_VALUE(lt_query.urlEncode())$">$CMS_VALUE(lt_linkText.convert2)$</a>

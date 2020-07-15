@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <CMS_INPUT_TEXT name="st_title" hFill="yes" maxInputLength="50" singleLine="no" useLanguages="yes">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Title"/>
+      <LANGINFO lang="DE" label="Überschrift"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+  <FS_CATALOG name="st_nTeaserItems" forbidPolyglotDataHierarchy="yes" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Teaser Items"/>
+      <LANGINFO lang="DE" label="Teaser-Elemente"/>
+    </LANGINFOS>
+    <TEMPLATES type="section">
+      <TEMPLATE uid="n_teaser_item_content_teaser"/>
+      <TEMPLATE uid="n_teaser_item_product_teaser"/>
+    </TEMPLATES>
+  </FS_CATALOG>
+
+</CMS_MODULE>

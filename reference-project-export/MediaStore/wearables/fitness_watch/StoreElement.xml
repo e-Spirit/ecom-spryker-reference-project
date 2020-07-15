@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="FitnessWatch" id="6469869636740364457" type="pic" uniquedescription="fitness_watch">
+	<LANG displayname="Fitness Watch" language="EN"/>
+	<LANG displayname="Fitnessuhr" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="1016.0,794.0,2398.0,1346.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="1486.0,551.0,2604.0,2169.0,0,false" extension="jpg" height="2169" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2604"/>
+		<RESOLUTION cropData="21.0,1008.0,4374.0,878.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="7.0,710.0,4453.0,1545.0,0,false" extension="jpg" height="471" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION extension="jpg" height="3264" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4460"/>
+	</PICTURE>
+</MEDIUM>

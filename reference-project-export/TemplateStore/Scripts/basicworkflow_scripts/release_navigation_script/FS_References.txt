@@ -1,0 +1,6 @@
+[self]
+uid=release_navigation_script
+gid=6acf0953-a085-482e-9d8e-2672b4044fc5
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

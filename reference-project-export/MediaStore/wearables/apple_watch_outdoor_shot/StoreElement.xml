@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="AppleWatchOutdoorShot" id="-2121044761909431104" type="pic" uniquedescription="apple_watch_outdoor_shot">
+	<LANG displayname="Apple Watch Outdoor Shot" language="EN"/>
+	<LANG displayname="Apple Watch Outdoor-Foto" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1918.0,3376.0,1899.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,2655.0,3373.0,680.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="13.0,1839.0,3360.0,2053.0,0,false" extension="jpg" height="830" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="66.0,1412.0,3307.0,2747.0,0,false" extension="jpg" height="2747" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3307"/>
+		<RESOLUTION extension="jpg" height="6000" mimetype="image/jpeg" resolutionid="ORIGINAL" width="3376"/>
+	</PICTURE>
+</MEDIUM>

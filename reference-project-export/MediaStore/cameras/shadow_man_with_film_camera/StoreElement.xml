@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="ShadowManWithFilmCamera" id="6073394789796579844" type="pic" uniquedescription="shadow_man_with_film_camera">
+	<LANG displayname="Schatten mit Filmkamera" language="DE"/>
+	<LANG displayname="Shadow man with filmcamera" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1506.0,4000.0,3013.0,0,false" extension="jpg" height="1024" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,3641.0,4000.0,800.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="479.0,933.0,3013.0,4360.0,0,false" extension="jpg" height="4360" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3013"/>
+		<RESOLUTION cropData="828.0,3447.0,3171.0,1789.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="6000" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4000"/>
+	</PICTURE>
+</MEDIUM>

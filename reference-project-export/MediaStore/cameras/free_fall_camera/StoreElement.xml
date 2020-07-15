@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="FreeFallCamera" id="-733880998562736799" type="pic" uniquedescription="free_fall_camera">
+	<LANG displayname="Fallende Kamera" language="DE"/>
+	<LANG displayname="Free Fall Camera" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1619.0,3230.0,1817.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,1986.0,3230.0,646.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="10.0,1227.0,3219.0,2229.0,0,false" extension="jpg" height="941" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="386.0,925.0,2681.0,2799.0,0,false" extension="jpg" height="2799" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2681"/>
+		<RESOLUTION extension="jpg" height="4845" mimetype="image/jpeg" resolutionid="ORIGINAL" width="3230"/>
+	</PICTURE>
+</MEDIUM>

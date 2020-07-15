@@ -1,0 +1,16 @@
+$CMS_IF(!lt_pageref.isEmpty)$$--
+--$$CMS_SET(set_pageUid,lt_pageref.get().page.template.uid)$$--
+--$$CMS_IF(set_pageUid == "contentpage")$$--
+--${% widget 'FirstSpiritContentLinkWidget' args ["$CMS_VALUE(lt_pageref.uid)$", "$CMS_VALUE(lt_linkText.convert2)$"] only %}{% endwidget %}$--
+--$$CMS_ELSIF(!set_ps_staticLinks.isEmpty)$$--
+	    --$$CMS_IF(set_ps_staticLinks.containsKey(set_pageUid) && !set_ps_staticLinks.get(set_pageUid).isEmpty)$$--
+			--$<a href="$CMS_VALUE(set_ps_staticLinks.get(set_pageUid))$">$CMS_VALUE(lt_linkText.convert2, default:"")$</a>$--
+		--$$CMS_ELSE$$--
+			--$$CMS_SET(void,#global.logWarning("No URL set for Static Page Template " + set_pageUid))$$--
+		--$$CMS_END_IF$$--
+	--$$CMS_ELSE$$--
+		--$$CMS_SET(void,#global.logWarning("Could not link to " + lt_pageref.get().page.uid))$$--
+	--$$CMS_END_IF$$--
+--$$CMS_ELSE$$--
+	--$$CMS_SET(void,#global.logWarning("This content link should not be empty!"))$$--
+--$$CMS_END_IF$

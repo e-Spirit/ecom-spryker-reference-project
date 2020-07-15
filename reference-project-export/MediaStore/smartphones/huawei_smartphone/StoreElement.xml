@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="HuaweiSmartphone" id="8635909946171518761" type="pic" uniquedescription="huawei_smartphone">
+	<LANG displayname="Huawei Smartphone" language="DE"/>
+	<LANG displayname="Huawei Smartphone" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,342.0,4272.0,861.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="1416.0,160.0,2854.0,1605.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="1601.0,170.0,2538.0,2253.0,0,false" extension="jpg" height="2253" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2538"/>
+		<RESOLUTION cropData="18.0,177.0,4247.0,1329.0,0,false" extension="jpg" height="425" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION extension="jpg" height="2848" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4272"/>
+	</PICTURE>
+</MEDIUM>

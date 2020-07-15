@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<FIELDS>
+	<FIELD name='ps_activeStore'><SEL><VALUE>DE</VALUE></SEL></FIELD>
+	<FIELD name='ps_navigationsPageReference'><UID>navigations</UID><UIDTYPE>SITESTORE_LEAF</UIDTYPE><REMOTE/></FIELD>
+</FIELDS>

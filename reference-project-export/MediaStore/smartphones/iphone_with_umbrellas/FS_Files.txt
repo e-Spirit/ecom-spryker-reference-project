@@ -1,0 +1,9 @@
+# mimeType        name
+text/plain;UTF-8  FS_Info.txt
+text/plain;UTF-8  FS_References.txt
+image/jpeg        Picture_iPhoneWithUmbrellas_BANNER_IMAGE.jpg
+image/jpeg        Picture_iPhoneWithUmbrellas_CONTENT_IMAGE.jpg
+image/jpeg        Picture_iPhoneWithUmbrellas_MAGAZINE_ARTICLE_BANNER.jpg
+image/jpeg        Picture_iPhoneWithUmbrellas_ORIGINAL.jpg
+image/jpeg        Picture_iPhoneWithUmbrellas_TEASER_IMAGE.jpg
+text/xml;UTF-8    StoreElement.xml

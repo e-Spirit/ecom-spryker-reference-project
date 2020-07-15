@@ -1,0 +1,6 @@
+[self]
+uid=html_mail_template
+gid=146752f9-f7e3-4a8d-9560-469277a0d183
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.PageTemplateImpl
+

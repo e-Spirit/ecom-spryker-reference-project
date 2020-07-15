@@ -1,0 +1,16 @@
+$CMS_TRIM(level:1)$
+	$CMS_SET(json, {:})$
+	$CMS_SET(previewId, previewId(element:#global.node))$
+	$CMS_SET(void, json.put("previewId", "" + previewId))$
+	$CMS_SET(void, json.put("pageRevisionId", #global.page.revision.id))$
+	$CMS_SET(void, json.put("pagetype", "product"))$
+	$-- Page uid is needed for later identification when setting the SKU of the page --$
+	$CMS_SET(void, json.put("page_uid", #global.page.uid))$
+	$CMS_SET(void, json.put("product_sku", pt_productSku))$
+	$CMS_SET(blocks, [])$
+
+	$CMS_VALUE(#global.page.body("content"))$
+	$CMS_SET(void, json.put("blocks", blocks))$
+  
+	$CMS_VALUE(json.toJSON)$
+$CMS_END_TRIM$

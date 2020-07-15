@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGEREF htmlname="magazine_detail_page" id="-6809146732214175442" pageref="-4905564545894174191" uniquedescription="magazine_detail_page">
+	<CONTENTPARAMETER count="1" source="magazine_articles" templateid="2285265719480341754"/>
+	<LANG displayname="Magazindetailseite" language="DE"/>
+	<LANG displayname="Magazine Detail Page" language="EN"/>
+	<PAGE_LANG_SPEC language="DE" showinpagegrp="1" showinsitemap="1"/>
+	<PAGE_LANG_SPEC language="EN" showinpagegrp="1" showinsitemap="1"/>
+</PAGEREF>

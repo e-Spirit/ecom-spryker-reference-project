@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="BlackAndWhitePhotographer" id="7960926879635987603" type="pic" uniquedescription="black_and_white_photographer">
+	<LANG displayname="Black and White Photographer" language="EN"/>
+	<LANG displayname="S/W Fotograf" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,471.0,2700.0,544.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="4.0,124.0,2696.0,956.0,0,false" extension="jpg" height="482" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="630.0,495.0,1440.0,810.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="648.0,16.0,1664.0,1568.0,0,false" extension="jpg" height="1568" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="1664"/>
+		<RESOLUTION extension="jpg" height="1800" mimetype="image/jpeg" resolutionid="ORIGINAL" width="2700"/>
+	</PICTURE>
+</MEDIUM>

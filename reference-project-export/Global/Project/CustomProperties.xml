@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OBJECT class="java.util.HashMap">
+	<OBJECT class="java.lang.String">caasV2Urls</OBJECT>
+	<OBJECT class="java.util.HashMap">
+		<OBJECT class="java.lang.String">SITESTORE_FOLDER:category_pages</OBJECT>
+		<OBJECT class="java.lang.String">{"collectionId":"categorypages"}</OBJECT>
+		<OBJECT class="java.lang.String">SITESTORE_FOLDER:content_pages</OBJECT>
+		<OBJECT class="java.lang.String">{"collectionId":"contentpages"}</OBJECT>
+		<OBJECT class="java.lang.String">SITESTORE_FOLDER:product_pages</OBJECT>
+		<OBJECT class="java.lang.String">{"collectionId":"productpages"}</OBJECT>
+		<OBJECT class="java.lang.String">SITESTORE_FOLDER:technical</OBJECT>
+		<OBJECT class="java.lang.String">{"collectionId":"technical"}</OBJECT>
+	</OBJECT>
+</OBJECT>

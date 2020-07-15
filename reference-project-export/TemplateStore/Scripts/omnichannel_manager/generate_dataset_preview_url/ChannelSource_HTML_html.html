@@ -1,0 +1,53 @@
+import de.espirit.firstspirit.access.store.Store;
+import de.espirit.firstspirit.access.store.contentstore.Content2;
+import de.espirit.firstspirit.access.store.contentstore.ContentStoreRoot;
+import de.espirit.firstspirit.access.store.contentstore.Dataset;
+import de.espirit.firstspirit.agency.StoreAgent;
+import de.espirit.firstspirit.forms.FormData;
+import de.espirit.firstspirit.forms.FormField;
+import de.espirit.or.schema.Entity;
+/**
+ * Generates a preview URL for the given content reference.
+ *
+ * Usage: TPP_SNAP.execute('script:generate_dataset_preview_url', {
+ *          content2Id: <content2Id> // Id of the content2 object
+ * 	  		entityId: <entityId> // Id of the given entity
+ *        })
+ */
+String TT_PAGE_IDENTIFIER = "tt_page_identifier";
+ 
+
+if (content2Id == void || content2Id == null) {
+    throw new IllegalArgumentException("Missing parameter 'content2Id'");
+}
+    
+if (entityId == void || entityId == null) {
+    throw new IllegalArgumentException("Missing parameter 'entityId'");
+}
+
+StoreAgent storeAgent = context.requireSpecialist(StoreAgent.TYPE);
+ContentStoreRoot store = (ContentStoreRoot) storeAgent.getStore(Store.Type.CONTENTSTORE, false);
+Content2 content2 = (Content2) store.getStoreElement(Long.parseLong(content2Id));
+Entity entity = content2.getEntity(Long.parseLong(entityId));
+if (entity == null) {
+    throw new IllegalStateException("Entity with id '" + entityId + "' does not exist!");
+}
+Dataset dataset = content2.getDataset(entity);
+
+if (dataset == null) {
+    throw new IllegalStateException("Couldn't retrieve dataset for entity with id '" + entityId + "'!");
+}
+
+FormData formData = dataset.getFormData();
+if (formData.getForm().findEditor(TT_PAGE_IDENTIFIER) == null) {
+    throw new IllegalStateException("Input component with name '" + TT_PAGE_IDENTIFIER + "' does not exist in dataset!");
+}
+
+FormField pageIdentifierFormField = formData.get(null, TT_PAGE_IDENTIFIER);
+if(!pageIdentifierFormField.isEmpty()) {
+    return "/fs-preview/fs-cms-page-preview/" + pageIdentifierFormField.get();
+} else {
+    context.logWarning("Failed to generate preview URL for dataset. Page identifier form field for entity " + entityId + " is empty.");
+}
+
+return null;

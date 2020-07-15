@@ -1,0 +1,53 @@
+$CMS_SET(block,{:})$
+$-- Defining general block data --$
+$CMS_SET(void, block.put("previewId", "" + previewId()))$
+$CMS_SET(void, block.put("active", "1"))$
+$CMS_SET(void, block.put("store_names", [ps_activeStore]))$
+$CMS_SET(void, block.put("template_name", "fs_molecule_block"))$
+$CMS_SET(void, block.put("template_path", "@CmsBlock/template/fs_molecule_block.twig"))$
+
+$CMS_SET(set_pageType, json.get("pagetype"))$
+
+$-- Add block name attribute to block object (page type dependent) --$
+$CMS_RENDER(template: "block_name_render", rt_pageType: set_pageType, rt_blockObject: block)$
+
+$-- Add additional block attributes to block object (page type dependent) --$
+$CMS_RENDER(template: "additional_block_attributes_render", rt_pageType: set_pageType, rt_blockObject: block)$
+
+$-- Defining placeholder data of the block --$
+$CMS_SET(placeholders,{:})$
+$CMS_SET(void, block.put("placeholder",placeholders))$
+
+$CMS_SET(data,{:})$
+$CMS_SET(void, data.put("moleculename", "fs-n-teaser"))$
+
+$-- this variable overrides the default value in Spryker. Default is 4 --$
+$CMS_SET(breakpoint, 4)$
+
+$CMS_IF(#global.page.template.uid == "categorypage")$
+	$CMS_IF(#global.section.parent.name == "top" || #global.section.parent.name == "bottom")$
+		$CMS_SET(breakpoint, 3)$
+	$CMS_END_IF$
+$CMS_END_IF$
+
+$CMS_SET(void, data.put("breakpoint", breakpoint))$
+
+$CMS_IF(!st_title.isEmpty)$
+	$CMS_SET(void, data.put("title", st_title.convert2))$
+$CMS_END_IF$
+
+$CMS_SET(set_nTeaserItems, [])$
+$CMS_VALUE(st_nTeaserItems)$
+$CMS_SET(void, data.put("teaser_items", set_nTeaserItems))$
+
+$CMS_SET(locale, #global.language.getLocale())$
+$CMS_SET(localeAbbr, locale.getLanguage() + "_" + locale.getCountry())$
+$CMS_SET(localizedData,{:})$
+$CMS_SET(void, localizedData.put(localeAbbr, data))$
+$CMS_SET(void, block.put("data", localizedData))$
+
+$CMS_IF(#global.is("WEBEDIT") && !isSet(caas_preview_generation))$
+	$CMS_VALUE(block.toJSON)$
+$CMS_ELSE$
+	$CMS_SET(void, blocks.add(block))$
+$CMS_END_IF$

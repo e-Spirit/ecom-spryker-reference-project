@@ -1,0 +1,6 @@
+[self]
+uid=camera_setup_with_lens
+gid=b958beee-9a0f-4548-832c-d80f09561bee
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

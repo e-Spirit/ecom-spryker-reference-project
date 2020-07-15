@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="magazine" id="3251640657626452968" type="pic" uniquedescription="magazine">
+	<LANG displayname="Magazin" language="DE"/>
+	<LANG displayname="Magazine" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,162.0,1657.0,932.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,182.0,1919.0,386.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="2.0,323.0,1917.0,560.0,0,false" extension="jpg" height="397" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="298.0,256.0,1033.0,1015.0,0,false" extension="jpg" height="1015" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="1033"/>
+		<RESOLUTION extension="jpg" height="1280" mimetype="image/jpeg" resolutionid="ORIGINAL" width="1920"/>
+	</PICTURE>
+</MEDIUM>

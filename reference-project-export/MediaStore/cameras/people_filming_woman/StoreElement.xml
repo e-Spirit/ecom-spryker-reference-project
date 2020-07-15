@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="PeapleFilmingWoman" id="3953899328148978641" type="pic" uniquedescription="people_filming_woman">
+	<LANG displayname="Menschen filmen eine Frau" language="DE"/>
+	<LANG displayname="People filming a woman" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1232.0,6240.0,1257.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="1469.0,257.0,4289.0,3485.0,0,false" extension="jpg" height="3485" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="4289"/>
+		<RESOLUTION cropData="474.0,434.0,5766.0,3248.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="9.0,868.0,6231.0,2089.0,0,false" extension="jpg" height="455" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION extension="jpg" height="4160" mimetype="image/jpeg" resolutionid="ORIGINAL" width="6240"/>
+	</PICTURE>
+</MEDIUM>

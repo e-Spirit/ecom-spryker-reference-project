@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RULES>
+	<RULE>
+		<WITH>
+			<MATCHES regex="^[\/A-Za-z0-9_.\-]+$">
+				<PROPERTY name="VALUE" source="pt_url"/>
+			</MATCHES>
+		</WITH>
+		<DO>
+			<VALIDATION scope="SAVE">
+				<PROPERTY name="VALID" source="pt_url"/>
+				<MESSAGE lang="*" text="The entered page url is not valid. Allowed characters are: A-Z a-z 0-9 / _ . -"/>
+				<MESSAGE lang="DE" text="Die eingebene URL der Seite ist nicht gültig. Zulässige Zeichen sind: A-Z a-z 0-9 / _ . -"/>
+			</VALIDATION>
+		</DO>
+	</RULE>
+</RULES>

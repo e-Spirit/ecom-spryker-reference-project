@@ -1,0 +1,12 @@
+[self]
+uid=navigations
+gid=d4d47484-27c7-4975-8583-3e7bafec281f
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.PageTemplateImpl
+
+[optionalId]
+uid=get_navigation_gca_pages
+gid=ad76ba93-aa0f-4981-a53b-1ea179127263
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

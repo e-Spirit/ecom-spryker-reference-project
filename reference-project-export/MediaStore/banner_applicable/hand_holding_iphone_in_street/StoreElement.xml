@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="HandHoldingiPhoneInStreet" id="8237467797730924617" type="pic" uniquedescription="hand_holding_iphone_in_street">
+	<LANG displayname="Hand Holding iPhone in Street" language="EN"/>
+	<LANG displayname="Hand mit iPhone vor Straße" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1168.0,3456.0,2759.0,0,false" extension="jpg" height="1085" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,1820.0,3456.0,696.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,755.0,3456.0,3505.0,0,false" extension="jpg" height="3505" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3456"/>
+		<RESOLUTION cropData="19.0,1469.0,3437.0,1933.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="4418" mimetype="image/jpeg" resolutionid="ORIGINAL" width="3456"/>
+	</PICTURE>
+</MEDIUM>

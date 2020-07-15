@@ -1,0 +1,6 @@
+[self]
+uid=check_page_ref_exists
+gid=f83a8ef1-7846-426d-8afa-81a5b008bb3b
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

@@ -1,0 +1,19 @@
+$CMS_TRIM(level:1)$
+	$CMS_SET(json, {:})$
+	$CMS_SET(previewId, previewId(element:#global.node))$
+	$CMS_SET(void, json.put("previewId", "" + previewId))$
+	$CMS_SET(void, json.put("pagetype", "static"))$
+	$CMS_SET(void, json.put("identifier", #global.node.uid))$
+
+	$CMS_SET(blocks, [])$
+
+    $CMS_VALUE(#global.page.body("stage"))$
+	$CMS_VALUE(#global.page.body("homepage_one"))$
+	$CMS_VALUE(#global.page.body("homepage_two"))$
+	$CMS_VALUE(#global.page.body("homepage_three"))$
+	$CMS_VALUE(#global.page.body("homepage_four"))$
+
+	$CMS_SET(void, json.put("blocks", blocks))$
+  
+	$CMS_VALUE(json.toJSON)$
+$CMS_END_TRIM$

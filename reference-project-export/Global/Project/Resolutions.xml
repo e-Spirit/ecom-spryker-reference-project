@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OBJECT class="java.util.ArrayList">
+	<OBJECT class="de.espirit.firstspirit.server.projectmanagement.ResolutionDTO">
+		<FIELD name="_descriptions"><NULL/><!-- interface java.util.Map --></FIELD>
+		<FIELD name="_keepAspectRatio" type="boolean">false</FIELD>
+		<FIELD name="_names"><NULL/><!-- interface java.util.Map --></FIELD>
+		<FIELD name="m_description">
+			<OBJECT class="java.lang.String"></OBJECT>
+		</FIELD>
+		<FIELD name="m_height" type="int">0</FIELD>
+		<FIELD name="m_name">
+			<OBJECT class="java.lang.String">ORIGINAL</OBJECT>
+		</FIELD>
+		<FIELD name="m_width" type="int">0</FIELD>
+	</OBJECT>
+	<OBJECT class="de.espirit.firstspirit.server.projectmanagement.ResolutionDTO">
+		<FIELD name="_descriptions">
+			<OBJECT class="java.util.HashMap">
+				<OBJECT class="java.lang.String">DE</OBJECT>
+				<OBJECT class="java.lang.String"></OBJECT>
+				<OBJECT class="java.lang.String">EN</OBJECT>
+				<OBJECT class="java.lang.String"></OBJECT>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="_keepAspectRatio" type="boolean">false</FIELD>
+		<FIELD name="_names">
+			<OBJECT class="java.util.HashMap">
+				<OBJECT class="java.lang.String">DE</OBJECT>
+				<OBJECT class="java.lang.String">Bannerbild</OBJECT>
+				<OBJECT class="java.lang.String">EN</OBJECT>
+				<OBJECT class="java.lang.String">Banner image</OBJECT>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="m_description">
+			<OBJECT class="java.lang.String">For use in banner sections</OBJECT>
+		</FIELD>
+		<FIELD name="m_height" type="int">290</FIELD>
+		<FIELD name="m_name">
+			<OBJECT class="java.lang.String">BANNER_IMAGE</OBJECT>
+		</FIELD>
+		<FIELD name="m_width" type="int">1440</FIELD>
+	</OBJECT>
+	<OBJECT class="de.espirit.firstspirit.server.projectmanagement.ResolutionDTO">
+		<FIELD name="_descriptions">
+			<OBJECT class="java.util.HashMap">
+				<OBJECT class="java.lang.String">DE</OBJECT>
+				<OBJECT class="java.lang.String"></OBJECT>
+				<OBJECT class="java.lang.String">EN</OBJECT>
+				<OBJECT class="java.lang.String"></OBJECT>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="_keepAspectRatio" type="boolean">false</FIELD>
+		<FIELD name="_names">
+			<OBJECT class="java.util.HashMap">
+				<OBJECT class="java.lang.String">DE</OBJECT>
+				<OBJECT class="java.lang.String">Inhaltsbild</OBJECT>
+				<OBJECT class="java.lang.String">EN</OBJECT>
+				<OBJECT class="java.lang.String">Content image</OBJECT>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="m_description">
+			<OBJECT class="java.lang.String">For use in text/image sections</OBJECT>
+		</FIELD>
+		<FIELD name="m_height" type="int">0</FIELD>
+		<FIELD name="m_name">
+			<OBJECT class="java.lang.String">CONTENT_IMAGE</OBJECT>
+		</FIELD>
+		<FIELD name="m_width" type="int">0</FIELD>
+	</OBJECT>
+	<OBJECT class="de.espirit.firstspirit.server.projectmanagement.ResolutionDTO">
+		<FIELD name="_descriptions">
+			<OBJECT class="java.util.HashMap">
+				<OBJECT class="java.lang.String">DE</OBJECT>
+				<OBJECT class="java.lang.String">Auflösung für das Magazinbanner</OBJECT>
+				<OBJECT class="java.lang.String">EN</OBJECT>
+				<OBJECT class="java.lang.String">Resolution for the Magazine banner</OBJECT>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="_keepAspectRatio" type="boolean">false</FIELD>
+		<FIELD name="_names">
+			<OBJECT class="java.util.HashMap">
+				<OBJECT class="java.lang.String">DE</OBJECT>
+				<OBJECT class="java.lang.String">Auflösung für das Magazinbanner</OBJECT>
+				<OBJECT class="java.lang.String">EN</OBJECT>
+				<OBJECT class="java.lang.String">Resolution for the Magazine banner</OBJECT>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="m_description">
+			<OBJECT class="java.lang.String">Resolution for the Magazine banner</OBJECT>
+		</FIELD>
+		<FIELD name="m_height" type="int">0</FIELD>
+		<FIELD name="m_name">
+			<OBJECT class="java.lang.String">MAGAZINE_ARTICLE_BANNER</OBJECT>
+		</FIELD>
+		<FIELD name="m_width" type="int">1360</FIELD>
+	</OBJECT>
+	<OBJECT class="de.espirit.firstspirit.server.projectmanagement.ResolutionDTO">
+		<FIELD name="_descriptions">
+			<OBJECT class="java.util.HashMap">
+				<OBJECT class="java.lang.String">DE</OBJECT>
+				<OBJECT class="java.lang.String"></OBJECT>
+				<OBJECT class="java.lang.String">EN</OBJECT>
+				<OBJECT class="java.lang.String">Ratio 16:9</OBJECT>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="_keepAspectRatio" type="boolean">false</FIELD>
+		<FIELD name="_names">
+			<OBJECT class="java.util.HashMap">
+				<OBJECT class="java.lang.String">DE</OBJECT>
+				<OBJECT class="java.lang.String"></OBJECT>
+				<OBJECT class="java.lang.String">EN</OBJECT>
+				<OBJECT class="java.lang.String">TEASER_IMAGE</OBJECT>
+			</OBJECT>
+		</FIELD>
+		<FIELD name="m_description">
+			<OBJECT class="java.lang.String">Ratio 16:9</OBJECT>
+		</FIELD>
+		<FIELD name="m_height" type="int">810</FIELD>
+		<FIELD name="m_name">
+			<OBJECT class="java.lang.String">TEASER_IMAGE</OBJECT>
+		</FIELD>
+		<FIELD name="m_width" type="int">1440</FIELD>
+	</OBJECT>
+</OBJECT>

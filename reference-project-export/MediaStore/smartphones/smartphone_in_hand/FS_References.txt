@@ -1,0 +1,6 @@
+[self]
+uid=smartphone_in_hand
+gid=2a523306-0f6a-4f59-a995-9fc1d33827f5
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

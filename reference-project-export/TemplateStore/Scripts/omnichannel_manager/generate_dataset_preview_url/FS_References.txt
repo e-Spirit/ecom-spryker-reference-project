@@ -1,0 +1,6 @@
+[self]
+uid=generate_dataset_preview_url
+gid=3116b3d8-9e48-4b7f-859c-3012f8344420
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

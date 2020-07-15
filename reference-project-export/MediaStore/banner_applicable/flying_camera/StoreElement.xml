@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="FlyingCamera" id="2047975894915566838" type="pic" uniquedescription="flying_camera">
+	<LANG displayname="Fliegende Kamera vor Wüstenlandschaft" language="DE"/>
+	<LANG displayname="Flying Camera in front of desert" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,974.0,5080.0,1026.0,0,false" deprecated="true" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="1390.0,0.0,2037.0,2253.0,0,false" extension="jpg" height="2253" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2037"/>
+		<RESOLUTION cropData="1467.0,238.0,1907.0,1071.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="6.0,228.0,5073.0,1665.0,0,false" extension="jpg" height="446" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION extension="jpg" height="2255" mimetype="image/jpeg" resolutionid="ORIGINAL" width="5080"/>
+	</PICTURE>
+</MEDIUM>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LINKTEMPLATE cat="url" ext="lt_linkUrl" id="8692782861488794113" name="dom_external_link" txt="lt_linkText">
+	<LANG displayname="External link" language="EN"/>
+	<LANG displayname="Externer Verweis" language="DE"/>
+</LINKTEMPLATE>

@@ -1,0 +1,6 @@
+[self]
+uid=huawei_smartphone
+gid=5421828e-894c-434a-a294-d1d142cb13d1
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

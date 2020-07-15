@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <FS_CATALOG name="st_teaserGridItemsLeft" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Teaser Grid Items Left"/>
+      <LANGINFO lang="DE" label="Linke Teaser-Grid-Elemente"/>
+    </LANGINFOS>
+    <TEMPLATES type="section">
+      <TEMPLATE uid="teaser_item"/>
+    </TEMPLATES>
+  </FS_CATALOG>
+
+  <FS_CATALOG name="st_teaserGridItemsRight" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Teaser Grid Items Right"/>
+      <LANGINFO lang="DE" label="Rechte Teaser-Grid-Elemente"/>
+    </LANGINFOS>
+    <TEMPLATES type="section">
+      <TEMPLATE uid="teaser_item"/>
+    </TEMPLATES>
+  </FS_CATALOG>
+
+</CMS_MODULE>

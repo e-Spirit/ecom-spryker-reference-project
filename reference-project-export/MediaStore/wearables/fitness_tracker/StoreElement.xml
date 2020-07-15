@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="FitnessTracker" id="-2581145709884847716" type="pic" uniquedescription="fitness_tracker">
+	<LANG displayname="Fitness Tracker" language="DE"/>
+	<LANG displayname="Fitness Tracker" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1664.0,3776.0,2132.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,2409.0,4000.0,800.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="13.0,1559.0,3987.0,2253.0,0,false" extension="jpg" height="768" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="413.0,1253.0,3573.0,2760.0,0,false" extension="jpg" height="2760" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3573"/>
+		<RESOLUTION extension="jpg" height="6000" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4000"/>
+	</PICTURE>
+</MEDIUM>

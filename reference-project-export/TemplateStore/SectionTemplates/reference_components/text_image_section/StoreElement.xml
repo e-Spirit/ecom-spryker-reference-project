@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEMPLATE filename="text_image_section" id="-1131489329298637098" templateid="4036886215267889542" type="section">
+	<EXTENSION anchor="0" file="html" link="html" templateSet="9062318847741885912"/>
+	<EXTENSION anchor="0" file="js" link="json" templateSet="-1285658006509869299"/>
+	<LANG displayname="Text mit Bild" language="DE"/>
+	<LANG displayname="Text with Image" language="EN"/>
+</TEMPLATE>

@@ -1,0 +1,3 @@
+$CMS_SET(set_id)$$CMS_VALUE(lt_article.values[0].formData.tt_page_identifier)$$CMS_END_SET$
+$CMS_SET(void, set_link.put("id", set_id.toString()))$
+$CMS_SET(void, set_link.put("type","cmspage"))$

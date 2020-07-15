@@ -1,0 +1,17 @@
+[self]
+uid=shoppable_video_item
+gid=b2abd2fe-a08e-4721-9ca8-7542cc3930d3
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.SectionTemplateImpl
+
+[optionalId]
+uid=root
+gid=02681229-ad84-4915-bf1a-94ff71862d2a
+uidType=MEDIASTORE_FOLDER
+class=de.espirit.firstspirit.store.access.mediastore.MediaStoreRootImpl
+
+uid=p
+gid=30978420-4441-47e8-aa91-aa78d28ab222
+uidType=TEMPLATESTORE_FORMATTEMPLATE
+class=de.espirit.firstspirit.store.access.templatestore.FormatTemplateImpl
+

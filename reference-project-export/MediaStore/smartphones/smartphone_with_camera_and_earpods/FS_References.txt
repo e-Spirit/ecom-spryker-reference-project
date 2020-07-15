@@ -1,0 +1,6 @@
+[self]
+uid=smartphone_with_camera_and_earpods
+gid=53d4770f-dc9a-4f97-90bd-757a88bcda74
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

@@ -1,0 +1,6 @@
+[self]
+uid=desk_with_gadgets
+gid=1617a5c5-67a5-43f1-90f8-f32be5459415
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

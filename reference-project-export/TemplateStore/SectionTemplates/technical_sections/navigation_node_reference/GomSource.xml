@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <FS_REFERENCE name="st_startNode" hFill="yes" useLanguages="no">
+    <FILTER>
+      <ALLOW type="pagereffolder"/>
+    </FILTER>
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Choose a start node that will be appended to the navigation"/>
+      <LANGINFO lang="DE" label="Wählen Sie den Startknoten der der Navigation angehängt wird"/>
+    </LANGINFOS>
+    <PROJECTS>
+      <LOCAL name=".">
+        <SOURCES>
+          <FOLDER name="content_pages" store="SITESTORE"/>
+        </SOURCES>
+      </LOCAL>
+    </PROJECTS>
+  </FS_REFERENCE>
+
+</CMS_MODULE>

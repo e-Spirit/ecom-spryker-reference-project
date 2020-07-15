@@ -1,0 +1,143 @@
+import de.espirit.firstspirit.access.store.pagestore.DataProvider;
+import de.espirit.firstspirit.access.store.pagestore.Section;
+import de.espirit.firstspirit.access.store.sitestore.PageRef;
+import de.espirit.firstspirit.agency.FormsAgent;
+import de.espirit.firstspirit.agency.LanguageAgent;
+import de.espirit.firstspirit.agency.OperationAgent;
+import de.espirit.firstspirit.agency.QueryAgent;
+import de.espirit.firstspirit.ui.operations.ShowFormDialogOperation;
+import de.espirit.firstspirit.agency.StoreElementAgent;
+import de.espirit.firstspirit.access.store.IDProvider;
+
+/**
+ * Sample usage: 
+TPP_API.Common.execute('script:tpp_add_catalog_card', {
+    // use a query generated from ElementStatus with a single result
+    elementQuery: 'fs.id = <status.id> and fs.type = <status.elementType>',
+    language: '<language>',         // The current language
+    catalogName: 'st_catalog',     // Editor name for FS_CATALOG
+    cardTemplateUid: '<templateUid>'     // Uid of the template to use for creating card items
+})
+ */
+
+result = new HashMap();
+result{"success"} = "false";
+result{"abort"} = "false";
+result{"errorMessage"} = "";
+
+if (elementQuery == void) {
+    throw new IllegalArgumentException("Missing Parameter 'elementQuery'");
+}
+elemIt = context.requireSpecialist(QueryAgent.TYPE).answer(elementQuery).iterator();
+if (!elemIt.hasNext()) {
+    message = "Could not find Element! query=" + elementQuery;
+    context.logError(message);
+    result{"errorMessage"} = message;
+    return result;
+}
+element = elemIt.next();
+if (elemIt.hasNext()) {
+    message = "Query has more than one result! query=" + elementQuery;
+    context.logError(message);
+    result{"errorMessage"} = message;
+    return result;
+}
+
+if (language == void) {
+    throw new IllegalArgumentException("Missing Parameter 'language'");
+}
+_language = context.requireSpecialist(LanguageAgent.TYPE).getProjectLanguages(false).get(language);
+if (_language == null) {
+    message = "Unknown Language Abbreviation! language=" + language;
+    context.logError(message);
+    result{"errorMessage"} = message;
+    return result;
+}
+
+if (element instanceof PageRef) {
+    lockable = element = element.page;
+} else {
+    lockable = element;
+}
+if (!(element instanceof DataProvider)) {
+    message = "Element is not a DataProvider! element=" + element;
+    context.logError(message);
+    result{"errorMessage"} = message;
+    return result;
+}
+
+if (element instanceof Section) {
+    lockable = element.parent.parent;
+}
+
+if (cardTemplateUid == void) {
+    throw new IllegalArgumentException("Missing Parameter 'cardTemplateUid'");
+}
+cardTemplate = context.requireSpecialist(StoreElementAgent.TYPE).loadStoreElement(cardTemplateUid, IDProvider.UidType.TEMPLATESTORE, false);
+if (cardTemplate == null) {
+    message = "Couldn't find card template with uid '" + cardTemplateUid + "'!";
+    context.logError(message);
+    result{"errorMessage"} = message;
+    return result;
+}
+
+if (catalogName == void) {
+    throw new IllegalArgumentException("Missing Parameter 'catalogName'");
+}
+editor = element.formData.form.findEditor(catalogName);
+if (editor == null) {
+    message = "Given Element does not contain a FS_CATALOG, named '" + catalogName + "'! element=" + element;
+    context.logError(message);
+    result{"errorMessage"} = message;
+    return result;
+}
+
+try {
+    lockable.setLock(true, true);
+
+    catalog = element.formData.get(_language, catalogName).get();
+
+    languages = editor.usesLanguages() ? element.project.languages : Collections.singletonList(_language);
+    dialog = context.requireSpecialist(OperationAgent.TYPE).getOperation(ShowFormDialogOperation.TYPE);
+
+    dialog.setContextElement(element);
+    dialog.setDisabled(false);
+    dialog.setModified(false);
+    dialog.setMultiLanguage(editor.usesLanguages());
+    dialog.setOkText("Create");
+    dialog.setTitle(cardTemplate.getDisplayName(_language));
+    dialog.setUiStyle(element.store.type);
+    dialog.setTitle(editor.label(_language.abbreviation));
+    dialog.setDefaults(cardTemplate.formDefaults);
+    dialog.setRuleset(cardTemplate.rulesetDefinition);
+    dialog.setValidation(true);
+
+    form = context.requireSpecialist(FormsAgent.TYPE).getForm(cardTemplate.gomSource);
+    cardFormData = dialog.perform(form, languages);
+
+    if (cardFormData != null) {
+        card = catalog.create(cardTemplate, cardFormData);
+        catalog.add(card);
+
+        elementFormData = element.formData;
+        elementFormData.get(_language, catalogName).set(catalog);
+        element.setFormData(elementFormData);
+        lockable.save();
+        result{"success"} = "true";
+        return result;
+    } else {
+        result{"abort"} = "true";
+        return result;
+    }
+} catch (e) {
+    message = "Creating a catalog card with card template '" + cardTemplateUid + "' in catalog '" + catalogName + "' of data provider '" + lockable.getUid() + "' failed: " + e.message;
+    context.logError(message, e);
+    result{"errorMessage"} = message;
+    return result;
+} finally {
+    if(lockable.isLocked()) {
+        lockable.setLock(false, true);
+    }
+}
+
+return result;

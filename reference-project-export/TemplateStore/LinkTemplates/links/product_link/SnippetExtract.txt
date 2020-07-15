@@ -1,0 +1,6 @@
+if(!lt_product.isEmpty,
+	if(lt_product.identifiers[0] == "error_404",
+		"This product is not available!",
+		"SKU: " + lt_product.identifiers[0]
+		)
+	)

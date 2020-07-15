@@ -1,0 +1,6 @@
+[self]
+uid=magazine
+gid=6554436c-3433-41cd-89d5-d6ffb31ab89a
+uidType=PAGESTORE
+class=de.espirit.firstspirit.store.access.pagestore.PageFolderImpl
+

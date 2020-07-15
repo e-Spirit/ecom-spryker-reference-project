@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTEMPLATE id="-5590241711104534398" name="magazine_teaser_render">
+	<LANG displayname="Magazin-Teaser Render Template" language="DE"/>
+	<LANG displayname="Magazine Teaser Render Template" language="EN"/>
+	<style tag="magazine_teaser_render" view="marked">
+		<attr name="align" value="left"/>
+		<render/>
+	</style>
+</FORMATTEMPLATE>

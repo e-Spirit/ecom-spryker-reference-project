@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FORMATTEMPLATE id="-8933182811298321164" name="h1">
+	<LANG displayname="Main headline" language="EN"/>
+	<LANG displayname="Überschrift 1" language="DE"/>
+	<style tag="h1" view="marked">
+		<attr name="align" value="LEFT"/>
+		<attr name="background-color" value=""/>
+		<attr name="border-color" value=""/>
+		<attr name="color" value=""/>
+		<attr name="font-size" value="24"/>
+		<attr name="font-style" value="bold"/>
+		<attr name="font" value=""/>
+		<attr name="tooltip" value=""/>
+		<render/>
+	</style>
+</FORMATTEMPLATE>

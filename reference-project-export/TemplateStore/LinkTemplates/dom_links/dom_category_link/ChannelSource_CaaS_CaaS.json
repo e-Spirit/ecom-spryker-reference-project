@@ -1,0 +1,1 @@
+$CMS_IF(!lt_category.isEmpty())${% widget 'FirstSpiritCategoryLinkWidget' args [$CMS_VALUE(lt_category.values[0].getNodeId)$, "$CMS_VALUE(lt_linkText.convert2)$"] only %}{% endwidget %}$CMS_END_IF$

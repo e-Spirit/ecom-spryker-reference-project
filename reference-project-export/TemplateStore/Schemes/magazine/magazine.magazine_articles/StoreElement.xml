@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TABLE comment="" copy="0" description="magazine.magazine_articles" filename="magazine_articles" id="2937624968841355553" previewPageRefUid="magazine_detail_page" templateid="2285265719480341754" type="content" webeditSupported="1">
+	<EXTENSION file="html" link="html" templateSet="9062318847741885912"/>
+	<EXTENSION file="json" link="json" templateSet="-1285658006509869299"/>
+	<LANG displayname="Magazinartikel" language="DE"/>
+	<LANG displayname="Magazine Articles" language="EN"/>
+</TABLE>

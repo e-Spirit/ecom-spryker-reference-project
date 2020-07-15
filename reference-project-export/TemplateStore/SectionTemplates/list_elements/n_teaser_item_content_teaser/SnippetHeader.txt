@@ -1,0 +1,9 @@
+if(!st_headline.isEmpty,
+	st_headline,
+	if(!st_subline.isEmpty,
+		st_subline,
+		if(!st_text.isEmpty,
+		truncate(st_text,80)
+		)
+	)
+)

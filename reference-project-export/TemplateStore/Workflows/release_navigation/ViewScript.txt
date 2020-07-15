@@ -1,0 +1,13 @@
+//!Beanshell
+
+import de.espirit.firstspirit.access.store.Store;
+import de.espirit.firstspirit.access.store.globalstore.GCAPage;
+import de.espirit.firstspirit.access.store.globalstore.ProjectProperties;
+
+boolean isGlobalPage(storeElement) {
+	return storeElement.getStore().getType() == Store.Type.GLOBALSTORE
+		&& storeElement instanceof GCAPage;
+}
+
+storeElement = context.getElement();
+return storeElement != null && isGlobalPage(storeElement);

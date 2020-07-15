@@ -1,0 +1,13 @@
+{
+	"navigationExtensions": [
+		$CMS_SET(set_navigationExtensionGcaPages, [])$
+		$CMS_RENDER(script: "get_navigation_gca_pages", isRelease: #global.isRelease(), resultList: set_navigationExtensionGcaPages)$
+		$CMS_FOR(for_gcaPage, set_navigationExtensionGcaPages)$
+			$CMS_SET(set_gcaRendered)$$CMS_VALUE(#global.gca(for_gcaPage))$$CMS_END_SET$
+			$CMS_IF(!set_gcaRendered.toString().isEmpty)$
+				$CMS_VALUE(set_gcaRendered)$
+				$CMS_IF(!#for.isLast)$,$CMS_END_IF$
+			$CMS_END_IF$
+		$CMS_END_FOR$
+	]
+}

@@ -1,0 +1,40 @@
+<RULES>
+	<!-- maximum entries -->
+	<RULE>
+		<WITH>
+			<GREATER_THAN>
+				<PROPERTY name="SIZE" source="st_video"/>
+				<NUMBER>0</NUMBER>
+			</GREATER_THAN>
+		</WITH>
+		<DO>
+			<NOT>
+				<PROPERTY name="ADD" source="st_video"/>
+			</NOT>
+		</DO>
+	</RULE>
+	<!-- mandatory -->
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="st_video"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="RELEASE">
+					<PROPERTY name="VALID" source="st_video"/>
+					<MESSAGE lang="*" text="This form element must not be empty!"/>
+					<MESSAGE lang="DE" text="Diese Eingabekomponente darf nicht leer sein!"/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+	<!-- disallow adding items without video editor -->
+	<RULE when="ONLOCK">
+		<WITH>
+			<FALSE/>
+		</WITH>
+		<DO>
+			<PROPERTY name="ADD" source="st_items"/>
+		</DO>
+	</RULE>
+</RULES>

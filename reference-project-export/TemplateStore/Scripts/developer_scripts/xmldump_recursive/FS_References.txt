@@ -1,0 +1,6 @@
+[self]
+uid=xmldump_recursive
+gid=64fe02a7-610f-4548-800a-bd573275fda5
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

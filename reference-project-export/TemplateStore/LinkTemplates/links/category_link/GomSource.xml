@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <FS_INDEX name="lt_category" height="1" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Category"/>
+      <LANGINFO lang="DE" label="Kategorie"/>
+    </LANGINFOS>
+    <SOURCE name="ContentConnectSpryker/ContentConnectSpryker_CategoryDataAccessPlugin"/>
+  </FS_INDEX>
+
+</CMS_MODULE>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <FS_REFERENCE name="st_dataSource" hFill="yes" hidden="yes" sections="no" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Page reference"/>
+      <LANGINFO lang="DE" label="Seitenreferenz"/>
+    </LANGINFOS>
+    <PROJECTS>
+      <LOCAL name=".">
+        <SOURCES>
+          <FOLDER name="root" store="contentstore"/>
+        </SOURCES>
+      </LOCAL>
+    </PROJECTS>
+  </FS_REFERENCE>
+
+  <CMS_GROUP>
+
+    <CMS_LABEL size="16">
+      <LANGINFOS>
+        <LANGINFO lang="*" label="Select featured articles"/>
+        <LANGINFO lang="DE" label="Auswahl der hervorzuhebenen Artikel"/>
+      </LANGINFOS>
+    </CMS_LABEL>
+
+    <FS_INDEX name="st_featuredArticles" useLanguages="no" viewMode="details">
+      <LANGINFOS>
+        <LANGINFO lang="*" label="Featured Articles"/>
+        <LANGINFO lang="DE" label="Hervorgehobene Artikel"/>
+      </LANGINFOS>
+      <SOURCE name="DatasetDataAccessPlugin">
+        <TEMPLATE uid="magazine.magazine_articles"/>
+      </SOURCE>
+    </FS_INDEX>
+
+    <CMS_LABEL bold="no">
+      <LANGINFOS>
+        <LANGINFO lang="*" label="(Featured articles will always be displayed at the top of the page!)"/>
+        <LANGINFO lang="DE" label="(Hervorgehobene Artikel werden immer oben auf der Seite angezeigt!)"/>
+      </LANGINFOS>
+    </CMS_LABEL>
+
+  </CMS_GROUP>
+
+  <CMS_GROUP>
+
+    <CMS_LABEL size="16">
+      <LANGINFOS>
+        <LANGINFO lang="*" label="Select sorting order of the total view of magazine teasers"/>
+        <LANGINFO lang="DE" label="Sortierung der Gesamtübersicht der Magazin-Teaser"/>
+      </LANGINFOS>
+    </CMS_LABEL>
+
+    <CMS_INPUT_RADIOBUTTON name="st_sortingOrder" gridWidth="1" hFill="yes" useLanguages="no">
+      <ENTRIES>
+        <ENTRY value="ascending">
+          <LANGINFOS>
+            <LANGINFO lang="*" label="Ascending"/>
+            <LANGINFO lang="DE" label="Aufsteigend"/>
+          </LANGINFOS>
+        </ENTRY>
+        <ENTRY value="descending">
+          <LANGINFOS>
+            <LANGINFO lang="*" label="Descending"/>
+            <LANGINFO lang="DE" label="Absteigend"/>
+          </LANGINFOS>
+        </ENTRY>
+      </ENTRIES>
+      <LANGINFOS>
+        <LANGINFO lang="*" label="Sorting order by date"/>
+        <LANGINFO lang="DE" label="Sortierung nach Datum"/>
+      </LANGINFOS>
+    </CMS_INPUT_RADIOBUTTON>
+
+  </CMS_GROUP>
+
+</CMS_MODULE>

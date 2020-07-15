@@ -1,0 +1,6 @@
+[self]
+uid=generate_page_preview_url
+gid=d79e82a1-81d8-4ae0-b6e2-c7baa0fbdd24
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

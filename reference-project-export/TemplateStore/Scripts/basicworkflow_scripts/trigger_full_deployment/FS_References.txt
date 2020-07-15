@@ -1,0 +1,6 @@
+[self]
+uid=trigger_full_deployment
+gid=2983b8fb-70ce-43a2-b1de-6a2938541e66
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

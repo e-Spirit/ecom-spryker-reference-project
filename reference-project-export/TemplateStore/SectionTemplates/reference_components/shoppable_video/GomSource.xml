@@ -1,0 +1,38 @@
+<CMS_MODULE>
+
+  <FS_INDEX name="st_video" height="1" useLanguages="no" viewMode="details">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="YouTube Video"/>
+      <LANGINFO lang="DE" label="YouTube-Video"/>
+    </LANGINFOS>
+    <SOURCE name="ContentConnectSpryker/ContentConnectSpryker_YoutubeVideoDataAccessPlugin"/>
+  </FS_INDEX>
+
+  <FS_BUTTON
+    name="st_interactiveVideo"
+    alwaysEnabled="no"
+    hFill="no"
+    onClick="class:ContentConnectSpryker_InteractiveVideoButton"
+    style="button"
+    useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Open Video Editor"/>
+      <LANGINFO lang="DE" label="Video-Editor öffnen"/>
+    </LANGINFOS>
+    <PARAMS>
+      <PARAM name="youtube">#field.st_video</PARAM>
+      <PARAM name="catalog">#field.st_items</PARAM>
+    </PARAMS>
+  </FS_BUTTON>
+
+  <FS_CATALOG name="st_items" useLanguages="no" viewMode="headers">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Items"/>
+      <LANGINFO lang="DE" label="Elemente"/>
+    </LANGINFOS>
+    <TEMPLATES type="section">
+      <TEMPLATE uid="shoppable_video_item"/>
+    </TEMPLATES>
+  </FS_CATALOG>
+
+</CMS_MODULE>

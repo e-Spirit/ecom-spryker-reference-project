@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="SonyCameraProductShot" id="-3635334109833070431" type="pic" uniquedescription="sony_camera_product_shot">
+	<LANG displayname="Sony Camera Product shot" language="EN"/>
+	<LANG displayname="Sony Kamera Produktfoto" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1564.0,3295.0,2023.0,0,false" extension="jpg" height="834" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,1822.0,3295.0,659.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="457.0,668.0,2645.0,3130.0,0,false" extension="jpg" height="3130" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2645"/>
+		<RESOLUTION cropData="7.0,1644.0,3288.0,1852.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="4119" mimetype="image/jpeg" resolutionid="ORIGINAL" width="3295"/>
+	</PICTURE>
+</MEDIUM>

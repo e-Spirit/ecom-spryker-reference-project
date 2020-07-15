@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <FS_REFERENCE name="lt_pageref" hFill="yes" sections="no" useLanguages="no">
+    <FILTER>
+      <ALLOW type="pageref"/>
+    </FILTER>
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Content page reference"/>
+      <LANGINFO lang="DE" label="Seitenreferenz"/>
+    </LANGINFOS>
+    <PROJECTS>
+      <LOCAL name=".">
+        <SOURCES>
+          <FOLDER name="content_pages" store="sitestore"/>
+        </SOURCES>
+      </LOCAL>
+    </PROJECTS>
+  </FS_REFERENCE>
+
+  <CMS_INPUT_TEXT name="lt_linkText" hFill="yes" singleLine="no" useLanguages="no">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Link text"/>
+      <LANGINFO lang="DE" label="Verweistext"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+</CMS_MODULE>

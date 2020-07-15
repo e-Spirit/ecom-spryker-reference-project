@@ -1,0 +1,6 @@
+[self]
+uid=fitness_tracker
+gid=a3aeda65-1366-4ff3-a2b8-a5b79d473eb3
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

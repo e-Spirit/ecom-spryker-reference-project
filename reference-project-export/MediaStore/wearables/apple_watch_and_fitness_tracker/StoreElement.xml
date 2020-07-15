@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="AppleWatchAndFitnessTracker" id="1205120707787231664" type="pic" uniquedescription="apple_watch_and_fitness_tracker">
+	<LANG displayname="Apple Watch and Fitness Tracker" language="EN"/>
+	<LANG displayname="Apple Watch und Fitness Tracker" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,509.0,3995.0,1387.0,0,false" extension="jpg" height="472" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="140.0,175.0,3785.0,2129.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="456.0,284.0,1659.0,1914.0,0,false" extension="jpg" height="1914" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="1659"/>
+		<RESOLUTION cropData="5.0,775.0,3995.0,806.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="2667" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4000"/>
+	</PICTURE>
+</MEDIUM>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="PhotographersDream" id="649121068957129940" type="pic" uniquedescription="photographers_dream">
+	<LANG displayname="Fotografentraum" language="DE"/>
+	<LANG displayname="Photographers Dream" language="EN"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1937.0,4793.0,1639.0,0,false" extension="jpg" height="465" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="0.0,251.0,4793.0,964.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="17.0,1186.0,3500.0,2612.0,0,false" extension="jpg" height="2612" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="3500"/>
+		<RESOLUTION cropData="303.0,1936.0,3074.0,1727.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="3841" mimetype="image/jpeg" resolutionid="ORIGINAL" width="4793"/>
+	</PICTURE>
+</MEDIUM>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MEDIUM filename="CameraEquipment" id="-6323068154862282936" type="pic" uniquedescription="camera_equipment">
+	<LANG displayname="Camera Equipment" language="EN"/>
+	<LANG displayname="Kamera-Ausrüstung" language="DE"/>
+	<PICTURE>
+		<RESOLUTION cropData="0.0,1094.0,3867.0,778.0,0,false" extension="jpg" height="290" mimetype="image/jpeg" resolutionid="BANNER_IMAGE" width="1440"/>
+		<RESOLUTION cropData="0.0,1115.0,3065.0,953.0,0,false" extension="jpg" height="422" mimetype="image/jpeg" resolutionid="MAGAZINE_ARTICLE_BANNER" width="1360"/>
+		<RESOLUTION cropData="232.0,1066.0,2775.0,2076.0,0,false" extension="jpg" height="2076" mimetype="image/jpeg" resolutionid="CONTENT_IMAGE" width="2775"/>
+		<RESOLUTION cropData="6.0,0.0,3694.0,2077.0,0,false" extension="jpg" height="810" mimetype="image/jpeg" resolutionid="TEASER_IMAGE" width="1440"/>
+		<RESOLUTION extension="jpg" height="3178" mimetype="image/jpeg" resolutionid="ORIGINAL" width="3867"/>
+	</PICTURE>
+</MEDIUM>
