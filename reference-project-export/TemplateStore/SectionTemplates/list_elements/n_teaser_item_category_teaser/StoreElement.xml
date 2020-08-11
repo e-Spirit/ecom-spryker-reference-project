@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEMPLATE comment="" filename="n_teaser_item_category_teaser" id="5769650242090186514" templateid="-2901478668543015863" transferEditor="st_category" type="section">
+	<EXTENSION file="html" link="html" templateSet="9062318847741885912"/>
+	<EXTENSION file="json" link="json" templateSet="-1285658006509869299"/>
+	<LANG displayname="N-Up-Kategorie-Teaser" language="DE"/>
+	<LANG displayname="N-Up Category Teaser" language="EN"/>
+</TEMPLATE>

@@ -1,7 +1,7 @@
 $CMS_TRIM(level:1)$
 {
 	"navigation_key": "$CMS_VALUE(pt_navigationKey)$",
-	$CMS_SET(set_previewId, if(!isSet(for_gcaPage), previewId(), previewId(element: #global.gca(for_gcaPage))))$
+	$CMS_SET(set_previewId, if(!isSet(for_gcaPage), previewId(element: #global.page), previewId(element: #global.gca(for_gcaPage))))$
 	"previewId": "custom:navigation:gcapage:$CMS_VALUE(set_previewId)$",
 	"additiveExtensionNodes": [
 		$CMS_IF(!pt_startNodes.isEmpty)$

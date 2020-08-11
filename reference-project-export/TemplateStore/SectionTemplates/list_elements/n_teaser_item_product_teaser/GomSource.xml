@@ -9,6 +9,23 @@
     <SOURCE name="ContentConnectSpryker/ContentConnectSpryker_ProductDataAccessPlugin"/>
   </FS_INDEX>
 
+  <FS_REFERENCE name="st_picture" hFill="yes" useLanguages="no">
+    <FILTER>
+      <ALLOW type="picture"/>
+    </FILTER>
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Picture"/>
+      <LANGINFO lang="DE" label="Bild"/>
+    </LANGINFOS>
+    <PROJECTS>
+      <LOCAL name=".">
+        <SOURCES>
+          <FOLDER name="root" store="mediastore"/>
+        </SOURCES>
+      </LOCAL>
+    </PROJECTS>
+  </FS_REFERENCE>
+
   <CMS_INPUT_TEXT name="st_linkText" hFill="yes" singleLine="no" useLanguages="yes">
     <LANGINFOS>
       <LANGINFO lang="*" label="Button link text"/>

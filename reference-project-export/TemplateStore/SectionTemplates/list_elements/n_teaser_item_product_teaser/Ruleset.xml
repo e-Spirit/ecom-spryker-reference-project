@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RULES>
+	<!-- picture overwrite info -->
+	<RULE>
+		<WITH>
+			<FALSE/>
+		</WITH>
+		<DO>
+			<VALIDATION scope="INFO">
+				<PROPERTY name="VALID" source="st_picture"/>
+				<MESSAGE lang="*" text="Displayed instead of the product image."/>
+				<MESSAGE lang="DE" text="Wird anstelle des Produktbildes angezeigt."/>
+			</VALIDATION>
+		</DO>
+	</RULE>
 	<!-- maximum entries -->
 	<RULE>
 		<WITH>

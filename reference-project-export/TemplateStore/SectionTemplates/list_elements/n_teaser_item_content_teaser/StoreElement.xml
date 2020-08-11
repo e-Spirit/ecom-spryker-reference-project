@@ -2,6 +2,6 @@
 <TEMPLATE comment="" filename="n_teaser_item_content_teaser" id="-7386136690219818189" templateid="-8670311215364085548" type="section">
 	<EXTENSION file="html" link="html" templateSet="9062318847741885912"/>
 	<EXTENSION file="json" link="json" templateSet="-1285658006509869299"/>
-	<LANG displayname="N-Up Teaser Item Content Teaser" language="DE"/>
-	<LANG displayname="N-Up Teaser Item Content Teaser" language="EN"/>
+	<LANG displayname="N-Up-Content-Teaser" language="DE"/>
+	<LANG displayname="N-Up Content Teaser" language="EN"/>
 </TEMPLATE>

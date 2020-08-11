@@ -1,0 +1,4 @@
+if(!pt_productSku.isEmpty,
+"SKU: " + pt_productSku)
+ + " " + italic(if(#item.isReleased, "published", "changed"))
+ + " " + italic(class("java.util.Date").new(#item.getRevision.getCreationTime).format("yyyy-MM-dd"))

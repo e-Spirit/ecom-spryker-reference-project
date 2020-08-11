@@ -16,6 +16,7 @@
     <TEMPLATES type="section">
       <TEMPLATE uid="n_teaser_item_content_teaser"/>
       <TEMPLATE uid="n_teaser_item_product_teaser"/>
+      <TEMPLATE uid="n_teaser_item_category_teaser"/>
     </TEMPLATES>
   </FS_CATALOG>
 

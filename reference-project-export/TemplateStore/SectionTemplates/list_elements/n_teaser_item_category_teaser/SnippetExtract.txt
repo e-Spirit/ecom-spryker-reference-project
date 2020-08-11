@@ -1,0 +1,6 @@
+if(!st_text.isEmpty,
+	st_text,
+	if (!st_category.isEmpty, 
+		bold(st_category.getSnippets().map(x->x.getExtract()).toString(", ")),
+		"Select a category!")
+)

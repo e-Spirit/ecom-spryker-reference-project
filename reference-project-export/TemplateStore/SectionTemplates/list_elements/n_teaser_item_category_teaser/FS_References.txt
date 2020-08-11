@@ -1,6 +1,6 @@
 [self]
-uid=n_teaser_item_product_teaser
-gid=ac0e9119-1733-49a5-b3c0-57580abf9951
+uid=n_teaser_item_category_teaser
+gid=a36654c1-9fe3-4c2b-99bf-b675dd04ba35
 uidType=TEMPLATESTORE
 class=de.espirit.firstspirit.store.access.templatestore.SectionTemplateImpl
 

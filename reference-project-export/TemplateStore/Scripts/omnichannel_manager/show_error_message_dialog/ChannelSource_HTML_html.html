@@ -4,30 +4,34 @@ import de.espirit.firstspirit.ui.operations.RequestOperation;
 /**
  * Displays an error message to the user with the ability to allow further inspection of the error using a detailed message
  *
- * Usage: TPP_SNAP.execute('script:show_message_dialog', {
- *          message: '<message>', // The message to show
- *	   [detailedMessage: '<detailedMessage>'] // Optional: A detailed message of the error
+ * Usage: TPP_SNAP.execute('script:show_error_message_dialog', {
+ *          message: '<message>',    // the message to show
+ *          [title: String],         // optional, title
+ *          [ok: true],              // optional, display ok-button
+ *          [buttons: List<String>]  // optional, list of button-labels
  *        })
  */
 
 if (message == void || message == null)
    throw new IllegalArgumentException("Missing parameter 'message'");
    
-operationAgent = context.requireSpecialist(OperationAgent.TYPE);
-requestOperation = operationAgent.getOperation(RequestOperation.TYPE);
-requestOperation.setKind(RequestOperation.Kind.ERROR);
-requestOperation.setTitle("Oops..");
+dialog = context.requireSpecialist(OperationAgent.TYPE)
+  .getOperation(RequestOperation.TYPE);
 
-okAnswer = requestOperation.addOk();
+dialog.setKind(RequestOperation.Kind.ERROR);
 
-if(detailedMessage != void && detailedMessage instanceof String && !detailedMessage.isEmpty()) {
-    showDetailedAnswer = requestOperation.addAnswer("Show more information");
-    selectedAnswer = requestOperation.perform(message);
-    if(selectedAnswer.equals(showDetailedAnswer)) {
-        detailedRequestOperation = operationAgent.getOperation(RequestOperation.TYPE);
-        detailedRequestOperation.setKind(RequestOperation.Kind.ERROR);
-        detailedRequestOperation.perform(detailedMessage);
-    }
-} else {
-    requestOperation.perform(message);
+if (title != void) {
+  dialog.setTitle(title);
 }
+
+answers = new HashMap();
+if (ok == void || ok == true) {
+  answers.put(dialog.addOk(), true);
+}
+if (buttons != void) {
+  for (button : buttons) {
+    answers.put(dialog.addAnswer(button), button);
+  }
+}
+
+return answers.get(dialog.perform(message));

@@ -1,0 +1,3 @@
+"Category ID: " + #item.uid.replace("category_","")
+ + " " + italic(if(#item.isReleased, "published", "changed"))
+ + " " + italic(class("java.util.Date").new(#item.getRevision.getCreationTime).format("yyyy-MM-dd"))

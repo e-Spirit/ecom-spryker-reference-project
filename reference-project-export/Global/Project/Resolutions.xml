@@ -4,6 +4,7 @@
 		<FIELD name="_descriptions"><NULL/><!-- interface java.util.Map --></FIELD>
 		<FIELD name="_keepAspectRatio" type="boolean">false</FIELD>
 		<FIELD name="_names"><NULL/><!-- interface java.util.Map --></FIELD>
+		<FIELD name="_smartCropping" type="boolean">false</FIELD>
 		<FIELD name="m_description">
 			<OBJECT class="java.lang.String"></OBJECT>
 		</FIELD>
@@ -31,6 +32,7 @@
 				<OBJECT class="java.lang.String">Banner image</OBJECT>
 			</OBJECT>
 		</FIELD>
+		<FIELD name="_smartCropping" type="boolean">true</FIELD>
 		<FIELD name="m_description">
 			<OBJECT class="java.lang.String">For use in banner sections</OBJECT>
 		</FIELD>
@@ -58,6 +60,7 @@
 				<OBJECT class="java.lang.String">Content image</OBJECT>
 			</OBJECT>
 		</FIELD>
+		<FIELD name="_smartCropping" type="boolean">true</FIELD>
 		<FIELD name="m_description">
 			<OBJECT class="java.lang.String">For use in text/image sections</OBJECT>
 		</FIELD>
@@ -85,6 +88,7 @@
 				<OBJECT class="java.lang.String">Resolution for the Magazine banner</OBJECT>
 			</OBJECT>
 		</FIELD>
+		<FIELD name="_smartCropping" type="boolean">true</FIELD>
 		<FIELD name="m_description">
 			<OBJECT class="java.lang.String">Resolution for the Magazine banner</OBJECT>
 		</FIELD>
@@ -112,6 +116,7 @@
 				<OBJECT class="java.lang.String">TEASER_IMAGE</OBJECT>
 			</OBJECT>
 		</FIELD>
+		<FIELD name="_smartCropping" type="boolean">true</FIELD>
 		<FIELD name="m_description">
 			<OBJECT class="java.lang.String">Ratio 16:9</OBJECT>
 		</FIELD>

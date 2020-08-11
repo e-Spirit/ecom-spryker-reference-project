@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RULES>
+	<!-- picture overwrite info -->
+	<RULE>
+		<WITH>
+			<FALSE/>
+		</WITH>
+		<DO>
+			<VALIDATION scope="INFO">
+				<PROPERTY name="VALID" source="st_picture"/>
+				<MESSAGE lang="*" text="Displayed instead of the category image."/>
+				<MESSAGE lang="DE" text="Wird anstelle des Kategoriebildes angezeigt."/>
+			</VALIDATION>
+		</DO>
+	</RULE>
+	<!-- title overwrite info -->
+	<RULE>
+		<WITH>
+			<FALSE/>
+		</WITH>
+		<DO>
+			<VALIDATION scope="INFO">
+				<PROPERTY name="VALID" source="st_subline"/>
+				<MESSAGE lang="*" text="Displayed instead of the category title."/>
+				<MESSAGE lang="DE" text="Wird anstelle des Kategorietitels angezeigt."/>
+			</VALIDATION>
+		</DO>
+	</RULE>
+	<!-- description overwrite info -->
+	<RULE>
+		<WITH>
+			<FALSE/>
+		</WITH>
+		<DO>
+			<VALIDATION scope="INFO">
+				<PROPERTY name="VALID" source="st_text"/>
+				<MESSAGE lang="*" text="Displayed instead of the category meta description."/>
+				<MESSAGE lang="DE" text="Wird anstelle der Metabeschreibung angezeigt."/>
+			</VALIDATION>
+		</DO>
+	</RULE>
+	<!-- maximum entries -->
+	<RULE>
+		<WITH>
+			<GREATER_THAN>
+				<PROPERTY name="SIZE" source="st_category"/>
+				<NUMBER>0</NUMBER>
+			</GREATER_THAN>
+		</WITH>
+		<DO>
+			<NOT>
+				<PROPERTY name="ADD" source="st_category"/>
+			</NOT>
+		</DO>
+	</RULE>
+	<RULE>
+		<WITH>
+			<LESS_THAN>
+				<PROPERTY name="SIZE" source="st_category"/>
+				<NUMBER>2</NUMBER>
+			</LESS_THAN>
+		</WITH>
+		<DO>
+			<VALIDATION scope="SAVE">
+				<PROPERTY name="VALID" source="st_category"/>
+				<MESSAGE lang="*" text="This form element must not contain more than one entry!"/>
+				<MESSAGE lang="DE" text="Diese Eingabekomponente darf nicht mehr als einen Eintrag enthalten!"/>
+			</VALIDATION>
+		</DO>
+	</RULE>
+	<!-- mandatory -->
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="st_category"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="RELEASE">
+					<PROPERTY name="VALID" source="st_category"/>
+					<MESSAGE lang="*" text="This form element must not be empty!"/>
+					<MESSAGE lang="DE" text="Diese Eingabekomponente darf nicht leer sein!"/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+</RULES>

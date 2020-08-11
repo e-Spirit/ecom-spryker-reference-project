@@ -15,6 +15,11 @@ gid=f09bcdbf-adac-49f7-bb98-c000b98de782
 uidType=TEMPLATESTORE_FORMATTEMPLATE
 class=de.espirit.firstspirit.store.access.templatestore.FormatTemplateImpl
 
+uid=n_teaser_item_category_teaser
+gid=a36654c1-9fe3-4c2b-99bf-b675dd04ba35
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.SectionTemplateImpl
+
 uid=n_teaser_item_product_teaser
 gid=ac0e9119-1733-49a5-b3c0-57580abf9951
 uidType=TEMPLATESTORE

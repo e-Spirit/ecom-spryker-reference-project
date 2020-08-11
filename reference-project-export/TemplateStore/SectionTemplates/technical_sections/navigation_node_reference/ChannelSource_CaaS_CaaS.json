@@ -67,7 +67,7 @@ $CMS_TRIM(level:1)$
 				"identifier": "$CMS_VALUE(#card.id)$",
 				"node_type": "$CMS_RENDER(template: "nav_type_render",ref: set_referenceStartNode)$",  
 				"children": [$CMS_VALUE(fr_mainNav)$],
-				$CMS_SET(set_previewId, if(!isSet(for_gcaPage), previewId(), previewId(element: #global.gca(for_gcaPage))))$
+				$CMS_SET(set_previewId, if(!isSet(for_gcaPage), previewId(element: #global.page), previewId(element: #global.gca(for_gcaPage))))$
 				"previewId": "custom:catalog:$CMS_VALUE(set_previewId)$:pt_startNodes:$CMS_VALUE(#card.getId())$",
 				"is_active": true,
 				"localizedAttributes": {

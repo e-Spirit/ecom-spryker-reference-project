@@ -1,0 +1,3 @@
+if (!st_category.isEmpty, 
+	bold(st_category.getSnippets().map(x->x.getHeader()).toString(", ")) + " - Category ID: " + st_category.values[0].getNodeId(),
+	"Select a category!")

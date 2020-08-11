@@ -1,10 +1,19 @@
 $CMS_SET(set_teaserItem,{:})$
 
-$CMS_SET(void, set_teaserItem.put("moleculename", "fs-n-teaser-item-product"))$
+$CMS_SET(void, set_teaserItem.put("moleculename", "fs-n-teaser-item-category"))$
 
-$CMS_IF(!st_product.isEmpty())$
-	$CMS_SET(set_prodId)$$CMS_VALUE(st_product.identifiers[0])$$CMS_END_SET$
-	$CMS_SET(void, set_teaserItem.put("productSku", set_prodId.toString()))$
+$CMS_IF(!st_category.isEmpty())$
+	$CMS_SET(set_categoryId)$$CMS_VALUE(st_category.values[0].getNodeId)$$CMS_END_SET$
+	$CMS_SET(void, set_teaserItem.put("categoryId", set_categoryId.toString()))$
+$CMS_END_IF$
+
+$CMS_IF(!st_subline.isEmpty())$
+	$CMS_SET(void, set_teaserItem.put("subline", st_subline.convert2))$
+$CMS_END_IF$
+
+
+$CMS_IF(!st_text.isEmpty())$
+	$CMS_SET(void, set_teaserItem.put("description", st_text.convert2))$
 $CMS_END_IF$
 
 $CMS_SET(void, set_teaserItem.put("buttonText", if(!st_linkText.isEmpty,st_linkText.convert2)))$
@@ -18,7 +27,7 @@ $CMS_IF(!st_picture.isEmpty())$
 		$CMS_SET(previewId)$$CMS_VALUE(previewId(element:st_picture))$$CMS_END_SET$
 		$CMS_SET(void, set_picture.put("previewId", previewId.toString()))$
 	$CMS_END_IF$
-	$CMS_END_IF$
+$CMS_END_IF$
 $CMS_SET(void,set_teaserItem.put("picture", set_picture))$
 
 $-- Add to variable defined in n_teaser --$
