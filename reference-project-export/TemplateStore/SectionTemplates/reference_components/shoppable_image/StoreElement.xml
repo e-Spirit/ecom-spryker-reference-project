@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEMPLATE filename="shoppable_image" id="-4257271172662885151" templateid="-3641967359253832579" type="section">
-	<EXTENSION anchor="0" file="html" link="html" templateSet="9062318847741885912"/>
-	<EXTENSION anchor="0" file="json" link="json" templateSet="-1285658006509869299"/>
+<TEMPLATE comment="" filename="shoppable_image" id="-4257271172662885151" templateid="-3641967359253832579" type="section">
+	<EXTENSION file="html" link="html" templateSet="9062318847741885912"/>
+	<EXTENSION file="json" link="json" templateSet="-1285658006509869299"/>
 	<LANG displayname="Shoppable Image" language="DE"/>
 	<LANG displayname="Shoppable Image" language="EN"/>
 </TEMPLATE>

@@ -5,6 +5,7 @@ application/json;UTF-8  ChannelSource_CaaS_CaaS.json
 text/html;UTF-8   ChannelSource_HTML_html.html
 text/xml          GomDefaults.xml
 text/xml;UTF-8    GomSource.xml
+image/png         PreviewImage.png
 text/xml;UTF-8    Ruleset.xml
 text/plain;UTF-8  SnippetExtract.txt
 text/plain;UTF-8  SnippetHeader.txt

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEMPLATE filename="contentpage" id="8907829297219158859" templateid="-6629933020010405914" type="page">
+<TEMPLATE comment="" filename="contentpage" id="8907829297219158859" templateid="-6629933020010405914" type="page">
 	<ALLOWED enabled="content_body" templateid="-3054217477551797392"/>
 	<ALLOWED enabled="content_body" templateid="-3641967359253832579"/>
 	<ALLOWED enabled="content_body" templateid="-8221843494534206845"/>

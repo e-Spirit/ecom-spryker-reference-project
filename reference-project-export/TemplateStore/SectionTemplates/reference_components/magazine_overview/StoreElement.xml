@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEMPLATE filename="magazine_overview" id="7112263574816154536" templateid="-8221843494534206845" type="section">
-	<EXTENSION anchor="0" file="html" link="html" templateSet="9062318847741885912"/>
-	<EXTENSION anchor="0" file="json" link="json" templateSet="-1285658006509869299"/>
+<TEMPLATE comment="" filename="magazine_overview" id="7112263574816154536" templateid="-8221843494534206845" type="section">
+	<EXTENSION file="html" link="html" templateSet="9062318847741885912"/>
+	<EXTENSION file="json" link="json" templateSet="-1285658006509869299"/>
 	<LANG displayname="Magazine overview" language="EN"/>
 	<LANG displayname="Magazinübersicht" language="DE"/>
 </TEMPLATE>

@@ -20,13 +20,13 @@ gid=a36654c1-9fe3-4c2b-99bf-b675dd04ba35
 uidType=TEMPLATESTORE
 class=de.espirit.firstspirit.store.access.templatestore.SectionTemplateImpl
 
-uid=n_teaser_item_product_teaser
-gid=ac0e9119-1733-49a5-b3c0-57580abf9951
+uid=n_teaser_item_content_teaser
+gid=3fd0bf96-042b-4827-a756-6a47e36ad06a
 uidType=TEMPLATESTORE
 class=de.espirit.firstspirit.store.access.templatestore.SectionTemplateImpl
 
-uid=n_teaser_item_content_teaser
-gid=3fd0bf96-042b-4827-a756-6a47e36ad06a
+uid=n_teaser_item_product_teaser
+gid=ac0e9119-1733-49a5-b3c0-57580abf9951
 uidType=TEMPLATESTORE
 class=de.espirit.firstspirit.store.access.templatestore.SectionTemplateImpl
 

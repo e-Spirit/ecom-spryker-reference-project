@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEMPLATE filename="carousel_section" id="-9029294851445462083" templateid="-5069870773366139176" type="section">
-	<EXTENSION anchor="0" file="html" link="html" templateSet="9062318847741885912"/>
-	<EXTENSION anchor="0" file="js" link="json" templateSet="-1285658006509869299"/>
+<TEMPLATE comment="" filename="carousel_section" id="-9029294851445462083" templateid="-5069870773366139176" type="section">
+	<EXTENSION file="html" link="html" templateSet="9062318847741885912"/>
+	<EXTENSION file="js" link="json" templateSet="-1285658006509869299"/>
 	<LANG displayname="Carousel" language="EN"/>
 	<LANG displayname="Karussell" language="DE"/>
 </TEMPLATE>
