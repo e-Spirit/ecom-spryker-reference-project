@@ -5,15 +5,41 @@
 
     <CMS_GROUP>
       <LANGINFOS>
-        <LANGINFO lang="*" label="Picture"/>
+        <LANGINFO lang="*" label="Media"/>
       </LANGINFOS>
 
-      <FS_REFERENCE name="st_picture" hFill="yes" useLanguages="no">
+      <CMS_INPUT_RADIOBUTTON name="media" gridWidth="3" hFill="yes" useLanguages="no">
+        <ENTRIES>
+          <ENTRY value="">
+            <LANGINFOS>
+              <LANGINFO lang="*" label="&lt;none&gt;"/>
+              <LANGINFO lang="DE" label="&lt;ohne&gt;"/>
+            </LANGINFOS>
+          </ENTRY>
+          <ENTRY value="image">
+            <LANGINFOS>
+              <LANGINFO lang="*" label="Image"/>
+              <LANGINFO lang="DE" label="Bild"/>
+            </LANGINFOS>
+          </ENTRY>
+          <ENTRY value="video">
+            <LANGINFOS>
+              <LANGINFO lang="*" label="Video"/>
+            </LANGINFOS>
+          </ENTRY>
+        </ENTRIES>
+        <LANGINFOS>
+          <LANGINFO lang="*" label="Media"/>
+          <LANGINFO lang="DE" label="Medium"/>
+        </LANGINFOS>
+      </CMS_INPUT_RADIOBUTTON>
+
+      <FS_REFERENCE name="image" hFill="yes" useLanguages="no">
         <FILTER>
           <ALLOW type="picture"/>
         </FILTER>
         <LANGINFOS>
-          <LANGINFO lang="*" label="Picture"/>
+          <LANGINFO lang="*" label="Image"/>
           <LANGINFO lang="DE" label="Bild"/>
         </LANGINFOS>
         <PROJECTS>
@@ -25,108 +51,99 @@
         </PROJECTS>
       </FS_REFERENCE>
 
-      <CMS_INPUT_RADIOBUTTON name="st_picturePosition" hFill="yes" useLanguages="no">
-        <ENTRIES>
-          <ENTRY value="left">
-            <LANGINFOS>
-              <LANGINFO lang="*" label="Left"/>
-              <LANGINFO lang="DE" label="Links"/>
-            </LANGINFOS>
-          </ENTRY>
-          <ENTRY value="right">
-            <LANGINFOS>
-              <LANGINFO lang="*" label="Right"/>
-              <LANGINFO lang="DE" label="Rechts"/>
-            </LANGINFOS>
-          </ENTRY>
-          <ENTRY value="center">
-            <LANGINFOS>
-              <LANGINFO lang="*" label="Center"/>
-              <LANGINFO lang="DE" label="Zentriert"/>
-            </LANGINFOS>
-          </ENTRY>
-        </ENTRIES>
+      <FS_INDEX name="video" height="1" useLanguages="no" viewMode="details">
         <LANGINFOS>
-          <LANGINFO lang="*" label="Picture Position"/>
-          <LANGINFO lang="DE" label="Bildposition"/>
+          <LANGINFO lang="*" label="Video"/>
         </LANGINFOS>
-      </CMS_INPUT_RADIOBUTTON>
+        <SOURCE name="ContentConnectSpryker/ContentConnectSpryker_YoutubeVideoDataAccessPlugin"/>
+      </FS_INDEX>
 
-      <CMS_INPUT_RADIOBUTTON name="st_teaserVariation" hFill="yes">
+      <CMS_INPUT_RADIOBUTTON name="variant" gridWidth="3" hFill="yes" useLanguages="no">
         <ENTRIES>
-          <ENTRY value="hero">
+          <ENTRY value="">
             <LANGINFOS>
-              <LANGINFO lang="*" label="Hero Teaser"/>
-              <LANGINFO lang="DE" label="Hero-Teaser"/>
+              <LANGINFO lang="*" label="Filled Media"/>
+              <LANGINFO lang="DE" label="Ausgefülltes Medium"/>
             </LANGINFOS>
           </ENTRY>
-          <ENTRY value="small">
+          <ENTRY value="media-left">
             <LANGINFOS>
-              <LANGINFO lang="*" label="Small Teaser"/>
-              <LANGINFO lang="DE" label="Kleiner Teaser"/>
+              <LANGINFO lang="*" label="Media Left"/>
+              <LANGINFO lang="DE" label="Medium Links"/>
             </LANGINFOS>
           </ENTRY>
-          <ENTRY value="action">
+          <ENTRY value="media-right">
             <LANGINFOS>
-              <LANGINFO lang="*" label="Call to Action Teaser"/>
-              <LANGINFO lang="DE" label="Aktionsaufruf-Teaser"/>
+              <LANGINFO lang="*" label="Media Right"/>
+              <LANGINFO lang="DE" label="Medium Rechts"/>
             </LANGINFOS>
           </ENTRY>
         </ENTRIES>
         <LANGINFOS>
-          <LANGINFO lang="*" label="Teaser Variation"/>
-          <LANGINFO lang="DE" label="Teaservariante"/>
+          <LANGINFO lang="*" label="Variant"/>
+          <LANGINFO lang="DE" label="Variante"/>
         </LANGINFOS>
       </CMS_INPUT_RADIOBUTTON>
 
     </CMS_GROUP>
+
+    <CMS_INPUT_LINK name="link" hFill="yes" mode="inline" useLanguages="no">
+      <LANGINFOS>
+        <LANGINFO lang="*" label="Link"/>
+      </LANGINFOS>
+      <LINKEDITORS>
+        <LINKEDITOR name="category_link"/>
+        <LINKEDITOR name="product_link"/>
+        <LINKEDITOR name="search_link"/>
+        <LINKEDITOR name="magazine_article_link"/>
+        <LINKEDITOR name="content_link"/>
+        <LINKEDITOR name="external_link"/>
+      </LINKEDITORS>
+    </CMS_INPUT_LINK>
 
     <CMS_GROUP>
       <LANGINFOS>
         <LANGINFO lang="*" label="Text"/>
       </LANGINFOS>
 
-      <CMS_INPUT_TEXT name="st_title" hFill="yes" maxInputLength="50" singleLine="no" useLanguages="yes">
+      <CMS_INPUT_TEXT name="headline" hFill="yes" singleLine="no" useLanguages="yes">
         <LANGINFOS>
-          <LANGINFO lang="*" label="Title"/>
-          <LANGINFO lang="DE" label="Titel"/>
+          <LANGINFO lang="*" label="Headline"/>
+          <LANGINFO lang="DE" label="Überschrift"/>
         </LANGINFOS>
       </CMS_INPUT_TEXT>
 
-      <CMS_INPUT_TEXT name="st_subtitle" hFill="yes" maxInputLength="75" singleLine="no" useLanguages="yes">
+      <CMS_INPUT_TEXT name="subline" hFill="yes" singleLine="no" useLanguages="yes">
         <LANGINFOS>
-          <LANGINFO lang="*" label="Subtitle"/>
+          <LANGINFO lang="*" label="Subline"/>
           <LANGINFO lang="DE" label="Untertitel"/>
         </LANGINFOS>
       </CMS_INPUT_TEXT>
 
-      <CMS_INPUT_TEXTAREA name="st_teaserText" hFill="yes" maxInputLength="250" useLanguages="yes">
+      <CMS_INPUT_TEXTAREA name="text" hFill="yes" useLanguages="yes">
         <LANGINFOS>
-          <LANGINFO lang="*" label="Teaser text"/>
-          <LANGINFO lang="DE" label="Teasertext"/>
+          <LANGINFO lang="*" label="Text"/>
         </LANGINFOS>
       </CMS_INPUT_TEXTAREA>
 
-      <CMS_INPUT_LINK name="st_link" hFill="yes" mode="inline" useLanguages="no">
-        <LANGINFOS>
-          <LANGINFO lang="*" label="Link"/>
-        </LANGINFOS>
-        <LINKEDITORS>
-          <LINKEDITOR name="category_link"/>
-          <LINKEDITOR name="product_link"/>
-          <LINKEDITOR name="search_link"/>
-          <LINKEDITOR name="magazine_article_link"/>
-          <LINKEDITOR name="content_link"/>
-          <LINKEDITOR name="external_link"/>
-        </LINKEDITORS>
-      </CMS_INPUT_LINK>
+    </CMS_GROUP>
 
-      <CMS_INPUT_TEXT name="st_linkText" hFill="yes" singleLine="no" useLanguages="yes">
+    <CMS_GROUP name="tab_appearance">
+      <LANGINFOS>
+        <LANGINFO lang="*" label="Appearance"/>
+      </LANGINFOS>
+
+      <CMS_INPUT_NUMBER name="cols" type="long" hFill="yes" max="6.0" min="2.0" singleLine="no" useLanguages="no">
         <LANGINFOS>
-          <LANGINFO lang="*" label="Button link text"/>
-          <LANGINFO lang="DE" label="Button Verweistext"/>
+          <LANGINFO lang="*" label="Columns"/>
         </LANGINFOS>
-      </CMS_INPUT_TEXT>
+      </CMS_INPUT_NUMBER>
+
+      <CMS_INPUT_NUMBER name="rows" type="long" hFill="yes" min="1.0" singleLine="no" useLanguages="no">
+        <LANGINFOS>
+          <LANGINFO lang="*" label="Rows"/>
+        </LANGINFOS>
+      </CMS_INPUT_NUMBER>
 
     </CMS_GROUP>
 

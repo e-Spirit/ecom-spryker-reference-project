@@ -1,0 +1,80 @@
+import de.espirit.firstspirit.access.store.Store;
+import de.espirit.firstspirit.agency.StoreAgent;
+import de.espirit.firstspirit.agency.LanguageAgent;
+
+/**
+ * Sample usage: 
+ * TPP_API.Common.execute('script:tpp_teaser_grid_update', {
+ *   // use a query generated from ElementStatus with a single result
+ *   sectionId: '2312',                                      // The ID of Teaser Grid Section (Number as String)
+ *   language: '<language>',                                 // The current language
+ *   catalogName: 'st_catalog',                              // Editor name for FS_CATALOG
+ *   items: [			                         // List of Cards
+ *     {
+ *       rows: '1',                                          // Rows (Number as String)
+ *       cols: '3',                                          // Cols (Number as String)
+ *       variant: 'media-left',                              // Teaser Variant (Option as String)
+ *       index: '5',                                         // Current Index (Number as String)
+ *       reorder: '2',                                       // Changed Index (Number as String)
+ *     }
+ *   ]
+ * })
+ */
+
+page = null;
+try {
+  if (sectionId == void) throw new Exception("Missing Parameter 'sectionId'");
+  if (language == void) throw new Exception("Missing Parameter 'language'");
+  if (catalogName == void) throw new Exception("Missing Parameter 'catalogName'");
+  if (items == void) throw new Exception("Missing Parameter 'items'");
+
+  sectionId = Long.parseLong(sectionId);
+
+  section = context.requireSpecialist(StoreAgent.TYPE)
+    .getStore(Store.Type.PAGESTORE)
+    .getStoreElement(sectionId);
+  if (section == null) throw new Exception("Section not found! sectionId=" + sectionId);
+
+  page = section.parent.parent;
+
+  lang = context.requireSpecialist(LanguageAgent.TYPE).getProjectLanguages(false).get(language);
+  if (lang == null) throw new Exception("Unknown Language Abbreviation! language=" + language);
+
+  editor = section.formData.form.findEditor(catalogName);
+  if (editor == null) throw new Exception("Given Element does not contain a FS_CATALOG, named '" + catalogName + "'!");
+
+  page.setLock(true, true);
+  catalog = section.formData.get(lang, catalogName).get();
+  
+  cards = new ArrayList(catalog);
+  tree = new TreeMap();
+  for (item : items) {
+    card = cards.get(Integer.parseInt(item.get("index")));
+    data = card.item;
+    data.get(lang, "cols").set(Long.parseLong(item.get("cols")));
+    data.get(lang, "rows").set(Long.parseLong(item.get("rows")));
+    data.get(lang, "variant").set(item.get("variant"));
+    card.loadItem(data);
+    tree.put(Integer.parseInt(item.get("reorder")), card);
+  }
+  
+  catalog.clear();
+  catalog.addAll(tree.values());
+
+  data = section.formData;
+  data.get(lang, catalogName).set(catalog);
+  section.setFormData(data);
+  page.save();
+
+  result = new HashMap();
+  result.put("success", true);
+  return result;
+} catch(e) {
+  context.logError(e);
+  result = new HashMap();
+  result.put("success", false);
+  result.put("errorMessage", e.message);
+  return result;
+} finally {
+  if (page != null && page.isLocked()) page.setLock(false, true);
+}

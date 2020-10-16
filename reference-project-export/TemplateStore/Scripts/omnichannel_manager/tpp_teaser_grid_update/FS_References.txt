@@ -1,0 +1,6 @@
+[self]
+uid=tpp_teaser_grid_update
+gid=7eff91ab-6146-4de9-9f51-155dc9cdc020
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

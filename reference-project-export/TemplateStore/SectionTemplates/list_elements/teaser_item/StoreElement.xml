@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEMPLATE comment="" filename="teaser_item" id="5857708370315258656" templateid="1492694419231877031" type="section">
+<TEMPLATE comment="" filename="teaser_item" id="5857708370315258656" templateid="1492694419231877031" transferEditor="image" type="section">
 	<EXTENSION file="html" link="html" templateSet="9062318847741885912"/>
 	<EXTENSION file="json" link="json" templateSet="-1285658006509869299"/>
 	<LANG displayname="Teaser Item" language="EN"/>

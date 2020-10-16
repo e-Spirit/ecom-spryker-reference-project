@@ -1,4 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <FIELDS>
-	<FIELD name='st_picturePosition'><SEL><VALUE>left</VALUE></SEL></FIELD>
+	<FIELD name='media'><SEL><VALUE>image</VALUE></SEL></FIELD>
+	<FIELD name='variant'><SEL><VALUE>media-left</VALUE></SEL></FIELD>
+	<FIELD name='cols'><FIG>3</FIG></FIELD>
+	<FIELD name='rows'><FIG>1</FIG></FIELD>
 </FIELDS>

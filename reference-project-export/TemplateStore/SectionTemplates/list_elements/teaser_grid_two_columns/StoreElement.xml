@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEMPLATE comment="" filename="teaser_grid_two_columns" id="-2264565720850955728" templateid="-6232375975412317300" type="section">
-	<EXTENSION file="html" link="html" templateSet="9062318847741885912"/>
-	<EXTENSION file="json" link="json" templateSet="-1285658006509869299"/>
-	<LANG displayname="Two Column Teaser Grid" language="EN"/>
-	<LANG displayname="Zweispaltiges Teasergrid" language="DE"/>
-</TEMPLATE>

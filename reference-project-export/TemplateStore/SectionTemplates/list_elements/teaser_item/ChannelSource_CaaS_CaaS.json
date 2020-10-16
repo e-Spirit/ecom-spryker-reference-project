@@ -1,39 +1,19 @@
-$CMS_SET(set_teaserGridItem,{:})$
+$CMS_SET(set_link, {:})$$CMS_IF(!link.empty)$$CMS_VALUE(link)$$CMS_END_IF$
 
-$CMS_SET(void, set_teaserGridItem.put("itemPreviewId", "" + previewId()))$
-$CMS_SET(void, set_teaserGridItem.put("title", if(st_title.isEmpty(),"",st_title.convert2)))$
-$CMS_SET(void, set_teaserGridItem.put("subtitle", if(st_subtitle.isEmpty(),"",st_subtitle.convert2)))$
-$CMS_IF(!st_teaserText.isEmpty())$
-	$CMS_SET(void, set_teaserGridItem.put("teasertext", st_teaserText.convert2))$
-$CMS_END_IF$
-$CMS_SET(void, set_teaserGridItem.put("variation", st_teaserVariation.getValue()))$
-$CMS_SET(void, set_teaserGridItem.put("moleculename", "fs-teaser-grid-item"))$
-
-$CMS_SET(set_picture,{:})$
-$CMS_IF(!st_picture.isEmpty())$
-	$CMS_SET(set_imageUrl)$$CMS_REF(st_picture,resolution:"CONTENT_IMAGE",abs:1)$$CMS_END_SET$
-	$CMS_SET(void, set_picture.put("imageUrl", set_imageUrl.toString()))$
-	$CMS_SET(void, set_picture.put("position", if(st_picturePosition.isEmpty(),"left",st_picturePosition)))$
-	$CMS_IF(!#global.isRelease())$
-		$CMS_SET(previewId)$$CMS_VALUE(previewId(element:st_picture))$$CMS_END_SET$
-		$CMS_SET(void, set_picture.put("previewId", previewId.toString()))$
-	$CMS_END_IF$
-$CMS_END_IF$
-$CMS_SET(void,set_teaserGridItem.put("picture", set_picture))$
-
-$CMS_SET(set_link,{:})$
-$CMS_IF(st_teaserVariation.value == "action")$
-	$CMS_SET(void, set_link.put("text", st_linkText.convert2))$
-$CMS_END_IF$
-$CMS_IF(!st_link.isEmpty())$
-	$CMS_VALUE(st_link)$
-	$CMS_SET(void, set_teaserGridItem.put("link", set_link))$
-$CMS_END_IF$
-
-
-$CMS_IF(!set_teaserList.isNull())$
-	$CMS_SET(void, set_teaserList.add(set_teaserGridItem))$
-$CMS_ELSE$
-	$CMS_SET(void, set_teaserGridItems.add(set_teaserGridItem))$
-$CMS_END_IF$
-
+$CMS_SET(void, _items.add({
+	"moleculename": "fs-teaser-grid-item",
+	"previewId": if (!#global.isRelease(), "#" + _items.size()),
+	"cols": cols,
+	"rows": rows,
+	"variant": variant.value,
+	"media": media.value,
+	"headline": if (headline.empty, null, headline.convert2),
+	"subline": if (subline.empty, null, subline.convert2),
+	"text": if (text.empty, null, text.convert2),
+	"image": if (media.value != "image" || image.empty, null, {
+		"url": ref(image, res: "CONTENT_IMAGE", abs: 1).url,
+		"previewId": if (!#global.isRelease(), previewId(element: image))
+	}),
+	"video": if(media.value != "video" || video.empty, null, video.values.first.id),
+	"link": if (link.empty, null, set_link)
+}))$

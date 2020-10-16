@@ -1,68 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RULES>
+	<!-- media_align -->
 	<RULE>
 		<WITH>
-			<OR>
-				<PROPERTY name="EMPTY" source="st_picture"/>
+			<AND>
+				<NOT>
+					<PROPERTY name="EMPTY" source="media"/>
+				</NOT>
+				<OR>
+					<EQUAL>
+						<PROPERTY name="ENTRY" source="media"/>
+						<TEXT>image</TEXT>
+					</EQUAL>
+					<EQUAL>
+						<PROPERTY name="ENTRY" source="media"/>
+						<TEXT>video</TEXT>
+					</EQUAL>
+				</OR>
+			</AND>
+		</WITH>
+		<DO>
+			<PROPERTY name="VISIBLE" source="media_align"/>
+		</DO>
+	</RULE>
+	<!-- image -->
+	<RULE>
+		<WITH>
+			<AND>
+				<NOT>
+					<PROPERTY name="EMPTY" source="media"/>
+				</NOT>
 				<EQUAL>
-					<PROPERTY name="ENTRY" source="st_teaserVariation"/>
-					<TEXT>hero</TEXT>
+					<PROPERTY name="ENTRY" source="media"/>
+					<TEXT>image</TEXT>
 				</EQUAL>
-			</OR>
+			</AND>
+		</WITH>
+		<DO>
+			<PROPERTY name="VISIBLE" source="image"/>
+		</DO>
+	</RULE>
+	<!-- video -->
+	<RULE>
+		<WITH>
+			<AND>
+				<NOT>
+					<PROPERTY name="EMPTY" source="media"/>
+				</NOT>
+				<EQUAL>
+					<PROPERTY name="ENTRY" source="media"/>
+					<TEXT>video</TEXT>
+				</EQUAL>
+			</AND>
+		</WITH>
+		<DO>
+			<PROPERTY name="VISIBLE" source="video"/>
+		</DO>
+	</RULE>
+	<RULE>
+		<WITH>
+			<GREATER_THAN>
+				<PROPERTY name="SIZE" source="video"/>
+				<NUMBER>0</NUMBER>
+			</GREATER_THAN>
 		</WITH>
 		<DO>
 			<NOT>
-				<PROPERTY name="VISIBLE" source="st_picturePosition"/>
+				<PROPERTY name="ADD" source="video"/>
 			</NOT>
 		</DO>
 	</RULE>
+	<!-- appearance tab -->
 	<RULE>
-		<WITH>
-			<EQUAL>
-				<PROPERTY name="ENTRY" source="st_teaserVariation"/>
-				<TEXT>action</TEXT>
-			</EQUAL>
-		</WITH>
-		<DO>
-			<PROPERTY name="VISIBLE" source="st_teaserText"/>
-		</DO>
-	</RULE>
-	<RULE>
-		<WITH>
-			<PROPERTY name="EMPTY" source="st_picture"/>
-		</WITH>
-		<DO>
+		<IF>
 			<NOT>
-				<VALIDATION scope="RELEASE">
-					<PROPERTY name="VALID" source="st_picture"/>
-					<MESSAGE lang="*" text="This form element must not be empty!"/>
-					<MESSAGE lang="DE" text="Diese Eingabekomponente darf nicht leer sein!"/>
-				</VALIDATION>
+				<EQUAL>
+					<PROPERTY name="STORETYPE" source="#global"/>
+					<TEXT>templatestore</TEXT>
+				</EQUAL>
 			</NOT>
-		</DO>
-	</RULE>
-	<RULE>
+		</IF>
 		<WITH>
-			<EQUAL>
-				<PROPERTY name="VALUE" source="st_teaserVariation.value"/>
-				<TEXT>hero</TEXT>
-			</EQUAL>
+			<FALSE/>
 		</WITH>
 		<DO>
-			<NOT>
-				<PROPERTY name="VISIBLE" source="st_linkText"/>
-			</NOT>
-		</DO>
-	</RULE>
-	<RULE>
-		<WITH>
-			<EQUAL>
-				<PROPERTY name="ENTRY" source="st_teaserVariation"/>
-				<TEXT>action</TEXT>
-			</EQUAL>
-		</WITH>
-		<DO>
-			<PROPERTY name="VISIBLE" source="st_linkText"/>
+			<PROPERTY name="VISIBLE" source="#form.tab_appearance"/>
 		</DO>
 	</RULE>
 </RULES>

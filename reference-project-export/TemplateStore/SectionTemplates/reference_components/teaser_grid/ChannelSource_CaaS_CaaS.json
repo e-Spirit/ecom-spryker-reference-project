@@ -15,21 +15,19 @@ $-- Add additional block attributes to block object (page type dependent) --$
 $CMS_RENDER(template: "additional_block_attributes_render", rt_pageType: set_pageType, rt_blockObject: block)$
 
 $-- Defining placeholder data of the block --$
-$CMS_SET(placeholders,{:})$
-$CMS_SET(void, block.put("placeholder",placeholders))$
+$CMS_SET(void, block.put("placeholder", {:}))$
 
-$CMS_SET(data,{:})$
-$CMS_SET(void, data.put("moleculename", "fs-teaser-grid"))$
-$CMS_SET(void, data.put("title", if(st_title.isEmpty(),"",st_title.convert2)))$
-$CMS_SET(set_teaserGridItems, [])$
-$CMS_VALUE(st_teaserGridItems)$
-$CMS_SET(void, data.put("teaser_items", set_teaserGridItems))$
+$CMS_SET(_items, [])$
+$CMS_VALUE(items)$
 
-$CMS_SET(locale, #global.language.getLocale())$
-$CMS_SET(localeAbbr, locale.getLanguage() + "_" + locale.getCountry())$
-$CMS_SET(localizedData,{:})$
-$CMS_SET(void, localizedData.put(localeAbbr, data))$
-$CMS_SET(void, block.put("data", localizedData))$
+$CMS_SET(void, block.put("data", {
+	#global.language.locale.language + "_" + #global.language.locale.country: {
+		"moleculename": "fs-teaser-grid",
+		"title": if (title.empty, "", title.convert2),
+		"nestedPreviewId": if (!#global.isRelease(), "#items"),
+		"items": _items
+	}
+}))$
 
 $CMS_IF(#global.is("WEBEDIT") && !isSet(caas_preview_generation))$
 	$CMS_VALUE(block.toJSON)$
