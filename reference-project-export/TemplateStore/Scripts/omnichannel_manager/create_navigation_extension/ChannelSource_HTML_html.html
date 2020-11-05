@@ -11,15 +11,17 @@ import de.espirit.firstspirit.agency.OperationAgent;
 import de.espirit.firstspirit.ui.operations.ShowFormDialogOperation;
 import de.espirit.firstspirit.agency.FormsAgent;
 
-/*
+/**
  * Creates a GCA page that holds navigation extensions for a specific navigation (if the GCA page doesn't exist yet).
  *
  *  - Usage:
-TPP_API.Common.execute('script:create_navigation_extension', {
-    navigationKey: 'MAIN_NAVIGATION_DESKTOP',
-    language: 'en'
-});
+ *      WE_API.Common.execute('script:create_navigation_extension', {
+ *        navigationKey: 'MAIN_NAVIGATION_DESKTOP',
+ *        language: 'en',
+ *        dryRun: true,                              // optional, dryRun only checks the 'appendLeaf' permission on GCAFolder
+ *      });
  */
+
 String GCA_FOLDER_UID = "navigation_extensions";
 String PAGE_TEMPLATE_UID = "navigation_extension";
 String NAVIGATION_NODES_CATALOG_NAME = "pt_startNodes";
@@ -83,6 +85,12 @@ for(navigationExtensionGcaPage : gcaFolder.getChildren(GCAPage.class)) {
         navigationExtensionsPage = navigationExtensionGcaPage;
         break;
     }
+}
+
+if (dryRun != void && dryRun == true) {
+    result{"success"} = "true";
+    resultData.put("appendLeaf", navigationExtensionsFolder.permission.canAppendLeaf());
+    return result;
 }
 
 if(navigationExtensionsPage == null) {

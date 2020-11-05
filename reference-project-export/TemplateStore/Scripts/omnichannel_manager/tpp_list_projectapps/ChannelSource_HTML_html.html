@@ -1,0 +1,29 @@
+import de.espirit.firstspirit.access.AdminService;
+import de.espirit.firstspirit.access.ServicesBroker;
+import de.espirit.firstspirit.agency.ModuleAdminAgent;
+import de.espirit.firstspirit.agency.ProjectAgent;
+import de.espirit.firstspirit.module.descriptor.ComponentDescriptor;
+
+/**
+ * Sample usage: 
+ * const projectAppsNames = await TPP_SNAP.execute('script:tpp_list_projectapps');
+ *
+ */
+
+projectApps = new ArrayList();
+projectId = context.requireSpecialist(ProjectAgent.TYPE).getId();
+project = context.requireSpecialist(ServicesBroker.TYPE)
+  .getService(AdminService.class).getProjectStorage().getProject(projectId);
+moduleAdmin = context.requireSpecialist(ModuleAdminAgent.TYPE);
+
+for (module : moduleAdmin.getModules()) {
+  for (component : module.getComponents()) {
+    if (ComponentDescriptor.Type.PROJECTAPP.equals(component.getType())) {
+      if (moduleAdmin.getProjectAppUsages(module.getName(), component.getName()).contains(project)) {
+        projectApps.add(component.getName());
+      }
+    }  
+  }
+}
+
+return projectApps;
