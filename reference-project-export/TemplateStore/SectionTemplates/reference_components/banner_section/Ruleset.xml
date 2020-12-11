@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RULES>
-	<!-- mandatory -->
+	<!-- st_picture -->
 	<RULE>
 		<WITH>
 			<PROPERTY name="EMPTY" source="st_picture"/>

@@ -1,50 +1,53 @@
-$CMS_SET(block,{:})$
+$CMS_SET(set_link, {:})$$CMS_IF(!st_link.empty)$$CMS_VALUE(st_link)$$CMS_END_IF$$CMS_SET(data, {
+	"moleculename": "fs-banner",
 
-$-- Defining general block data --$
-$CMS_SET(void, block.put("previewId", "" + previewId()))$
-$CMS_SET(void, block.put("active", "1"))$
-$CMS_SET(void, block.put("store_names", [ps_activeStore]))$
-$CMS_SET(void, block.put("template_name", "fs_molecule_block"))$
-$CMS_SET(void, block.put("template_path", "@CmsBlock/template/fs_molecule_block.twig"))$
+	"picture": if (st_picture.empty, null, {
+		"imageUrl": ref(st_picture, res: "BANNER_IMAGE", abs: 1).url,
+		"previewId": if (!#global.release, previewId(element: st_picture))
+	}),
+	
+	"link": if (st_link.empty, null, set_link),
 
-$CMS_SET(set_pageType, json.get("pagetype"))$
+	"title": if (st_title.empty, null, st_title.convert2),
+	"subtitle": if (st_subtitle.empty, null, st_subtitle.convert2),
+	"variant": if(st_variant.empty, "", st_variant.value)
+})$
 
-$-- Defining placeholder data of the block --$
-$CMS_SET(placeholders,{:})$
-$CMS_SET(void, block.put("placeholder", placeholders))$
 
-$-- Add block name attribute to block object (page type dependent) --$
-$CMS_RENDER(template: "block_name_render", rt_pageType: set_pageType, rt_blockObject: block)$
+$CMS_IF(isSet(_items))$
 
-$-- Add additional block attributes to block object (page type dependent) --$
-$CMS_RENDER(template: "additional_block_attributes_render", rt_pageType: set_pageType, rt_blockObject: block)$
+	$CMS_SET(void, data.put("previewId", if (!#global.release, "#" + _items.size())))$
+	$CMS_SET(void, _items.add(data))$
 
-$CMS_SET(data,{:})$
-$CMS_SET(void, data.put("title", st_title.convert2))$
-$CMS_SET(void, data.put("titleColor", st_titleColor))$
-$CMS_SET(void, data.put("subtitle", st_subtitle.convert2))$
-$CMS_SET(void, data.put("subtitleColor", st_subtitleColor))$
-$CMS_SET(void, data.put("moleculename", "fs-banner"))$
-
-$CMS_SET(picture,{:})$
-$CMS_IF(!st_picture.isEmpty())$
-	$CMS_SET(imageUrl)$$CMS_REF(st_picture,resolution:"BANNER_IMAGE",abs:1)$$CMS_END_SET$
-	$CMS_SET(void, picture.put("imageUrl", imageUrl.toString()))$
-	$CMS_IF(!#global.isRelease())$
-		$CMS_SET(previewId)$$CMS_VALUE(previewId(element:st_picture))$$CMS_END_SET$
-		$CMS_SET(void, picture.put("previewId", previewId.toString()))$
-	$CMS_END_IF$
-$CMS_END_IF$	
-$CMS_SET(void, data.put("picture", picture))$
-
-$CMS_SET(locale, #global.language.getLocale())$
-$CMS_SET(localeAbbr, locale.getLanguage() + "_" + locale.getCountry())$
-$CMS_SET(localizedData,{:})$
-$CMS_SET(void, localizedData.put(localeAbbr, data))$
-$CMS_SET(void, block.put("data", localizedData))$
-
-$CMS_IF(#global.is("WEBEDIT") && !isSet(caas_preview_generation))$
-	$CMS_VALUE(block.toJSON)$
 $CMS_ELSE$
-	$CMS_SET(void, blocks.add(block))$
+
+	$CMS_SET(block,{:})$
+	$-- Defining general block data --$
+	$CMS_SET(void, block.put("previewId", "" + previewId()))$
+	$CMS_SET(void, block.put("active", "1"))$
+	$CMS_SET(void, block.put("store_names", [ps_activeStore]))$
+	$CMS_SET(void, block.put("template_name", "fs_molecule_block"))$
+	$CMS_SET(void, block.put("template_path", "@CmsBlock/template/fs_molecule_block.twig"))$
+	
+	$CMS_SET(set_pageType, json.get("pagetype"))$
+	
+	$-- Add block name attribute to block object (page type dependent) --$
+	$CMS_RENDER(template: "block_name_render", rt_pageType: set_pageType, rt_blockObject: block)$
+	
+	$-- Add additional block attributes to block object (page type dependent) --$
+	$CMS_RENDER(template: "additional_block_attributes_render", rt_pageType: set_pageType, rt_blockObject: block)$
+	
+	$-- Defining placeholder data of the block --$
+	$CMS_SET(void, block.put("placeholder", {:}))$
+	
+	$CMS_SET(void, block.put("data", {
+		#global.language.locale.language + "_" + #global.language.locale.country: data
+	}))$
+	
+	$CMS_IF(#global.is("WEBEDIT") && !isSet(caas_preview_generation))$
+		$CMS_VALUE(block.toJSON)$
+	$CMS_ELSE$
+		$CMS_SET(void, blocks.add(block))$
+	$CMS_END_IF$
+
 $CMS_END_IF$

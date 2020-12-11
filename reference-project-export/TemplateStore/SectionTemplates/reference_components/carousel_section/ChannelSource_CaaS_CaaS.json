@@ -1,5 +1,4 @@
 $CMS_SET(block,{:})$
-
 $-- Defining general block data --$
 $CMS_SET(void, block.put("previewId", "" + previewId()))$
 $CMS_SET(void, block.put("active", "1"))$
@@ -16,27 +15,18 @@ $-- Add additional block attributes to block object (page type dependent) --$
 $CMS_RENDER(template: "additional_block_attributes_render", rt_pageType: set_pageType, rt_blockObject: block)$
 
 $-- Defining placeholder data of the block --$
-$CMS_SET(placeholders,{:})$
-$CMS_SET(void, block.put("placeholder",placeholders))$
+$CMS_SET(void, block.put("placeholder", {:}))$
 
-$CMS_SET(data,{:})$
+$CMS_SET(_items, [])$$CMS_VALUE(st_items)$
 
-$CMS_SET(void, data.put("moleculename", "fs-carousel"))$
-$CMS_SET(attributes,{:})$
-$CMS_SET(void, attributes.put("autoplay_enabled", st_autoplayEnabled))$
-$CMS_SET(void, attributes.put("autoplay_speed", st_autoplaySpeed))$
-$CMS_SET(void, data.put("attributes", attributes))$
-
-$CMS_SET(set_carouselItems, [])$
-$CMS_VALUE(st_carouselItems)$
-$CMS_SET(void, #global.logInfo(set_carouselItems))$
-$CMS_SET(void, data.put("carousel_items", set_carouselItems))$
-$CMS_SET(void, data.put("slide_width", st_slideWidth))$
-$CMS_SET(locale, #global.language.getLocale())$
-$CMS_SET(localeAbbr, locale.getLanguage() + "_" + locale.getCountry())$
-$CMS_SET(localizedData,{:})$
-$CMS_SET(void, localizedData.put(localeAbbr, data))$
-$CMS_SET(void, block.put("data", localizedData))$
+$CMS_SET(void, block.put("data", {
+	#global.language.locale.language + "_" + #global.language.locale.country: {
+		"moleculename": "fs-carousel",
+		"nestedPreviewId": if (!#global.isRelease(), "#st_items"),
+		"items": _items,
+		"autoplay": if(!st_autoplay.empty && !st_autoplay.value.empty, st_autoplay.value)
+	}
+}))$
 
 $CMS_IF(#global.is("WEBEDIT") && !isSet(caas_preview_generation))$
 	$CMS_VALUE(block.toJSON)$

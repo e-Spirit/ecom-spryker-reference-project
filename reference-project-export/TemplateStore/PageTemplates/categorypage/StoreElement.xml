@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEMPLATE filename="categorypage" hidden="1" id="6288037676649031318" templateid="4385079165626528132" type="page">
 	<ALLOWED enabled="banner" templateid="-5069870773366139176"/>
-	<ALLOWED enabled="banner" templateid="5421764679857664518"/>
 	<ALLOWED enabled="top,bottom" templateid="-3054217477551797392"/>
 	<ALLOWED enabled="top,bottom" templateid="-3641967359253832579"/>
 	<ALLOWED enabled="top,bottom" templateid="1272876832146233179"/>

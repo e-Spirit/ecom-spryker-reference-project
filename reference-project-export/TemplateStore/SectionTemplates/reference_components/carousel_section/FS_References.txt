@@ -10,13 +10,13 @@ gid=3c34c4a1-2e62-4e16-9d78-de82b2585483
 uidType=TEMPLATESTORE_FORMATTEMPLATE
 class=de.espirit.firstspirit.store.access.templatestore.FormatTemplateImpl
 
+uid=banner_section
+gid=752debfa-88a7-44c6-ab45-901e991c822e
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.SectionTemplateImpl
+
 uid=block_name_render
 gid=f09bcdbf-adac-49f7-bb98-c000b98de782
 uidType=TEMPLATESTORE_FORMATTEMPLATE
 class=de.espirit.firstspirit.store.access.templatestore.FormatTemplateImpl
-
-uid=carousel_item
-gid=c710000d-a113-4947-9351-8e4517555899
-uidType=TEMPLATESTORE
-class=de.espirit.firstspirit.store.access.templatestore.SectionTemplateImpl
 

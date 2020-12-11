@@ -1,1 +1,0 @@
-if(!st_subtitle.isEmpty(), st_subtitle, "No subtitle")

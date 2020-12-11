@@ -1,1 +1,3 @@
-if(!st_title.isEmpty(), st_title, "No title")
+if(!st_title.empty, st_title,
+  if(!st_picture.empty, st_picture.media.filename, "")
+)

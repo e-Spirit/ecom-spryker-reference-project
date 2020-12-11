@@ -1,1 +1,0 @@
-if(!st_backgroundImage.isEmpty(), st_backgroundImage)

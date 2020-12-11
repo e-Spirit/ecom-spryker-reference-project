@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <FIELDS>
-	<FIELD name='st_autoplayEnabled'><STATE>false</STATE></FIELD>
-	<FIELD name='st_autoplaySpeed'><FIG>5000</FIG></FIELD>
-	<FIELD name='st_slideWidth'><FIG>100</FIG></FIELD>
+	<FIELD name='st_items'><CATALOG><CARD id="b7e982ed-15cd-43e6-b34f-f6132a200ab4" template="banner_section" type="TEMPLATESTORE"><TEMPLATECONTENT><CMS_VALUE name="st_picture"><LANG id="§" set="0"/></CMS_VALUE><CMS_VALUE name="st_link"><LANG id="§" set="0"/></CMS_VALUE><CMS_VALUE name="st_title"><LANG id="*" set="0"/><LANG id="DE" set="0"/><LANG id="EN" set="0"/></CMS_VALUE><CMS_VALUE name="st_subtitle"><LANG id="*" set="0"/><LANG id="DE" set="0"/><LANG id="EN" set="0"/></CMS_VALUE><CMS_VALUE name="st_variant"><LANG id="§" set="0"/></CMS_VALUE></TEMPLATECONTENT></CARD></CATALOG></FIELD>
+	<FIELD name='st_autoplay'><SEL><VALUE/></SEL></FIELD>
 </FIELDS>

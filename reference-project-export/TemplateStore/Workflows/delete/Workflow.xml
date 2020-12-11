@@ -2022,6 +2022,7 @@
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">0</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">69</FIELD>
@@ -2109,6 +2110,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">3</FIELD>
 				<FIELD name="port_target" type="int">2</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">2</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">5</FIELD>
@@ -2190,6 +2192,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">81</FIELD>
 				<FIELD name="storeElementRights" type="int">64</FIELD>
 				<FIELD name="target" type="long">7</FIELD>
@@ -2271,6 +2274,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">7</FIELD>
 				<FIELD name="storeElementRights" type="int">64</FIELD>
 				<FIELD name="target" type="long">9</FIELD>
@@ -2352,6 +2356,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">55</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">11</FIELD>
@@ -2433,6 +2438,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">34</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">92</FIELD>
@@ -2520,6 +2526,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">11</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">35</FIELD>
@@ -2601,6 +2608,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">0</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">14</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">16</FIELD>
@@ -2686,6 +2694,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">2</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">43</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">9</FIELD>
@@ -2773,6 +2782,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">0</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">56</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">19</FIELD>
@@ -2854,6 +2864,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">3</FIELD>
 				<FIELD name="port_target" type="int">2</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">19</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">21</FIELD>
@@ -2945,6 +2956,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">0</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">21</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">5</FIELD>
@@ -3012,6 +3024,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">2</FIELD>
 				<FIELD name="port_target" type="int">3</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">23</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">25</FIELD>
@@ -3093,6 +3106,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">2</FIELD>
 				<FIELD name="port_target" type="int">3</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">25</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">27</FIELD>
@@ -3180,6 +3194,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">25</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">5</FIELD>
@@ -3261,6 +3276,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">21</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">30</FIELD>
@@ -3342,6 +3358,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">3</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">11</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">32</FIELD>
@@ -3423,6 +3440,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">2</FIELD>
 				<FIELD name="port_target" type="int">3</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">48</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">34</FIELD>
@@ -3510,6 +3528,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">0</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">34</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">50</FIELD>
@@ -3591,6 +3610,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">2</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">35</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">38</FIELD>
@@ -3672,6 +3692,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">0</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">38</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">30</FIELD>
@@ -3753,6 +3774,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">0</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">38</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">14</FIELD>
@@ -3834,6 +3856,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">0</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">16</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">42</FIELD>
@@ -3915,6 +3938,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">0</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">42</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">43</FIELD>
@@ -3996,6 +4020,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">0</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">32</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">46</FIELD>
@@ -4083,6 +4108,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">0</FIELD>
 				<FIELD name="port_target" type="int">3</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">46</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">50</FIELD>
@@ -4164,6 +4190,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">2</FIELD>
 				<FIELD name="port_target" type="int">3</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">46</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">48</FIELD>
@@ -4245,6 +4272,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">3</FIELD>
 				<FIELD name="port_target" type="int">2</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">50</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">52</FIELD>
@@ -4330,6 +4358,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">3</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">52</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">30</FIELD>
@@ -4411,6 +4440,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">0</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">52</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">9</FIELD>
@@ -4492,6 +4522,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">2</FIELD>
 				<FIELD name="storeElementRights" type="int">64</FIELD>
 				<FIELD name="target" type="long">9</FIELD>
@@ -4579,6 +4610,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">3</FIELD>
 				<FIELD name="port_target" type="int">2</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">7</FIELD>
 				<FIELD name="storeElementRights" type="int">64</FIELD>
 				<FIELD name="target" type="long">19</FIELD>
@@ -4660,6 +4692,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">56</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">55</FIELD>
@@ -4741,6 +4774,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">3</FIELD>
 				<FIELD name="port_target" type="int">2</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">9</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">56</FIELD>
@@ -4822,6 +4856,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">2</FIELD>
 				<FIELD name="port_target" type="int">3</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">38</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">63</FIELD>
@@ -4903,6 +4938,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">3</FIELD>
 				<FIELD name="port_target" type="int">2</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">43</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">30</FIELD>
@@ -4984,6 +5020,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">2</FIELD>
 				<FIELD name="port_target" type="int">3</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">63</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">65</FIELD>
@@ -5065,6 +5102,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">0</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">65</FIELD>
 				<FIELD name="storeElementRights" type="int">64</FIELD>
 				<FIELD name="target" type="long">32</FIELD>
@@ -5152,6 +5190,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">3</FIELD>
 				<FIELD name="port_target" type="int">2</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">56</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">67</FIELD>
@@ -5233,6 +5272,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">3</FIELD>
 				<FIELD name="port_target" type="int">2</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">69</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">71</FIELD>
@@ -5314,6 +5354,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">69</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">73</FIELD>
@@ -5395,6 +5436,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">73</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">2</FIELD>
@@ -5476,6 +5518,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">71</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">76</FIELD>
@@ -5557,6 +5600,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">2</FIELD>
 				<FIELD name="port_target" type="int">3</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">76</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">5</FIELD>
@@ -5645,6 +5689,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">76</FIELD>
 				<FIELD name="storeElementRights" type="int">32</FIELD>
 				<FIELD name="target" type="long">9</FIELD>
@@ -5726,6 +5771,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">2</FIELD>
 				<FIELD name="port_target" type="int">3</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">79</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">81</FIELD>
@@ -5792,6 +5838,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">5</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">79</FIELD>
@@ -5873,6 +5920,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">79</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">84</FIELD>
@@ -5953,6 +6001,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">84</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">86</FIELD>
@@ -6033,6 +6082,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">86</FIELD>
 				<FIELD name="storeElementRights" type="int">32</FIELD>
 				<FIELD name="target" type="long">9</FIELD>
@@ -6113,6 +6163,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">86</FIELD>
 				<FIELD name="storeElementRights" type="int">32</FIELD>
 				<FIELD name="target" type="long">19</FIELD>
@@ -6192,6 +6243,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">2</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">30</FIELD>
@@ -6263,6 +6315,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">76</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">30</FIELD>
@@ -6329,6 +6382,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">92</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">93</FIELD>
@@ -6410,6 +6464,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">93</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">4</FIELD>
@@ -6491,6 +6546,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">93</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">91</FIELD>
@@ -6571,6 +6627,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">3</FIELD>
 				<FIELD name="port_target" type="int">1</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">86</FIELD>
 				<FIELD name="storeElementRights" type="int">64</FIELD>
 				<FIELD name="target" type="long">98</FIELD>
@@ -6655,6 +6712,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">2</FIELD>
 				<FIELD name="storeElementRights" type="int">64</FIELD>
 				<FIELD name="target" type="long">98</FIELD>
@@ -6735,6 +6793,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">3</FIELD>
 				<FIELD name="port_target" type="int">0</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">98</FIELD>
 				<FIELD name="storeElementRights" type="int">4</FIELD>
 				<FIELD name="target" type="long">101</FIELD>
@@ -6819,6 +6878,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">1</FIELD>
 				<FIELD name="port_target" type="int">3</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">101</FIELD>
 				<FIELD name="storeElementRights" type="int">64</FIELD>
 				<FIELD name="target" type="long">9</FIELD>
@@ -6899,6 +6959,7 @@ Best regards</OBJECT>
 				</FIELD>
 				<FIELD name="port_source" type="int">3</FIELD>
 				<FIELD name="port_target" type="int">2</FIELD>
+				<FIELD name="position" type="int">0</FIELD>
 				<FIELD name="source" type="long">7</FIELD>
 				<FIELD name="storeElementRights" type="int">64</FIELD>
 				<FIELD name="target" type="long">98</FIELD>

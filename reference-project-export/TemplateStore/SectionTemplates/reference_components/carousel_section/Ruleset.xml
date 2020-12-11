@@ -1,37 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RULES>
+	<!-- st_items -->
 	<RULE>
 		<WITH>
-			<PROPERTY name="VALUE" source="st_autoplayEnabled"/>
-		</WITH>
-		<DO>
-			<PROPERTY name="VISIBLE" source="st_autoplaySpeed"/>
-		</DO>
-	</RULE>
-	<!-- mandatory -->
-	<RULE>
-		<WITH>
-			<PROPERTY name="EMPTY" source="st_carouselItems"/>
+			<PROPERTY name="EMPTY" source="st_items"/>
 		</WITH>
 		<DO>
 			<NOT>
 				<VALIDATION scope="RELEASE">
-					<PROPERTY name="VALID" source="st_carouselItems"/>
-					<MESSAGE lang="*" text="This form element must not be empty!"/>
-					<MESSAGE lang="DE" text="Diese Eingabekomponente darf nicht leer sein!"/>
-				</VALIDATION>
-			</NOT>
-		</DO>
-	</RULE>
-	<!-- mandatory -->
-	<RULE>
-		<WITH>
-			<PROPERTY name="EMPTY" source="st_slideWidth"/>
-		</WITH>
-		<DO>
-			<NOT>
-				<VALIDATION scope="RELEASE">
-					<PROPERTY name="VALID" source="st_slideWidth"/>
+					<PROPERTY name="VALID" source="st_items"/>
 					<MESSAGE lang="*" text="This form element must not be empty!"/>
 					<MESSAGE lang="DE" text="Diese Eingabekomponente darf nicht leer sein!"/>
 				</VALIDATION>

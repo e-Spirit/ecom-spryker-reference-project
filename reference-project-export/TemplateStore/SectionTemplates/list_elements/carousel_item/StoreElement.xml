@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEMPLATE filename="carousel_item" id="-9205792046555233796" templateid="8052621845632095052" type="section">
-	<EXTENSION anchor="0" file="html" link="html" templateSet="9062318847741885912"/>
-	<EXTENSION anchor="0" file="json" link="json" templateSet="-1285658006509869299"/>
-	<LANG displayname="Carousel item" language="EN"/>
-	<LANG displayname="Karussellelement" language="DE"/>
-</TEMPLATE>

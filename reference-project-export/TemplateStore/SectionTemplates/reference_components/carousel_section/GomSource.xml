@@ -1,35 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CMS_MODULE>
 
-  <FS_CATALOG name="st_carouselItems" useLanguages="no" viewMode="headers">
+  <FS_CATALOG name="st_items" useLanguages="no" viewMode="details">
     <LANGINFOS>
-      <LANGINFO lang="*" label="Carousel items"/>
-      <LANGINFO lang="DE" label="Karussellelemente"/>
+      <LANGINFO lang="*" label="Banners"/>
     </LANGINFOS>
     <TEMPLATES type="section">
-      <TEMPLATE uid="carousel_item"/>
+      <TEMPLATE uid="banner_section"/>
     </TEMPLATES>
   </FS_CATALOG>
 
-  <CMS_INPUT_TOGGLE name="st_autoplayEnabled" hFill="yes" singleLine="no" useLanguages="no">
+  <CMS_INPUT_RADIOBUTTON name="st_autoplay" gridWidth="4" hFill="yes" useLanguages="no">
+    <ENTRIES>
+      <ENTRY value="">
+        <LANGINFOS>
+          <LANGINFO lang="*" label="None"/>
+          <LANGINFO lang="DE" label="Ohne"/>
+        </LANGINFOS>
+      </ENTRY>
+      <ENTRY value="3000">
+        <LANGINFOS>
+          <LANGINFO lang="*" label="3s"/>
+        </LANGINFOS>
+      </ENTRY>
+      <ENTRY value="5000">
+        <LANGINFOS>
+          <LANGINFO lang="*" label="5s"/>
+        </LANGINFOS>
+      </ENTRY>
+      <ENTRY value="8000">
+        <LANGINFOS>
+          <LANGINFO lang="*" label="8s"/>
+        </LANGINFOS>
+      </ENTRY>
+    </ENTRIES>
     <LANGINFOS>
-      <LANGINFO lang="*" label="Enable autoplay"/>
-      <LANGINFO lang="DE" label="Autoplay einschalten"/>
+      <LANGINFO lang="*" label="Autoplay Interval"/>
     </LANGINFOS>
-  </CMS_INPUT_TOGGLE>
-
-  <CMS_INPUT_NUMBER name="st_autoplaySpeed" hFill="yes" singleLine="no" useLanguages="no">
-    <LANGINFOS>
-      <LANGINFO lang="*" label="Autoplay speed (ms)" description="Time in ms which indicates how long a slide is shown."/>
-      <LANGINFO lang="DE" label="Autoplaygeschwindigkeit (ms)" description="Zeit in ms, welche die Anzeigedauer eines Elements festlegt."/>
-    </LANGINFOS>
-  </CMS_INPUT_NUMBER>
-
-  <CMS_INPUT_NUMBER name="st_slideWidth" type="double" hFill="yes" max="100.0" min="1.0" singleLine="no" useLanguages="no">
-    <LANGINFOS>
-      <LANGINFO lang="*" label="Slide width (%)" description="Width of a slide in percent."/>
-      <LANGINFO lang="DE" label="Elementbreite (%)" description="Breite eines Karussellelements in Prozent"/>
-    </LANGINFOS>
-  </CMS_INPUT_NUMBER>
+  </CMS_INPUT_RADIOBUTTON>
 
 </CMS_MODULE>
