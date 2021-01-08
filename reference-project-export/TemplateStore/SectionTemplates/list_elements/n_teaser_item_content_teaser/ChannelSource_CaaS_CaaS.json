@@ -1,6 +1,6 @@
 $CMS_SET(set_teaserItem,{:})$
 
-$CMS_SET(void, set_teaserItem.put("itemPreviewId", "" + previewId()))$
+$CMS_SET(void, set_teaserItem.put("previewId", if(!#global.release, "#" + set_nTeaserItems.size())))$
 $CMS_SET(void, set_teaserItem.put("headline", if(st_headline.isEmpty(),"",st_headline.convert2)))$
 $CMS_SET(void, set_teaserItem.put("subline", if(st_subline.isEmpty(),"",st_subline.convert2)))$
 $CMS_IF(!st_text.isEmpty())$

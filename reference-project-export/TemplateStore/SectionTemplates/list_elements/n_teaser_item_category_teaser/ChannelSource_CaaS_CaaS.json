@@ -1,6 +1,7 @@
 $CMS_SET(set_teaserItem,{:})$
 
 $CMS_SET(void, set_teaserItem.put("moleculename", "fs-n-teaser-item-category"))$
+$CMS_SET(void, set_teaserItem.put("previewId", if(!#global.release, "#" + set_nTeaserItems.size())))$
 
 $CMS_IF(!st_category.isEmpty())$
 	$CMS_SET(set_categoryId)$$CMS_VALUE(st_category.values[0].getNodeId)$$CMS_END_SET$

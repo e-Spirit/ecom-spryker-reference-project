@@ -39,6 +39,7 @@ $CMS_END_IF$
 $CMS_SET(set_nTeaserItems, [])$
 $CMS_VALUE(st_nTeaserItems)$
 $CMS_SET(void, data.put("teaser_items", set_nTeaserItems))$
+$CMS_SET(void, data.put("nestedPreviewId", if(!#global.release, "#st_nTeaserItems")))$
 
 $CMS_SET(locale, #global.language.getLocale())$
 $CMS_SET(localeAbbr, locale.getLanguage() + "_" + locale.getCountry())$

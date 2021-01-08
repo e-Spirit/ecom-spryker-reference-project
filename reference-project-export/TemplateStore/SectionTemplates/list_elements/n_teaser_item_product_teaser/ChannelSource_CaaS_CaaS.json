@@ -1,6 +1,7 @@
 $CMS_SET(set_teaserItem,{:})$
 
 $CMS_SET(void, set_teaserItem.put("moleculename", "fs-n-teaser-item-product"))$
+$CMS_SET(void, set_teaserItem.put("previewId", if(!#global.release, "#" + set_nTeaserItems.size())))$
 
 $CMS_IF(!st_product.isEmpty())$
 	$CMS_SET(set_prodId)$$CMS_VALUE(st_product.identifiers[0])$$CMS_END_SET$
