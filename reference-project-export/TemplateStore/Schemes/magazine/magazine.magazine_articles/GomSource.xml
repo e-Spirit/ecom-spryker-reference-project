@@ -73,9 +73,8 @@
             <TEMPLATE uid="banner_section"/>
             <TEMPLATE uid="carousel_section"/>
             <TEMPLATE uid="text_image_section"/>
-            <TEMPLATE uid="shoppable_video"/>
-            <TEMPLATE uid="teaser_grid"/>
             <TEMPLATE uid="shoppable_image"/>
+            <TEMPLATE uid="teaser_grid"/>
           </TEMPLATES>
         </FS_CATALOG>
 
